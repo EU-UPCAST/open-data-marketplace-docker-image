@@ -1,0 +1,14 @@
+services:
+  drupal:
+    build: .
+    ports:
+      - "5000:80"
+  database:
+    image: 'mysql:latest' 
+    ports:
+      - "33061:3306"
+    command: --init-file /data/application/init.sql
+    volumes:
+      - ./init.sql:/data/application/init.sql
+    env_file:
+      - .env
