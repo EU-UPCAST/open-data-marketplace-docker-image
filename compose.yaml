@@ -3,6 +3,19 @@ services:
     build: .
     ports:
       - "5000:80"
+    env_file:
+      - .env
+    environment:
+      - DRUPAL_DB_HOST=database
+      - MYSQL_PORT_3306_TCP=3306
+      - DRUPAL_DB_USER=root
+      - DRUPAL_DB_PASSWORD_FILE=/run/secrets/mysql_root_password/password
+    volumes:
+      - drupal_default:/opt/drupal/web/sites/default:rw
+    depends_on:
+      - database
+    secrets:
+      - mysql_root_password
   database:
     image: 'mysql:latest' 
     ports:
@@ -10,5 +23,27 @@ services:
     command: --init-file /data/application/init.sql
     volumes:
       - ./init.sql:/data/application/init.sql
+      - /var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD_FILE=/run/secrets/mysql_root_password/password
     env_file:
       - .env
+    secrets:
+      - mysql_root_password
+    depends_on:
+      - password-generator
+
+  password-generator:
+    image: python:3.9-alpine
+    command: /app/generate-mysql-password.py
+    volumes:
+      - ./generate-mysql-password.py:/app/generate-mysql-password.py
+      - ./secrets/mysql_root_password:/run/secrets/mysql_root_password:rw
+    environment:
+      - SECRET_FILE=/run/secrets/mysql_root_password/password
+volumes:
+  drupal_default:
+secrets:
+  mysql_root_password:
+    file: ./secrets/mysql_root_password
+    
