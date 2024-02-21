@@ -8,9 +8,13 @@ COPY ./entrypoint.sh /opt/entrypoint.sh
 COPY ./wait-for-it.sh /opt/wait-for-it.sh
 COPY ./profile/odm /opt/odm
 RUN <<EOF
+docker-php-ext-install bcmath
+composer config minimum-stability dev
+composer config prefer-stable true
 composer config repositories.odm path ../odm
 composer config --no-plugins allow-plugins.cweagans/composer-patches true
 composer require -n drupal/odm @dev
+
 
 composer require drush/drush
 echo 'export PATH="/opt/drupal/vendor/bin:$PATH"' >> ~/.bashrc
