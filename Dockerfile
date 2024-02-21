@@ -1,15 +1,21 @@
 # syntax=docker/dockerfile:1
 FROM drupal:latest
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 RUN ln -sf /usr/bin/bash /bin/sh
 WORKDIR /opt/drupal
 ENV COMPOSER_ALLOW_SUPERUSER=1
 COPY ./entrypoint.sh /opt/entrypoint.sh
-COPY ./profile/odm /opt/drupal/web/profiles/odm
+COPY ./wait-for-it.sh /opt/wait-for-it.sh
+COPY ./profile/odm /opt/odm
 RUN <<EOF
+composer config repositories.odm path ../odm
+composer config --no-plugins allow-plugins.cweagans/composer-patches true
+composer require -n drupal/odm @dev
+
 composer require drush/drush
 echo 'export PATH="/opt/drupal/vendor/bin:$PATH"' >> ~/.bashrc
 apt update
-apt install nano
+apt install nano git jq -y
 if ! test -f /opt/drupal/web/sites/default/settings.php; then
 
   cp /opt/drupal/web/sites/default/default.settings.php  /opt/drupal/web/sites/default/settings.php 
@@ -21,7 +27,7 @@ if ! test -f /opt/drupal/web/sites/default/settings.php; then
     'password' => getenv('DRUPAL_DB_PASSWORD'),
     'prefix' => '',
     'host' => getenv('DRUPAL_DB_HOST'),
-    'port' => '3306',
+    'port' => getenv('MYSQL_PORT_3306_TCP'),
     'isolation_level' => 'READ COMMITTED',
     'namespace' => 'Drupal\\\\mysql\\\\Driver\\\\Database\\\\mysql',
     'driver' => 'mysql',
@@ -30,6 +36,12 @@ if ! test -f /opt/drupal/web/sites/default/settings.php; then
   ">> /opt/drupal/web/sites/default/settings.php
   echo "\$settings['hash_salt'] = \"$(drush php-eval 'echo \Drupal\Component\Utility\Crypt::randomBytesBase64(55)')\";
   " >> /opt/drupal/web/sites/default/settings.php
+
+
+  echo "\$settings['trusted_host_patterns'] = [
+    '^'.getenv('DRUPAL_TRUSTED_HOST').'\$',
+  ];" >> /opt/drupal/web/sites/default/settings.php
+
   
   echo "\$settings['config_sync_directory'] = '/opt/config/sync';" >> /opt/drupal/web/sites/default/settings.php
 fi
@@ -60,4 +72,4 @@ EOF
 
 ADD ./entrypoint.sh /opt/entrypoint.sh
 RUN chmod +x /opt/entrypoint.sh
-CMD ["bash", "-c","source /opt/entrypoint.sh; echo $DRUPAL_DB_PASSWORD; /usr/local/bin/apache2-foreground;"]
+CMD ["bash", "-c","source /opt/entrypoint.sh; /opt/wait-for-it.sh ${DRUPAL_DB_HOST}:${MYSQL_PORT_3306_TCP} -t 3 -- /usr/local/bin/apache2-foreground;"]
