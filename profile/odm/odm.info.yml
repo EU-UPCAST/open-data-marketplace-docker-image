@@ -51,6 +51,7 @@ install:
   - views
   - views_ui
   - editor
+  - commerce
 
 
 # Required modules. These cannot be uninstalled.
