@@ -76,4 +76,4 @@ EOF
 
 ADD ./entrypoint.sh /opt/entrypoint.sh
 RUN chmod +x /opt/entrypoint.sh
-CMD ["bash", "-c","source /opt/entrypoint.sh; /opt/wait-for-it.sh ${DRUPAL_DB_HOST}:${MYSQL_PORT_3306_TCP} -t 3 -- /usr/local/bin/apache2-foreground;"]
+CMD ["bash", "-c","source /opt/entrypoint.sh; /opt/wait-for-it.sh ${DRUPAL_DB_HOST}:${MYSQL_PORT_3306_TCP}  -- /usr/local/bin/apache2-foreground;"]
