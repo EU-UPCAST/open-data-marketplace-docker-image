@@ -1,0 +1,10 @@
+uuid: 6bcdd6a0-ff94-417c-8dfb-cc47b7ea04f6
+langcode: el
+status: true
+dependencies: {  }
+id: dataset
+label: 'Dataset Variation'
+traits: {  }
+locked: false
+orderItemType: negotiated_dataset_purchase_item
+generateTitle: false

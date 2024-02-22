@@ -24,34 +24,137 @@ distribution:
   #   theme: my_theme
   #   # To redirect to specific URL after profile installation set your finish_url: 
   #   finish_url: ?welcome=1
-  langcode: en
+  # langcode: en
 
 # Modules to install to support the profile.
 # Unlike dependencies, these can be uninstalled later.
 install:
-  - history
-  - block_content
-  - breakpoint
-  - color
-  - config
-  - comment
-  - contextual
-  - contact
-  - help
-  - image
-  - options
-  - path
-  - taxonomy
-  - dblog
-  - search
-  - shortcut
-  - toolbar
-  - field_ui
-  - file
-  - views
-  - views_ui
-  - editor
-  - commerce
+- automated_cron
+- basic_auth
+- big_pipe
+- block
+- block_content
+- breakpoint
+- ckeditor5
+- config
+- content_moderation
+- contextual
+- datetime
+- datetime_range
+- dblog
+- dynamic_page_cache
+- editor
+- field
+- field_layout
+- field_ui
+- file
+- filter
+- image
+- jsonapi
+- language
+- layout_builder
+- layout_discovery
+- link
+- locale
+- media
+- menu_link_content
+- menu_ui
+- mysql
+- node
+- options
+- page_cache
+- path
+- path_alias
+- rest
+- serialization
+- settings_tray
+- system
+- taxonomy
+- telephone
+- text
+- toolbar
+- update
+- user
+- views
+- views_ui
+- workflows
+- address
+- admin_toolbar
+- admin_toolbar_tools
+- allowed_formats
+- auto_entitylabel
+- backup_migrate
+- bamboo_twig
+- bamboo_twig_file
+- bamboo_twig_i18n
+- bamboo_twig_loader
+- bamboo_twig_path
+- bamboo_twig_security
+- bamboo_twig_token
+- bpmn_io
+- commerce
+- commerce_cart
+- commerce_checkout
+- commerce_number_pattern
+- commerce_order
+- commerce_payment
+- commerce_payment_example
+- commerce_price
+- commerce_product
+- commerce_store
+- commerce_checkout_order_fields
+- ctools
+- dkan
+- common
+- dkan_alt_api
+- datastore
+- datastore_mysql_import
+- dkan_js_frontend
+- frontend
+- harvest
+- json_form_widget
+- metastore
+- metastore_admin
+- metastore_search
+- eca
+- eca_base
+- eca_content
+- eca_form
+- eca_misc
+- eca_modeller_bpmn
+- eca_render
+- eca_ui
+- eca_user
+- eca_views
+- eca_commerce
+- eca_state_machine
+- eca_state_machine_example
+- eca_tamper
+- entity
+- entity_reference_revisions
+- facets
+- form_mode_control
+- gin_toolbar
+- hide_revision_field
+- http_client_manager
+- http_client_manager_example
+- inline_entity_form
+- json_field
+- json_field_widget
+- material_icons
+- moderated_content_bulk_publish
+- pathauto
+- profile
+- search_api_db
+- search_api
+- select2
+- select_or_other
+- state_machine
+- tamper
+- token
+- twig_tweak
+- views_bulk_operations
+
 
 
 # Required modules. These cannot be uninstalled.
@@ -66,3 +169,5 @@ dependencies:
 themes:
   - olivero
   - claro
+  - xara
+  - gin

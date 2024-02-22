@@ -1,0 +1,15 @@
+uuid: b2e714d6-639a-4a60-ad42-c78fa91b7679
+langcode: el
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_product
+_core:
+  default_config_hash: 6n6q97CDOCqHGs4Dun3BqVJE6e1o6TA-69qCwoUU-SY
+id: default
+label: Προεπιλεγμένο
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: default

@@ -9,10 +9,21 @@ COPY ./wait-for-it.sh /opt/wait-for-it.sh
 COPY ./profile/odm /opt/odm
 RUN <<EOF
 docker-php-ext-install bcmath
+
 composer config minimum-stability dev
 composer config prefer-stable true
+
 composer config repositories.odm path ../odm
-composer config --no-plugins allow-plugins.cweagans/composer-patches true
+composer config repositories.assets composer https://asset-packagist.org
+composer config repositories.jsoneditor --json  '{"type":"package","package":{"name":"josdejong\/jsoneditor","version":"v5.29.1","type":"drupal-library","dist":{"url":"https:\/\/github.com\/josdejong\/jsoneditor\/archive\/v5.29.1.zip","type":"zip"},"source":{"url":"https:\/\/github.com\/josdejong\/jsoneditor","type":"git","reference":"v5.29.1"}}}'
+composer config repositories.jsonview --json  '{"type":"package","package":{"name":"yesmeck\/jquery-jsonview","version":"v1.2.3","type":"drupal-library","dist":{"url":"https:\/\/github.com\/yesmeck\/jquery-jsonview\/archive\/v1.2.3.zip","type":"zip"},"source":{"url":"https:\/\/github.com\/yesmeck\/jquery-jsonview","type":"git","reference":"v1.2.3"}}}'
+composer config --no-interaction allow-plugins.cweagans/composer-patches true
+composer config --no-interaction allow-plugins.oomphinc/composer-installers-extender true
+composer config --no-interaction extra.enable-patching true
+composer config --no-interaction extra.patches --json '{"drupal\/core":{"2893933: claimItem in the database and memory queues does not use expire correctly":"https:\/\/www.drupal.org\/files\/issues\/2023-01-10\/2893933-drupal-queue-claim-9.5.x-58.patch"}}'
+composer config --no-interaction extra.installer-types --json '["bower-asset", "npm-asset"]'
+composer config --no-interaction extra.installer-paths.web/libraries/{\$name} --json '["type:drupal-library","type:bower-asset","type:npm-asset"]'
+
 composer require -n drupal/odm @dev
 
 

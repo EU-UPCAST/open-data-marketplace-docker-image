@@ -1,0 +1,16 @@
+uuid: 814f1db0-918c-4737-9e81-48f31cfc9f2c
+langcode: el
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: hwJoqnxqBS0fPM3s6FccZ2bWaq9LneRYLzFk-wlJWjs
+id: default
+label: Προεπιλεγμένο
+traits: {  }
+locked: false
+description: ''
+variationType: default
+variationTypes:
+  - default
+multipleVariations: true
+injectVariationFields: true

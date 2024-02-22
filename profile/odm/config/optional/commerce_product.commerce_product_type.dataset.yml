@@ -1,0 +1,14 @@
+uuid: 2b8dcba4-77e6-4d86-b5a9-0ebef0847f1c
+langcode: el
+status: true
+dependencies: {  }
+id: dataset
+label: Dataset
+traits: {  }
+locked: false
+description: 'This is a dataset product type for the SKG data marketplace. Datasets contain data.'
+variationType: dataset
+variationTypes:
+  - dataset
+multipleVariations: true
+injectVariationFields: true

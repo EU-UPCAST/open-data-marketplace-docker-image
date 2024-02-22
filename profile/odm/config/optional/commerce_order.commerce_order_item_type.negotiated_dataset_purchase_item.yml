@@ -1,0 +1,10 @@
+uuid: d451b718-8978-4523-9c1d-646d12a2f90a
+langcode: el
+status: true
+dependencies: {  }
+id: negotiated_dataset_purchase_item
+label: "negotiated dataset purchase item\t"
+traits: {  }
+locked: false
+purchasableEntityType: commerce_product_variation
+orderType: dataset_purchase_negotiation
