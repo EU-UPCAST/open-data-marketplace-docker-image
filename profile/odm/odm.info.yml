@@ -24,7 +24,7 @@ distribution:
   #   theme: my_theme
   #   # To redirect to specific URL after profile installation set your finish_url: 
   #   finish_url: ?welcome=1
-  # langcode: en
+  langcode: en
 
 # Modules to install to support the profile.
 # Unlike dependencies, these can be uninstalled later.

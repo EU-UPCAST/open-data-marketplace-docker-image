@@ -1,0 +1,21 @@
+uuid: 0c78d0e3-57a4-4753-8e34-21c5f9e68150
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_workflow
+    - node.type.data_processing_workflow
+  module:
+    - json_field
+id: node.data_processing_workflow.field_workflow
+field_name: field_workflow
+entity_type: node
+bundle: data_processing_workflow
+label: workflow
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: json_native

@@ -1,0 +1,15 @@
+uuid: a94bd734-f6f2-481d-afed-7c563de23c3d
+langcode: el
+status: true
+dependencies:
+  module:
+    - dkan_alt_api
+_core:
+  default_config_hash: a7K8i7sisKU0vTHo9kvhOiSW7FgXsbiQZF04Qe2HzZY
+id: alternate_api_user
+label: 'Alternate API user'
+weight: -6
+is_admin: false
+permissions:
+  - 'get data through the alternate metastore api'
+  - 'query the alternate sql endpoint api'

@@ -1,0 +1,29 @@
+uuid: 283a1fa8-0267-468e-96d1-bd423b835ff2
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.node.field_product
+    - node.type.data_exchange_negotiation
+id: node.data_exchange_negotiation.field_product
+field_name: field_product
+entity_type: node
+bundle: data_exchange_negotiation
+label: 'Dataset product'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      dataset: dataset
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

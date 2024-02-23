@@ -1,0 +1,22 @@
+uuid: 312e39d0-85f2-4e7c-8a15-6a9265f8180a
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.data_processing_workflow
+id: node.data_processing_workflow.promote
+field_name: promote
+entity_type: node
+bundle: data_processing_workflow
+label: 'Προβιβασμένο στην πρώτη σελίδα'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Ανοικτό
+  off_label: Κλειστό
+field_type: boolean

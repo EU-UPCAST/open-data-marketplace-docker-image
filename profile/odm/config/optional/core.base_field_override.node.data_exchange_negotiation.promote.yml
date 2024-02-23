@@ -1,0 +1,22 @@
+uuid: cb447113-0714-402d-9247-b9a92ad6e7f9
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.data_exchange_negotiation
+id: node.data_exchange_negotiation.promote
+field_name: promote
+entity_type: node
+bundle: data_exchange_negotiation
+label: 'Προβιβασμένο στην πρώτη σελίδα'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Ανοικτό
+  off_label: Κλειστό
+field_type: boolean

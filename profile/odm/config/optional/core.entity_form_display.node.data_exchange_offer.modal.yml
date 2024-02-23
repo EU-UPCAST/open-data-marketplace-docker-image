@@ -1,0 +1,65 @@
+uuid: 2f7cb703-83b3-4491-8e0b-b87ca9935667
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.modal
+    - field.field.node.data_exchange_offer.body
+    - field.field.node.data_exchange_offer.field_negotiation
+    - field.field.node.data_exchange_offer.field_variation
+    - node.type.data_exchange_offer
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: node.data_exchange_offer.modal
+targetEntityType: node
+bundle: data_exchange_offer
+mode: modal
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_negotiation:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_variation:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  moderation_state: true
+  path: true
+  promote: true
+  revision_log: true
+  status: true
+  sticky: true
+  title: true
+  uid: true

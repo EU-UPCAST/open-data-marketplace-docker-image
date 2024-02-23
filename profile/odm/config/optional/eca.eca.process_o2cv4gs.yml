@@ -1,0 +1,194 @@
+uuid: d76c3337-b12b-4b51-84e4-91d7c09f339c
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_type.dataset_purchase_negotiation
+    - field.field.node.data_exchange_agreement.field_negotiation
+    - field.field.node.data_exchange_negotiation.field_data_processing_workflow
+    - field.field.node.data_exchange_offer.field_negotiation
+    - field.field.node.data_exchange_request.field_data_processing_workflow
+    - field.field.node.data_exchange_request.field_negotiation
+    - field.storage.node.field_data_processing_workflow
+    - field.storage.node.field_negotiation
+    - node.type.data_exchange_request
+  module:
+    - eca_base
+    - eca_content
+    - eca_form
+    - eca_user
+id: process_o2cv4gs
+modeller: bpmn_io
+label: 'Consumer request creation process'
+version: ''
+weight: null
+events:
+  Event_14hrhmc:
+    plugin: 'form:form_build'
+    label: |
+      build request form
+    configuration:
+      form_id: node-data-exchange-request-form
+      entity_type_id: ''
+      bundle: ''
+      operation: ''
+    successors:
+      -
+        id: Activity_0gjzpgg
+        condition: ''
+      -
+        id: Activity_1c3d3uc
+        condition: ''
+      -
+        id: Activity_1g3pwjo
+        condition: ''
+  Event_12yhxy8:
+    plugin: 'form:form_submit'
+    label: 'submit request form'
+    configuration:
+      form_id: node-data-exchange-request-form
+      entity_type_id: ''
+      bundle: ''
+      operation: ''
+    successors:
+      -
+        id: Activity_0v7dtp7
+        condition: Flow_0xw9v94
+  Event_00r7s6s:
+    plugin: 'content_entity:insert'
+    label: |
+      data exchange request inserted
+    configuration:
+      type: 'node data_exchange_request'
+    successors:
+      -
+        id: Activity_0zlsbgo
+        condition: ''
+conditions:
+  Flow_0kykb35:
+    plugin: eca_token_exists
+    configuration:
+      negate: false
+      token_name: 'current-page:query:title'
+  Flow_079kh71:
+    plugin: eca_token_exists
+    configuration:
+      negate: false
+      token_name: 'current-page:query:negotiation'
+  Flow_0xw9v94:
+    plugin: eca_token_exists
+    configuration:
+      negate: false
+      token_name: 'current-page:query:redirect'
+gateways: {  }
+actions:
+  Activity_0gjzpgg:
+    plugin: eca_form_field_default_value
+    label: 'default title'
+    configuration:
+      value: '[current-page:query:title]'
+      field_name: title
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_1k5ge7q
+        condition: Flow_0kykb35
+  Activity_1k5ge7q:
+    plugin: eca_form_field_disable
+    label: 'lock title'
+    configuration:
+      flag: true
+      field_name: title
+    successors: {  }
+  Activity_1c3d3uc:
+    plugin: eca_form_field_default_value
+    label: 'default negotiation'
+    configuration:
+      value: '[current-page:query:negotiation]'
+      field_name: field_negotiation
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_14ylcg5
+        condition: Flow_079kh71
+  Activity_14ylcg5:
+    plugin: eca_form_field_disable
+    label: 'lock negotiation'
+    configuration:
+      flag: true
+      field_name: field_negotiation
+    successors: {  }
+  Activity_0v7dtp7:
+    plugin: eca_form_state_set_redirect
+    label: 'redirect to negotiation'
+    configuration:
+      destination: '[current-page:query:redirect]'
+    successors: {  }
+  Activity_0zlsbgo:
+    plugin: eca_token_load_entity_ref
+    label: 'load negotiation'
+    configuration:
+      field_name_entity_ref: field_negotiation
+      token_name: negotiation
+      from: current
+      entity_type: node
+      entity_id: '[node:id]'
+      revision_id: ''
+      properties: ''
+      langcode: _interface
+      latest_revision: false
+      unchanged: false
+      object: ''
+    successors:
+      -
+        id: Activity_03oaltz
+        condition: ''
+  update_negotiation_dpw:
+    plugin: eca_set_field_value
+    label: 'set DPW of negotiation'
+    configuration:
+      field_name: field_data_processing_workflow
+      field_value: '[node:field_data_processing_workflow]'
+      method: 'set:clear'
+      strip_tags: false
+      trim: false
+      save_entity: true
+      object: negotiation
+    successors:
+      -
+        id: Activity_0m7r0kq
+        condition: ''
+  Activity_03oaltz:
+    plugin: eca_switch_account
+    label: 'switch user'
+    configuration:
+      user_id: '1'
+    successors:
+      -
+        id: update_negotiation_dpw
+        condition: ''
+  Activity_1g3pwjo:
+    plugin: eca_form_field_default_value
+    label: 'default DPW'
+    configuration:
+      value: '[current-page:query:dpw]'
+      field_name: field_data_processing_workflow
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors: {  }
+  Activity_0m7r0kq:
+    plugin: eca_new_entity
+    label: Activity_0m7r0kq
+    configuration:
+      token_name: ''
+      type: 'commerce_order dataset_purchase_negotiation'
+      langcode: ''
+      label: newcart
+      published: false
+      owner: '2'
+    successors: {  }

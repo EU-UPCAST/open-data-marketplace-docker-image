@@ -1,0 +1,51 @@
+uuid: 01b5b99a-685b-4634-9350-d84454a3d5f2
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.data.field_data_type
+    - field.field.node.data.field_json_metadata
+    - node.type.data
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: iwSpKtN3kB-7hACWg2rQijK0pkEfCdelGQXJ_VFfWic
+id: node.data.full
+targetEntityType: node
+bundle: data
+mode: full
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_data_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_json_metadata:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

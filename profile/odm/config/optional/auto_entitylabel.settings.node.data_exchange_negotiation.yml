@@ -1,0 +1,9 @@
+status: 2
+pattern: 'Negotiation for [node:field_product:entity:title] started by [node:author:name]'
+escape: false
+preserve_titles: false
+save: false
+chunk: 50
+dependencies:
+  config:
+    - node.type.data_exchange_negotiation

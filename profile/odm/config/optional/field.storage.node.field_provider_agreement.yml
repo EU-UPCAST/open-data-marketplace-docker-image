@@ -1,0 +1,19 @@
+uuid: d12bfbcb-def9-42b3-b045-eae6098d8319
+langcode: el
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_provider_agreement
+field_name: field_provider_agreement
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

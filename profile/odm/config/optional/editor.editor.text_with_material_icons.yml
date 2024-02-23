@@ -1,0 +1,29 @@
+uuid: af01ff67-4e95-4379-baac-0fee858895c3
+langcode: el
+status: true
+dependencies:
+  config:
+    - filter.format.text_with_material_icons
+  module:
+    - ckeditor5
+format: text_with_material_icons
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - heading
+      - bold
+      - italic
+      - materialIcons
+      - sourceEditing
+  plugins:
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+image_upload: {  }

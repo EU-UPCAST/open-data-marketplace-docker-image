@@ -1,0 +1,48 @@
+uuid: 17ad8f86-4147-4dee-a347-2824ff5a6c46
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.data_exchange_negotiation.body
+    - field.field.node.data_exchange_negotiation.field_consumer
+    - field.field.node.data_exchange_negotiation.field_consumer_agreement
+    - field.field.node.data_exchange_negotiation.field_data_definition
+    - field.field.node.data_exchange_negotiation.field_data_processing_workflow
+    - field.field.node.data_exchange_negotiation.field_product
+    - field.field.node.data_exchange_negotiation.field_provider
+    - field.field.node.data_exchange_negotiation.field_provider_agreement
+    - field.field.node.data_exchange_negotiation.field_state
+    - node.type.data_exchange_negotiation
+  module:
+    - text
+    - user
+id: node.data_exchange_negotiation.teaser
+targetEntityType: node
+bundle: data_exchange_negotiation
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_consumer: true
+  field_consumer_agreement: true
+  field_data_definition: true
+  field_data_processing_workflow: true
+  field_product: true
+  field_provider: true
+  field_provider_agreement: true
+  field_state: true
+  langcode: true
+  search_api_excerpt: true

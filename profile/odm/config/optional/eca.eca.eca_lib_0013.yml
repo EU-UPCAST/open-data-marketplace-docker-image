@@ -1,0 +1,178 @@
+uuid: 1fc1b36c-3e1b-4a58-bcb3-37b0a7ce38d4
+langcode: en
+status: false
+dependencies:
+  module:
+    - eca_base
+    - eca_tamper
+id: eca_lib_0013
+modeller: bpmn_io
+label: 'Find values in lists'
+version: v1
+weight: null
+events:
+  Event_1td3hty:
+    plugin: 'eca_base:eca_custom'
+    label: 'Custom event compare'
+    configuration:
+      event_id: compare
+    successors:
+      -
+        id: Activity_13duhrl
+        condition: ''
+conditions:
+  Flow_02o8wqo:
+    plugin: eca_scalar
+    configuration:
+      negate: false
+      case: false
+      left: '[list]'
+      right: '|[value]|'
+      operator: contains
+      type: value
+  Flow_13987i7:
+    plugin: eca_scalar
+    configuration:
+      case: false
+      left: '[list]'
+      right: '|[value]|'
+      operator: contains
+      type: value
+      negate: true
+gateways:
+  Gateway_0d9ssu4:
+    type: 0
+    successors:
+      -
+        id: Activity_0x3bl20
+        condition: ''
+actions:
+  Activity_07d5x73:
+    plugin: eca_token_set_value
+    label: 'Set value abc'
+    configuration:
+      token_name: value
+      token_value: abc
+      use_yaml: false
+    successors:
+      -
+        id: Gateway_0d9ssu4
+        condition: ''
+  Activity_0s43zxs:
+    plugin: eca_token_set_value
+    label: 'Set value xyz'
+    configuration:
+      token_name: value
+      token_value: xyz
+      use_yaml: false
+    successors:
+      -
+        id: Gateway_0d9ssu4
+        condition: ''
+  Activity_0ejcfgn:
+    plugin: action_message_action
+    label: 'Success message'
+    configuration:
+      message: 'The value "[value]" is contained in the list'
+      replace_tokens: true
+    successors: {  }
+  Activity_1e3h516:
+    plugin: action_message_action
+    label: 'Print value'
+    configuration:
+      message: 'Step [counter]: "[value]"'
+      replace_tokens: true
+    successors:
+      -
+        id: Activity_0ejcfgn
+        condition: Flow_02o8wqo
+      -
+        id: Activity_1rk59sk
+        condition: Flow_13987i7
+  Activity_1ydh8rg:
+    plugin: eca_token_set_value
+    label: 'Set value def'
+    configuration:
+      token_name: value
+      token_value: def
+      use_yaml: false
+    successors:
+      -
+        id: Gateway_0d9ssu4
+        condition: ''
+  Activity_1rk59sk:
+    plugin: action_message_action
+    label: 'Failure message'
+    configuration:
+      replace_tokens: false
+      message: 'NO - "[value]" is not there!!!'
+    successors: {  }
+  Activity_1qzm12r:
+    plugin: eca_token_set_value
+    label: 'Define the list'
+    configuration:
+      token_name: list
+      token_value: '|abc|xyz|mno|'
+      use_yaml: false
+    successors:
+      -
+        id: Activity_07d5x73
+        condition: ''
+      -
+        id: Activity_0s43zxs
+        condition: ''
+      -
+        id: Activity_1ydh8rg
+        condition: ''
+      -
+        id: Activity_0mwhugj
+        condition: ''
+      -
+        id: Activity_0nfy1oe
+        condition: ''
+  Activity_0mwhugj:
+    plugin: eca_token_set_value
+    label: 'Set value x'
+    configuration:
+      token_name: value
+      token_value: x
+      use_yaml: false
+    successors:
+      -
+        id: Gateway_0d9ssu4
+        condition: ''
+  Activity_0nfy1oe:
+    plugin: eca_token_set_value
+    label: 'Set value to mno'
+    configuration:
+      token_name: value
+      token_value: mno
+      use_yaml: false
+    successors:
+      -
+        id: Gateway_0d9ssu4
+        condition: ''
+  Activity_0x3bl20:
+    plugin: 'eca_tamper:math'
+    label: 'Increment counter'
+    configuration:
+      operation: addition
+      flip: false
+      value: '1'
+      eca_data: '[counter]'
+      eca_token_name: counter
+    successors:
+      -
+        id: Activity_1e3h516
+        condition: ''
+  Activity_13duhrl:
+    plugin: eca_token_set_value
+    label: 'Initialize counter'
+    configuration:
+      token_name: counter
+      token_value: '0'
+      use_yaml: false
+    successors:
+      -
+        id: Activity_1qzm12r
+        condition: ''

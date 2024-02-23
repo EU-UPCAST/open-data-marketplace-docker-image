@@ -1,0 +1,11 @@
+uuid: a0a1c0fa-60ed-4628-8e85-e2bc2f09d09a
+langcode: el
+status: true
+dependencies: {  }
+name: 'Data exchange request'
+type: data_exchange_request
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

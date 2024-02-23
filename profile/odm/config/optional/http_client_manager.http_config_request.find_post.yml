@@ -1,0 +1,17 @@
+uuid: 8784103e-4053-41e5-8b73-79ffa89c0c10
+langcode: el
+status: true
+dependencies:
+  module:
+    - http_client_manager_example
+  enforced:
+    module:
+      - http_client_manager_example
+_core:
+  default_config_hash: aZU068DB_fS-cnZ37Ci_1XvLtW83tvy_yjNtwopNZ4s
+id: find_post
+label: 'Find post'
+service_api: example_services
+command_name: FindPost
+parameters:
+  postId: '1'

@@ -1,0 +1,24 @@
+uuid: 76fdb323-bb61-4cb8-b0d7-686f5de91c84
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.data_processing_workflow
+  module:
+    - text
+id: node.data_processing_workflow.body
+field_name: body
+entity_type: node
+bundle: data_processing_workflow
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

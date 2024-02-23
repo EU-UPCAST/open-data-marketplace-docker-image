@@ -1,0 +1,29 @@
+uuid: 9cbf11fc-44f9-4f06-a0c6-fc9ac4c88c49
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_preview_image
+    - media.type.preview_image_type
+id: commerce_product.dataset.field_preview_image
+field_name: field_preview_image
+entity_type: commerce_product
+bundle: dataset
+label: 'preview image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      preview_image_type: preview_image_type
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

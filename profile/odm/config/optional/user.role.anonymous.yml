@@ -1,0 +1,20 @@
+uuid: a260480b-14a4-4efc-bac8-7915cad49890
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_checkout
+    - commerce_product
+    - media
+    - system
+_core:
+  default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
+id: anonymous
+label: 'Ανώνυμος χρήστης'
+weight: -9
+is_admin: false
+permissions:
+  - 'access checkout'
+  - 'access content'
+  - 'view commerce_product'
+  - 'view media'

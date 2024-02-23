@@ -1,0 +1,20 @@
+uuid: 7611a4b8-5472-44b0-9d1f-35af3467a9be
+langcode: el
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.field_consumer
+field_name: field_consumer
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

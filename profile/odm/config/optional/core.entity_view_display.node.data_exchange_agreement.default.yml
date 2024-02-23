@@ -1,0 +1,39 @@
+uuid: 94214335-302e-4146-9e8c-4f3aa3962ef4
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.field.node.data_exchange_agreement.body
+    - field.field.node.data_exchange_agreement.field_negotiation
+    - node.type.data_exchange_agreement
+  module:
+    - text
+    - user
+id: node.data_exchange_agreement.default
+targetEntityType: node
+bundle: data_exchange_agreement
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_negotiation:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

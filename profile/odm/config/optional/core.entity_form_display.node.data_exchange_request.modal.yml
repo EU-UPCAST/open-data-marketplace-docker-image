@@ -1,0 +1,65 @@
+uuid: db6f2737-7fca-4238-8e4b-5273c022e24b
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.modal
+    - field.field.node.data_exchange_request.body
+    - field.field.node.data_exchange_request.field_data_processing_workflow
+    - field.field.node.data_exchange_request.field_negotiation
+    - node.type.data_exchange_request
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: node.data_exchange_request.modal
+targetEntityType: node
+bundle: data_exchange_request
+mode: modal
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_data_processing_workflow:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_negotiation:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  moderation_state: true
+  path: true
+  promote: true
+  revision_log: true
+  status: true
+  sticky: true
+  title: true
+  uid: true

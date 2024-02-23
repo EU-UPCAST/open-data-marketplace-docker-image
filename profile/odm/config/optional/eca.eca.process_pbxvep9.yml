@@ -1,0 +1,156 @@
+uuid: b4c38460-6146-4f6e-8329-2c7fe03f055c
+langcode: el
+status: true
+dependencies:
+  module:
+    - eca_base
+    - eca_form
+id: process_pbxvep9
+modeller: bpmn_io
+label: 'Negotiation creation process'
+version: ''
+weight: null
+events:
+  Event_14hrhmc:
+    plugin: 'form:form_build'
+    label: |
+      build negotiation form
+    configuration:
+      form_id: node-data-exchange-negotiation-form
+      entity_type_id: ''
+      bundle: ''
+      operation: ''
+    successors:
+      -
+        id: Activity_0gjzpgg
+        condition: ''
+      -
+        id: Activity_1c3d3uc
+        condition: ''
+      -
+        id: Activity_1g3pwjo
+        condition: ''
+      -
+        id: Activity_1kn3lpt
+        condition: ''
+      -
+        id: Activity_1111a0j
+        condition: ''
+conditions:
+  Flow_0kykb35:
+    plugin: eca_token_exists
+    configuration:
+      negate: false
+      token_name: 'current-page:query:title'
+  Flow_079kh71:
+    plugin: eca_token_exists
+    configuration:
+      negate: false
+      token_name: 'current-page:query:product'
+  Flow_0rpfr6n:
+    plugin: eca_token_exists
+    configuration:
+      negate: false
+      token_name: 'current-page:query:dd'
+gateways: {  }
+actions:
+  Activity_0gjzpgg:
+    plugin: eca_form_field_default_value
+    label: 'default title'
+    configuration:
+      value: '[current-page:query:title]'
+      field_name: title
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_1k5ge7q
+        condition: Flow_0kykb35
+  Activity_1k5ge7q:
+    plugin: eca_form_field_disable
+    label: 'lock title'
+    configuration:
+      flag: true
+      field_name: title
+    successors: {  }
+  Activity_1c3d3uc:
+    plugin: eca_form_field_default_value
+    label: 'default product'
+    configuration:
+      value: '[current-page:query:product]'
+      field_name: field_product
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_14ylcg5
+        condition: Flow_079kh71
+  Activity_14ylcg5:
+    plugin: eca_form_field_disable
+    label: 'lock product'
+    configuration:
+      flag: true
+      field_name: field_product
+    successors: {  }
+  Activity_1g3pwjo:
+    plugin: eca_form_field_default_value
+    label: 'default data definition'
+    configuration:
+      value: '[current-page:query:dd]'
+      field_name: field_data_definition
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_1m6z6ib
+        condition: Flow_0rpfr6n
+  Activity_1m6z6ib:
+    plugin: eca_form_field_disable
+    label: 'lock data definition'
+    configuration:
+      flag: true
+      field_name: field_data_definition
+    successors: {  }
+  Activity_1kn3lpt:
+    plugin: eca_form_field_default_value
+    label: 'default consumer'
+    configuration:
+      value: '[current-page:query:consumer]'
+      field_name: field_consumer
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_1m977j9
+        condition: ''
+  Activity_1111a0j:
+    plugin: eca_form_field_default_value
+    label: 'default provider'
+    configuration:
+      value: '[current-page:query:provider]'
+      field_name: field_provider
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_1vpvm6q
+        condition: ''
+  Activity_1m977j9:
+    plugin: eca_form_field_disable
+    label: 'lock consumer'
+    configuration:
+      flag: true
+      field_name: field_consumer
+    successors: {  }
+  Activity_1vpvm6q:
+    plugin: eca_form_field_disable
+    label: 'lock provider'
+    configuration:
+      flag: true
+      field_name: field_provider
+    successors: {  }

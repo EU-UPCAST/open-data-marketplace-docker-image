@@ -1,0 +1,24 @@
+uuid: 9099a269-d919-4cbe-8aac-69601c260e16
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.data_exchange_agreement
+  module:
+    - text
+id: node.data_exchange_agreement.body
+field_name: body
+entity_type: node
+bundle: data_exchange_agreement
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

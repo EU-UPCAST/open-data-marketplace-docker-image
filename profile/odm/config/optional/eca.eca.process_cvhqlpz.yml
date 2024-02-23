@@ -1,0 +1,242 @@
+uuid: dc91f339-4565-4b1e-894f-77bb42922be4
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.negotiated_dataset_purchase_item
+    - commerce_order.commerce_order_type.dataset_purchase_negotiation
+    - node.type.data_exchange_offer
+  module:
+    - eca_base
+    - eca_content
+    - eca_form
+id: process_cvhqlpz
+modeller: bpmn_io
+label: 'Provider offer creation process'
+version: ''
+weight: null
+events:
+  Event_14hrhmc:
+    plugin: 'form:form_build'
+    label: |
+      Exchange offer build form
+    configuration:
+      form_id: node-data-exchange-offer-form
+      entity_type_id: ''
+      bundle: ''
+      operation: ''
+    successors:
+      -
+        id: Activity_0gjzpgg
+        condition: ''
+      -
+        id: Activity_1c3d3uc
+        condition: ''
+  Event_12yhxy8:
+    plugin: 'form:form_submit'
+    label: 'New data exchange form submit'
+    configuration:
+      form_id: node-data-exchange-offer-form
+      entity_type_id: ''
+      bundle: ''
+      operation: default
+    successors:
+      -
+        id: Activity_0v7dtp7
+        condition: Flow_0xw9v94
+  Event_1lqosbv:
+    plugin: 'content_entity:insert'
+    label: Event_1lqosbv
+    configuration:
+      type: 'node data_exchange_offer'
+    successors:
+      -
+        id: Activity_0llv8f9
+        condition: ''
+conditions:
+  Flow_0kykb35:
+    plugin: eca_token_exists
+    configuration:
+      negate: false
+      token_name: 'current-page:query:title'
+  Flow_079kh71:
+    plugin: eca_token_exists
+    configuration:
+      negate: false
+      token_name: 'current-page:query:negotiation'
+  Flow_0xw9v94:
+    plugin: eca_token_exists
+    configuration:
+      negate: false
+      token_name: 'current-page:query:redirect'
+gateways: {  }
+actions:
+  Activity_0gjzpgg:
+    plugin: eca_form_field_default_value
+    label: |
+      Set title from query
+    configuration:
+      value: '[current-page:query:title]'
+      field_name: title
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_1k5ge7q
+        condition: Flow_0kykb35
+  Activity_1k5ge7q:
+    plugin: eca_form_field_disable
+    label: 'Lock the title field'
+    configuration:
+      flag: true
+      field_name: title
+    successors: {  }
+  Activity_1c3d3uc:
+    plugin: eca_form_field_default_value
+    label: 'Set negotiation from query'
+    configuration:
+      value: '[current-page:query:negotiation]'
+      field_name: field_negotiation
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_14ylcg5
+        condition: Flow_079kh71
+  Activity_14ylcg5:
+    plugin: eca_form_field_disable
+    label: 'Lock the negotiation field'
+    configuration:
+      flag: true
+      field_name: field_negotiation
+    successors: {  }
+  Activity_0v7dtp7:
+    plugin: eca_form_state_set_redirect
+    label: 'redirect to negotiation'
+    configuration:
+      destination: '[current-page:query:redirect]'
+    successors: {  }
+  Activity_1k0ag45:
+    plugin: eca_new_entity
+    label: Activity_1k0ag45
+    configuration:
+      token_name: order_item
+      type: 'commerce_order_item negotiated_dataset_purchase_item'
+      langcode: ''
+      label: ''
+      published: true
+      owner: '2'
+    successors:
+      -
+        id: Activity_12xhi4x
+        condition: ''
+  Activity_1gfqmpu:
+    plugin: eca_set_field_value
+    label: Activity_1gfqmpu
+    configuration:
+      field_name: purchased_entity
+      field_value: '1'
+      method: 'set:clear'
+      strip_tags: false
+      trim: false
+      save_entity: true
+      object: order_item
+    successors:
+      -
+        id: Activity_1b058id
+        condition: ''
+  Activity_0llv8f9:
+    plugin: eca_new_entity
+    label: Activity_0llv8f9
+    configuration:
+      token_name: order
+      type: 'commerce_order dataset_purchase_negotiation'
+      langcode: ''
+      label: ''
+      published: true
+      owner: '2'
+    successors:
+      -
+        id: Activity_0uv6ly7
+        condition: ''
+  Activity_1b058id:
+    plugin: eca_set_field_value
+    label: Activity_1b058id
+    configuration:
+      field_name: order_id
+      field_value: '[order]'
+      method: 'set:clear'
+      strip_tags: false
+      trim: false
+      save_entity: true
+      object: order_item
+    successors:
+      -
+        id: Activity_1jb6d6w
+        condition: ''
+  Activity_0uv6ly7:
+    plugin: eca_save_entity
+    label: Activity_0uv6ly7
+    configuration:
+      object: order
+    successors:
+      -
+        id: Activity_1r5ottk
+        condition: ''
+  Activity_12xhi4x:
+    plugin: eca_save_entity
+    label: Activity_12xhi4x
+    configuration:
+      object: order_item
+    successors:
+      -
+        id: Activity_1gfqmpu
+        condition: ''
+      -
+        id: Activity_08emem7
+        condition: ''
+  Activity_08emem7:
+    plugin: eca_warning_message
+    label: Activity_08emem7
+    configuration:
+      replace_tokens: false
+      message: '[order_item]'
+    successors: {  }
+  Activity_1r5ottk:
+    plugin: eca_set_field_value
+    label: Activity_1r5ottk
+    configuration:
+      field_name: store_id
+      field_value: '1'
+      method: 'set:clear'
+      strip_tags: false
+      trim: false
+      save_entity: true
+      object: order
+    successors:
+      -
+        id: Activity_1k0ag45
+        condition: ''
+  Activity_0esui4f:
+    plugin: eca_save_entity
+    label: Activity_0esui4f
+    configuration:
+      object: order
+    successors: {  }
+  Activity_1jb6d6w:
+    plugin: eca_set_field_value
+    label: Activity_1jb6d6w
+    configuration:
+      field_name: order_items
+      field_value: '[order_item]'
+      method: 'set:clear'
+      strip_tags: false
+      trim: false
+      save_entity: false
+      object: order
+    successors:
+      -
+        id: Activity_0esui4f
+        condition: ''

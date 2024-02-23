@@ -1,0 +1,34 @@
+uuid: 3a999dbb-ee23-4682-8869-d73d1dd3d37c
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.data_exchange_agreement.body
+    - field.field.node.data_exchange_agreement.field_negotiation
+    - node.type.data_exchange_agreement
+  module:
+    - text
+    - user
+id: node.data_exchange_agreement.teaser
+targetEntityType: node
+bundle: data_exchange_agreement
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_negotiation: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,11 @@
+uuid: 60f62419-9911-4b32-bb4c-db7d6aef55cb
+langcode: el
+status: true
+dependencies: {  }
+name: 'Data exchange agreement'
+type: data_exchange_agreement
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

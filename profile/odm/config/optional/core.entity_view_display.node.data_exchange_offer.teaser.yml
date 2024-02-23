@@ -1,0 +1,36 @@
+uuid: 9c04c9bb-2372-4bd9-86b1-423711449ac8
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.data_exchange_offer.body
+    - field.field.node.data_exchange_offer.field_negotiation
+    - field.field.node.data_exchange_offer.field_variation
+    - node.type.data_exchange_offer
+  module:
+    - text
+    - user
+id: node.data_exchange_offer.teaser
+targetEntityType: node
+bundle: data_exchange_offer
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_negotiation: true
+  field_variation: true
+  langcode: true
+  search_api_excerpt: true

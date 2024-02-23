@@ -1,0 +1,33 @@
+uuid: 8f59facd-0ff1-4335-a28f-9e4655f9f448
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.field.media.preview_image_type.field_media_image
+    - image.style.large
+    - media.type.preview_image_type
+  module:
+    - image
+id: media.preview_image_type.default
+targetEntityType: media
+bundle: preview_image_type
+mode: default
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

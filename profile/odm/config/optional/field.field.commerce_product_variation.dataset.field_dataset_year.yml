@@ -1,0 +1,23 @@
+uuid: 0a403d5a-5775-480f-b58c-27544008d39c
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.dataset
+    - field.storage.commerce_product_variation.field_dataset_year
+id: commerce_product_variation.dataset.field_dataset_year
+field_name: field_dataset_year
+entity_type: commerce_product_variation
+bundle: dataset
+label: 'dataset year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

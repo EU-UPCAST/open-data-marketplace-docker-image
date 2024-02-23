@@ -1,0 +1,11 @@
+uuid: 543caf92-f4cf-4e81-8ced-244a2d22b69a
+langcode: el
+status: true
+dependencies: {  }
+name: 'Data processing workflow'
+type: data_processing_workflow
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

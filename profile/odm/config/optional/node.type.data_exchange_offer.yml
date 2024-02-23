@@ -1,0 +1,11 @@
+uuid: 33ff0d60-8820-4ad9-b583-60f70832e652
+langcode: el
+status: true
+dependencies: {  }
+name: 'Data exchange offer'
+type: data_exchange_offer
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

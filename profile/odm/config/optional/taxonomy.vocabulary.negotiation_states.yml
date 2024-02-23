@@ -1,0 +1,8 @@
+uuid: f8b30890-a2af-4d85-a897-cd5e5b5b3567
+langcode: und
+status: true
+dependencies: {  }
+name: 'Negotiation states'
+vid: negotiation_states
+description: ''
+weight: 0

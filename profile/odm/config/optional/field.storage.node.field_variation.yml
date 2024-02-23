@@ -1,0 +1,20 @@
+uuid: a7b97ed2-3569-401a-8ee8-69ad8de611e7
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - node
+id: node.field_variation
+field_name: field_variation
+entity_type: node
+type: entity_reference
+settings:
+  target_type: commerce_product_variation
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,33 @@
+uuid: 7f80354a-857d-44f6-9fba-7a05776f825f
+langcode: el
+status: true
+dependencies:
+  config:
+    - views.view.dataset_products
+  module:
+    - commerce_product
+    - views
+  theme:
+    - xara
+id: xara_views_block__dataset_products_block_2
+theme: xara
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:dataset_products-block_2'
+settings:
+  id: 'views_block:dataset_products-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:commerce_product':
+    id: 'entity_bundle:commerce_product'
+    negate: false
+    context_mapping:
+      commerce_product: '@commerce_product.product_route_context:commerce_product'
+    bundles:
+      dataset: dataset

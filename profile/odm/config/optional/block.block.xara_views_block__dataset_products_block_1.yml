@@ -1,0 +1,29 @@
+uuid: fe52e687-8a2a-460c-b077-897cdae68119
+langcode: el
+status: true
+dependencies:
+  config:
+    - views.view.dataset_products
+  module:
+    - system
+    - views
+  theme:
+    - xara
+id: xara_views_block__dataset_products_block_1
+theme: xara
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:dataset_products-block_1'
+settings:
+  id: 'views_block:dataset_products-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

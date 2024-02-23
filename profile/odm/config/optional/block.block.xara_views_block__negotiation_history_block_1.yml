@@ -1,0 +1,33 @@
+uuid: 92dc8b43-d826-4261-9806-3bb7e654c5ab
+langcode: el
+status: true
+dependencies:
+  config:
+    - views.view.negotiation_history
+  module:
+    - node
+    - views
+  theme:
+    - xara
+id: xara_views_block__negotiation_history_block_1
+theme: xara
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:negotiation_history-block_1'
+settings:
+  id: 'views_block:negotiation_history-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      data_exchange_negotiation: data_exchange_negotiation

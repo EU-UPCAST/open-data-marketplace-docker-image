@@ -1,0 +1,29 @@
+uuid: 922a05ae-03e1-4521-b112-f98b2cad3d47
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_processing_workflow
+    - node.type.data_exchange_negotiation
+    - node.type.data_processing_workflow
+id: node.data_exchange_negotiation.field_data_processing_workflow
+field_name: field_data_processing_workflow
+entity_type: node
+bundle: data_exchange_negotiation
+label: 'Negotiated data processing workflow'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      data_processing_workflow: data_processing_workflow
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

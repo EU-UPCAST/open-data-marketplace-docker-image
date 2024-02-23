@@ -1,0 +1,29 @@
+uuid: a207ef36-299a-406a-80e9-6556ffbd7222
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consumer_agreement
+    - node.type.data_exchange_agreement
+    - node.type.data_exchange_negotiation
+id: node.data_exchange_negotiation.field_consumer_agreement
+field_name: field_consumer_agreement
+entity_type: node
+bundle: data_exchange_negotiation
+label: consumer_agreement
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      data_exchange_agreement: data_exchange_agreement
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

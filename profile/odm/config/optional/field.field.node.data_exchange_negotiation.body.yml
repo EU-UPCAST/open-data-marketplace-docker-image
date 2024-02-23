@@ -1,0 +1,26 @@
+uuid: 73d175f6-946c-4e8e-be2a-c1614b4f1344
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.plain_text
+    - node.type.data_exchange_negotiation
+  module:
+    - text
+id: node.data_exchange_negotiation.body
+field_name: body
+entity_type: node
+bundle: data_exchange_negotiation
+label: 'Negotiation topic'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - plain_text
+field_type: text_with_summary

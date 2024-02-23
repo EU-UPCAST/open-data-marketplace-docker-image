@@ -1,0 +1,51 @@
+uuid: 6113aa74-5134-4f90-b5e2-16b1bbf73be9
+langcode: el
+status: true
+dependencies:
+  config:
+    - filter.format.text_with_material_icons
+    - node.type.data
+    - node.type.data_exchange_negotiation
+    - node.type.data_exchange_offer
+    - node.type.data_exchange_request
+    - node.type.data_processing_workflow
+  module:
+    - commerce_checkout
+    - commerce_order
+    - commerce_payment
+    - commerce_product
+    - filter
+    - form_mode_control
+    - media
+    - node
+    - system
+    - toolbar
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Πιστοποιημένος χρήστης'
+weight: -8
+is_admin: false
+permissions:
+  - 'access checkout'
+  - 'access content'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'create data content'
+  - 'create data_exchange_negotiation content'
+  - 'create data_exchange_offer content'
+  - 'create data_exchange_request content'
+  - 'create data_processing_workflow content'
+  - 'delete any data_exchange_offer content'
+  - 'delete any data_exchange_request content'
+  - 'delete any data_processing_workflow content'
+  - 'manage own commerce_payment_method'
+  - 'use  The form mode modal linked to  node entity( data_exchange_negotiation )'
+  - 'use  The form mode modal linked to  node entity( data_exchange_offer )'
+  - 'use  The form mode modal linked to  node entity( data_exchange_request )'
+  - 'use text format text_with_material_icons'
+  - 'view commerce_product'
+  - 'view media'
+  - 'view own commerce_order'
+  - 'view own unpublished content'

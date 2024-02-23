@@ -1,0 +1,17 @@
+uuid: 71ef1657-63b3-4221-9ce0-470b8bcf6601
+langcode: el
+status: true
+dependencies: {  }
+name: 'Text with Material Icons'
+format: text_with_material_icons
+weight: -10
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: ''
+      filter_html_help: true
+      filter_html_nofollow: false
