@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
+langcode: el
+uuid: 25c61213-6c6b-40a6-9f46-d9599f553b6b
+name: 'SKG DataMarket by UPCAST'
+mail: larjohn@gmail.com
+slogan: ''
+page:
+  403: /node/88
+  404: /node/88
+  front: /node/88
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: el

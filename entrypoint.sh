@@ -30,7 +30,7 @@ file_env() {
 file_env 'DRUPAL_DB_HOST'
 file_env 'DRUPAL_DB_USER'
 file_env 'DRUPAL_DB_PASSWORD'
-file_env 'MYSQL_DATABASE'
+file_env 'DRUPAL_DATABASE'
 
 echo "$@"
 

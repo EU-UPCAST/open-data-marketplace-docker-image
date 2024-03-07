@@ -7,6 +7,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 COPY ./entrypoint.sh /opt/entrypoint.sh
 COPY ./wait-for-it.sh /opt/wait-for-it.sh
 COPY ./profile/odm /opt/odm
+COPY ./modules /opt/modules
 RUN <<EOF
 docker-php-ext-install bcmath
 
@@ -14,6 +15,7 @@ composer config minimum-stability dev
 composer config prefer-stable true
 
 composer config repositories.odm path ../odm
+composer config repositories.odm_modules path ../modules/*
 composer config repositories.assets composer https://asset-packagist.org
 composer config repositories.jsoneditor --json  '{"type":"package","package":{"name":"josdejong\/jsoneditor","version":"v5.29.1","type":"drupal-library","dist":{"url":"https:\/\/github.com\/josdejong\/jsoneditor\/archive\/v5.29.1.zip","type":"zip"},"source":{"url":"https:\/\/github.com\/josdejong\/jsoneditor","type":"git","reference":"v5.29.1"}}}'
 composer config repositories.jsonview --json  '{"type":"package","package":{"name":"yesmeck\/jquery-jsonview","version":"v1.2.3","type":"drupal-library","dist":{"url":"https:\/\/github.com\/yesmeck\/jquery-jsonview\/archive\/v1.2.3.zip","type":"zip"},"source":{"url":"https:\/\/github.com\/yesmeck\/jquery-jsonview","type":"git","reference":"v1.2.3"}}}'
@@ -37,7 +39,7 @@ if ! test -f /opt/drupal/web/sites/default/settings.php; then
  
  echo "
   \$databases['default']['default'] = array (
-    'database' => getenv('MYSQL_DATABASE'),
+    'database' => getenv('DRUPAL_DATABASE'),
     'username' => getenv('DRUPAL_DB_USER'),
     'password' => getenv('DRUPAL_DB_PASSWORD'),
     'prefix' => '',
@@ -59,13 +61,15 @@ if ! test -f /opt/drupal/web/sites/default/settings.php; then
 
   
   echo "\$settings['config_sync_directory'] = '/opt/config/sync';" >> /opt/drupal/web/sites/default/settings.php
+  echo "\$settings['extension_discovery_scan_tests'] = true;">> /opt/drupal/web/sites/default/settings.php
+
 fi
 
 chown -R  www-data:www-data /opt/drupal/web/sites/default
 
 
-chown -R www-data:www-data /opt/drupal/web/profiles/odm
-chmod -R 555 /opt/drupal/web/profiles/odm
+chown -R www-data:www-data /opt/drupal/web/profiles/contrib/odm
+chmod -R 555 /opt/drupal/web/profiles/contrib/odm
 
 mkdir -p /opt/config/sync
 chown -R www-data:www-data /opt/config/sync

@@ -1,0 +1,8 @@
+name: Open Data Marketplace
+description: Open Data Marketplace provides bootstrap content and configuration for Drupal Commerce to enable dataset exchange functionality.
+package: Commerce
+
+type: module
+core_version_requirement: ^10
+dependencies:
+  - pathauto

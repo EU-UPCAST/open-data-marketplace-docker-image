@@ -1,4 +1,0 @@
-<?php
-use Drupal\taxonomy\Entity\Vocabulary;
-use Drupal\taxonomy\Entity\Term;
-

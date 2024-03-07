@@ -24,7 +24,7 @@ distribution:
   #   theme: my_theme
   #   # To redirect to specific URL after profile installation set your finish_url: 
   #   finish_url: ?welcome=1
-  langcode: en
+  #langcode: en
 
 # Modules to install to support the profile.
 # Unlike dependencies, these can be uninstalled later.
@@ -143,7 +143,6 @@ install:
 - json_field_widget
 - material_icons
 - moderated_content_bulk_publish
-- pathauto
 - profile
 - search_api_db
 - search_api
@@ -163,6 +162,7 @@ dependencies:
   - node
   - block
   - views
+  - open_data_marketplace
 
 # List any themes that should be installed as part of the profile installation.
 # Note that this will not set any theme as the default theme.
