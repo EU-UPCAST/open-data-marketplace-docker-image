@@ -1,7 +1,7 @@
 name: Open Data Marketplace
 type: profile
-description: 'A profile to create a data marketplace with Drupal and other contributed plugins.'
-core_version_requirement: ^10
+description: 'A profile to build data marketplaces with Drupal and other contributed plugins.'
+core_version_requirement: ^10 || ^11
 
 # Optional: Declare your installation profile as a distribution
 # This will make the installer auto-select this installation profile.
@@ -24,150 +24,227 @@ distribution:
   #   theme: my_theme
   #   # To redirect to specific URL after profile installation set your finish_url: 
   #   finish_url: ?welcome=1
-  #langcode: en
+  langcode: en
 
 # Modules to install to support the profile.
 # Unlike dependencies, these can be uninstalled later.
 install:
-- automated_cron
-- basic_auth
-- big_pipe
-- block
-- block_content
-- breakpoint
-- ckeditor5
-- config
-- content_moderation
-- contextual
-- datetime
-- datetime_range
-- dblog
-- dynamic_page_cache
-- editor
-- field
-- field_layout
-- field_ui
-- file
-- filter
-- image
-- jsonapi
-- language
-- layout_builder
-- layout_discovery
-- link
-- locale
-- media
-- menu_link_content
-- menu_ui
-- mysql
-- node
-- options
-- page_cache
-- path
-- path_alias
-- rest
-- serialization
-- settings_tray
-- system
-- taxonomy
-- telephone
-- text
-- toolbar
-- update
-- user
-- views
-- views_ui
-- workflows
-- address
-- admin_toolbar
-- admin_toolbar_tools
-- allowed_formats
-- auto_entitylabel
-- backup_migrate
-- bamboo_twig
-- bamboo_twig_file
-- bamboo_twig_i18n
-- bamboo_twig_loader
-- bamboo_twig_path
-- bamboo_twig_security
-- bamboo_twig_token
-- bpmn_io
-- commerce
-- commerce_cart
-- commerce_checkout
-- commerce_number_pattern
-- commerce_order
-- commerce_payment
-- commerce_payment_example
-- commerce_price
-- commerce_product
-- commerce_store
-- commerce_checkout_order_fields
-- ctools
-- dkan
-- common
-- dkan_alt_api
-- datastore
-- datastore_mysql_import
-- dkan_js_frontend
-- frontend
-- harvest
-- json_form_widget
-- metastore
-- metastore_admin
-- metastore_search
-- eca
-- eca_base
-- eca_content
-- eca_form
-- eca_misc
-- eca_modeller_bpmn
-- eca_render
-- eca_ui
-- eca_user
-- eca_views
-- eca_commerce
-- eca_state_machine
-- eca_state_machine_example
-- eca_tamper
-- entity
-- entity_reference_revisions
-- facets
-- form_mode_control
-- gin_toolbar
-- hide_revision_field
-- http_client_manager
-- http_client_manager_example
-- inline_entity_form
-- json_field
-- json_field_widget
-- material_icons
-- moderated_content_bulk_publish
-- profile
-- search_api_db
-- search_api
-- select2
-- select_or_other
-- state_machine
-- tamper
-- token
-- twig_tweak
-- views_bulk_operations
-
-
+  - access_unpublished
+  - address
+  - admin_toolbar
+  - admin_toolbar_tools
+  - advancedqueue
+  - allowed_formats
+  - auto_entitylabel
+  - backup_migrate
+  - bamboo_twig
+  - bamboo_twig_file
+  - bamboo_twig_i18n
+  - bamboo_twig_loader
+  - bamboo_twig_path
+  - bamboo_twig_security
+  - bamboo_twig_token
+  - block_class
+  - bpmn_io
+  - captcha
+  - ckan_connect
+  - color
+  - color_field
+  - colorbox
+  - commerce
+  - commerce_cart
+  - commerce_checkout
+  - commerce_log
+  - commerce_number_pattern
+  - commerce_order
+  - commerce_payment
+  - commerce_payment_example
+  - commerce_price
+  - commerce_product
+  - commerce_promotion
+  - commerce_store
+  - commerce_cart_api
+  - commerce_cart_flyout
+  - commerce_checkout_order_fields
+  - commerce_feeds
+  - commerce_file
+  - commerce_license
+  - commerce_tokens
+  - commerce_variation_cart_form
+  - components
+  - consumers
+  - csv_importer
+  - ctools
+  - custom_field
+  - danse
+  - danse_content
+  - eca_danse
+  - devel
+  - devel_entity_updates
+  - ds
+  - ds_extras
+  - ds_switch_view_mode
+  - dvf
+  - dvf_ckan
+  - eca
+  - eca_base
+  - eca_content
+  - eca_form
+  - eca_misc
+  - eca_modeller_bpmn
+  - eca_render
+  - eca_ui
+  - eca_user
+  - eca_views
+  - eca_commerce
+  - eca_state_machine
+  - eca_state_machine_example
+  - eca_tamper
+  - entity
+  - entity_browser
+  - entity_browser_example
+  - entity_browser_entity_form
+  - entity_print
+  - entity_reference_revisions
+  - facets
+  - feeds
+  - feeds_tamper
+  - field_group
+  - form_mode_control
+  - geofield
+  - geofield_map
+  - geofield_map_extras
+  - gin_toolbar
+  - hide_revision_field
+  - http_client_manager
+  - http_client_manager_example
+  - inline_entity_form
+  - interval
+  - json_field
+  - json_field_widget
+  - json_ld_schema_ui
+  - json_table
+  - languagefield
+  - leaflet
+  - leaflet_views
+  - masonry
+  - masonry_views
+  - material_icons
+  - menu_export
+  - moderated_content_bulk_publish
+  - pathauto
+  - profile
+  - recaptcha
+  - redirect
+  - rip
+  - search_api_db
+  - search_api
+  - search_api_autocomplete
+  - facets_map_widget
+  - search_api_location_views
+  - search_api_location
+  - security_review
+  - select2
+  - select_or_other
+  - simple_oauth_static_scope
+  - simple_oauth
+  - simplify
+  - state_machine
+  - svg_image_field_media_bundle
+  - svg_image_field
+  - tamper
+  - taxonomy_delete
+  - taxonomy_facets
+  - taxonomy_import
+  - term_reference_tree
+  - themable_forms
+  - token
+  - twig_tweak
+  - twigsuggest
+  - vefl
+  - view_mode_page
+  - views_arg_entity_field
+  - views_argument_token
+  - views_bootstrap
+  - views_bulk_operations
+  - votingapi
+  - votingapi_reaction
+  - webform_access
+  - webform_bootstrap
+  - webform_devel
+  - webform_example_composite
+  - webform_example_custom_form
+  - webform_example_element
+  - webform_example_handler
+  - webform_example_remote_post
+  - webform_example_variant
+  - webform_examples
+  - webform_node
+  - webform_schema
+  - webform_templates
+  - webform
+  - odmsync
+  - odm_agree_terms
+  - odm_license_url
+  - odmblocks
 
 # Required modules. These cannot be uninstalled.
 # Note that any dependencies of the modules listed here will be installed automatically.
 dependencies:
-  - node
+  - automated_cron
+  - basic_auth
+  - big_pipe
   - block
+  - block_content
+  - breakpoint
+  - ckeditor5
+  - comment
+  - config
+  - content_moderation
+  - contextual
+  - datetime
+  - datetime_range
+  - dblog
+  - dynamic_page_cache
+  - editor
+  - field
+  - field_ui
+  - file
+  - filter
+  - help
+  - image
+  - jsonapi
+  - language
+  - layout_discovery
+  - link
+  - locale
+  - media
+  - menu_link_content
+  - menu_ui
+  - mysql
+  - node
+  - options
+  - page_cache
+  - path
+  - path_alias
+  - rest
+  - serialization
+  - settings_tray
+  - system
+  - taxonomy
+  - telephone
+  - text
+  - toolbar
+  - update
+  - user
   - views
-  - open_data_marketplace
+  - views_ui
+  - workflows
 
 # List any themes that should be installed as part of the profile installation.
 # Note that this will not set any theme as the default theme.
 themes:
-  - olivero
-  - claro
-  - xara
   - gin
+  - radix
+  - ct
+  - odmtheme

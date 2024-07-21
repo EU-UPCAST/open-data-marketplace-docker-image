@@ -3,6 +3,6 @@ description: Open Data Marketplace provides bootstrap content and configuration 
 package: Commerce
 
 type: module
-core_version_requirement: ^10
+core_version_requirement: ^10 || ^11
 dependencies:
   - pathauto

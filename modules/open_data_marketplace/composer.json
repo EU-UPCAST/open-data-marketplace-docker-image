@@ -1,21 +1,21 @@
 {
-    "name": "drupal/open_data_marketplace",
-    "description": "Open Data Marketplace module initializes the ODM platform.",
-    "type": "drupal-module",
-    "license": "GPL-2.0-or-later",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": {
-      "drupal": {
-          "type": "composer",
-          "url": "https://packages.drupal.org/8"
-      },
-      "asset": {
-          "type": "composer",
-          "url": "https://asset-packagist.org"
-      }
+  "name": "drupal/open_data_marketplace",
+  "description": "Open Data Marketplace module initializes the ODM platform.",
+  "type": "drupal-module",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
     },
-    "require": {
-      "drupal/pathauto":"^1.12"
+    "asset": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
     }
+  },
+  "require": {
+    "drupal/pathauto": "^1.12"
   }
+}
