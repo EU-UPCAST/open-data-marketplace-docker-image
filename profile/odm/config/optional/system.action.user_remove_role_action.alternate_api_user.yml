@@ -1,0 +1,14 @@
+uuid: b9599db4-bbf5-41e4-a25c-f03ca30a9e34
+langcode: el
+status: true
+dependencies:
+  config:
+    - user.role.alternate_api_user
+  module:
+    - user
+id: user_remove_role_action.alternate_api_user
+label: 'Remove the Alternate API user role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: alternate_api_user

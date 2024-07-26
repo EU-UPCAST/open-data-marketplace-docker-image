@@ -9,14 +9,7 @@ dependencies:
     - field.field.node.data_exchange_request.field_negotiation
     - node.type.data_exchange_request
   module:
-    - field_layout
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: node.data_exchange_request.modal
 targetEntityType: node
 bundle: data_exchange_request
@@ -52,6 +45,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   langcode: true
@@ -63,3 +61,4 @@ hidden:
   sticky: true
   title: true
   uid: true
+  uuid: true

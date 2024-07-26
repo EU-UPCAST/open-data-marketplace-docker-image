@@ -1,0 +1,7 @@
+uuid: 3f4efa79-87ee-4aba-98b4-158806336539
+langcode: el
+status: false
+dependencies: {  }
+formId: node_rights_statment_form
+captchaType: default
+label: node_rights_statment_form

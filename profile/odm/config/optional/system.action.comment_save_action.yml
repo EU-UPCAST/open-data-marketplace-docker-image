@@ -1,0 +1,13 @@
+uuid: e7951aba-817d-4fd9-99c7-0dbc6af19f3d
+langcode: el
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: lfyE_snmvfg_EQ3VDyhUtGAXgmqtEiqa46I3bTMg8DU
+id: comment_save_action
+label: 'Αποθήκευση σχολίου'
+type: comment
+plugin: 'entity:save_action:comment'
+configuration: {  }

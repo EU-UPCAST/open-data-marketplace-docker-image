@@ -1,0 +1,20 @@
+uuid: a8868b9a-84ee-4f90-9fca-0b9ed4dede05
+langcode: el
+status: true
+dependencies:
+  module:
+    - color_field
+    - commerce_store
+id: commerce_store.field_color
+field_name: field_color
+entity_type: commerce_store
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

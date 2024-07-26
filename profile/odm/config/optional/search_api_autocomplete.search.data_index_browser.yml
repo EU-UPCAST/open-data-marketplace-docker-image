@@ -1,0 +1,29 @@
+uuid: 3f0f3f3a-4776-433b-8004-83e65b23002a
+langcode: el
+status: true
+dependencies:
+  config:
+    - search_api.index.datasets_index
+    - views.view.data_index_browser
+  module:
+    - views
+    - search_api_autocomplete
+id: data_index_browser
+label: 'Data index browser'
+index_id: datasets_index
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:data_index_browser':
+    displays:
+      default: true
+      selected: {  }
+options: {  }

@@ -1,0 +1,28 @@
+uuid: 4f7885bf-3708-478d-a18c-3b8e5b677644
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_licensed_files
+    - node.type.consumer_application
+id: node.consumer_application.field_licensed_files
+field_name: field_licensed_files
+entity_type: node
+bundle: consumer_application
+label: 'Included datasets'
+description: "These datasets are in the RDF Data Cube format and can be included in your application's Docker image. Please select the datasets you want to include."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_license'
+  handler_settings:
+    target_bundles:
+      commerce_file: commerce_file
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: url
+field_type: entity_reference

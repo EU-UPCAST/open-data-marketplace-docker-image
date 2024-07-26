@@ -1,0 +1,11 @@
+uuid: 4112f6ca-0f50-46cc-8f7e-7f9ddd523384
+langcode: el
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.negotiation_states
+id: taxonomy_term.negotiation_states
+target_entity_type_id: taxonomy_term
+target_bundle: negotiation_states
+default_langcode: und
+language_alterable: false

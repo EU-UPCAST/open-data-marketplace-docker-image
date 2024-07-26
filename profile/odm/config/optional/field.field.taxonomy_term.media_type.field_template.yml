@@ -1,0 +1,19 @@
+uuid: 10a9f5f4-7c91-4f99-a6d0-645b7ad03d84
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_template
+    - taxonomy.vocabulary.media_type
+id: taxonomy_term.media_type.field_template
+field_name: field_template
+entity_type: taxonomy_term
+bundle: media_type
+label: template
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

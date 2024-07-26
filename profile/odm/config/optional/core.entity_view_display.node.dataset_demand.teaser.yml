@@ -1,0 +1,38 @@
+uuid: 0c3dcb50-be54-46b2-b172-26b02bb5fcc9
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dataset_demand.body
+    - field.field.node.dataset_demand.field_provider_store
+    - field.field.node.dataset_demand.field_reactions
+    - node.type.dataset_demand
+  module:
+    - text
+    - user
+id: node.dataset_demand.teaser
+targetEntityType: node
+bundle: dataset_demand
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  danse_subscribe: true
+  field_provider_store: true
+  field_reactions: true
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

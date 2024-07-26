@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: 1uOyyqrRapCqlEtFdd4bpuDrmke-qkgpVJvb6OqoQ4I
+schema:
+  base_uri: 'https://schema.org'
+  sources:
+    - 'https://schema.org/version/latest/schemaorg-current-https.jsonld'

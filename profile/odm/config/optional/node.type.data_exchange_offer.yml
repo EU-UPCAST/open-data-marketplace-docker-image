@@ -4,8 +4,8 @@ status: true
 dependencies: {  }
 name: 'Data exchange offer'
 type: data_exchange_offer
-description: ''
-help: ''
+description: null
+help: null
 new_revision: false
 preview_mode: 0
 display_submitted: true

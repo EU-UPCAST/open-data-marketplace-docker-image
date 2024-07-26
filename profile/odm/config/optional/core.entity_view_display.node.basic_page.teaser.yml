@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_buzzword
+    - field.field.node.basic_page.field_featured_image
     - node.type.basic_page
   module:
     - text
@@ -28,5 +30,11 @@ content:
     weight: 100
     region: content
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_buzzword: true
+  field_featured_image: true
   langcode: true
   search_api_excerpt: true
+  uuid: true

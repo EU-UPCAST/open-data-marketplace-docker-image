@@ -1,0 +1,20 @@
+uuid: 2bce579e-2004-4dac-9703-98a4f9303766
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - taxonomy
+id: commerce_product_variation.field_package_format
+field_name: field_package_format
+entity_type: commerce_product_variation
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

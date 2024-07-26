@@ -1,0 +1,29 @@
+uuid: d827c73b-dda2-4bd9-9bac-e01392da90b6
+langcode: el
+status: true
+dependencies:
+  config:
+    - facets.facet.subtheme
+  module:
+    - facets
+    - system
+  theme:
+    - odmtheme
+id: odmtheme_subtheme
+theme: odmtheme
+region: content
+weight: -5
+provider: null
+plugin: 'facet_block:subtheme'
+settings:
+  id: 'facet_block:subtheme'
+  label: subtheme
+  label_display: '0'
+  provider: facets
+  context_mapping: {  }
+  block_id: odmtheme_subtheme
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /theme_browse

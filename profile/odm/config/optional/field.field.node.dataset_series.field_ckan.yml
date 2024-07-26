@@ -1,0 +1,23 @@
+uuid: 7ce9043a-5a21-44f8-810d-95ff783629a2
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ckan
+    - node.type.dataset_series
+  module:
+    - dvf
+id: node.dataset_series.field_ckan
+field_name: field_ckan
+entity_type: node
+bundle: dataset_series
+label: ckan
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  visualisation_source: dvf_ckan_resource
+  visualisation_source_options: {  }
+field_type: dvf_url

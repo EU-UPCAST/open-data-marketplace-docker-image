@@ -1,0 +1,22 @@
+uuid: f25c1be2-160f-4305-a500-8a484a099e04
+langcode: el
+status: true
+dependencies:
+  theme:
+    - radix
+_core:
+  default_config_hash: ave7f2EIV8te1RvQeVa42yOn70D0sfJn2psVzrCgIPI
+id: radix_local_tasks
+theme: radix
+region: content
+weight: -9
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Καρτέλες
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

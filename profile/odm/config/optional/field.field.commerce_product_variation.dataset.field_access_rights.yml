@@ -1,0 +1,29 @@
+uuid: d55530ba-a9b6-4ad9-bdd7-fb9b08eefd9d
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.dataset
+    - field.storage.commerce_product_variation.field_access_rights
+    - node.type.rights_statment
+id: commerce_product_variation.dataset.field_access_rights
+field_name: field_access_rights
+entity_type: commerce_product_variation
+bundle: dataset
+label: 'access rights'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      rights_statment: rights_statment
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

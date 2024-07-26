@@ -1,0 +1,11 @@
+uuid: 0cd33ab9-eff4-4bc6-90fc-5e84efa9334f
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.data_exchange_request
+id: node.data_exchange_request
+target_entity_type_id: node
+target_bundle: data_exchange_request
+default_langcode: site_default
+language_alterable: false

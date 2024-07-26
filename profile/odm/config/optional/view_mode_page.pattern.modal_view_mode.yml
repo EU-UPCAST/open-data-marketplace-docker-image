@@ -1,0 +1,25 @@
+uuid: f7c38b04-40a6-4d7a-8d6b-4787d6e6c4be
+langcode: el
+status: true
+dependencies:
+  module:
+    - node
+id: modal_view_mode
+label: 'modal view mode'
+type: 'canonical_entities:node'
+pattern: '%/modal'
+view_mode: modal
+selection_criteria:
+  ba1c8dad-807d-43bb-8e69-adec24524c6b:
+    id: 'entity_bundle:node'
+    bundles:
+      license_document: license_document
+      policy: policy
+      rights_statment: rights_statment
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ba1c8dad-807d-43bb-8e69-adec24524c6b
+selection_logic: and
+weight: -5
+relationships: {  }

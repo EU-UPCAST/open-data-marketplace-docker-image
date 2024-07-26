@@ -1,0 +1,25 @@
+uuid: a2da8ef5-5d99-4b0e-aa84-f141f8d43eec
+langcode: el
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - odmtheme
+id: odmtheme_menoylogariasmoyhristi
+theme: odmtheme
+region: navbar_right
+weight: 0
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Μενού λογαριασμού χρήστη'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

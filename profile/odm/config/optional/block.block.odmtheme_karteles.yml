@@ -1,0 +1,26 @@
+uuid: 85baf4bd-e663-4241-98fe-2d292ad349d2
+langcode: el
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - odmtheme
+id: odmtheme_karteles
+theme: odmtheme
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Καρτέλες
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

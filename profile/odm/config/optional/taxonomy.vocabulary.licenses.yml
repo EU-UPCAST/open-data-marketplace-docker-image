@@ -1,0 +1,9 @@
+uuid: 748bcef8-dd6f-4f78-9979-5a12a2681abc
+langcode: el
+status: true
+dependencies: {  }
+name: 'License Components'
+vid: licenses
+description: null
+weight: 0
+new_revision: false

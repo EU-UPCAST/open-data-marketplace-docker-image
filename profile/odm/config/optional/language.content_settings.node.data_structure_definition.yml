@@ -1,0 +1,11 @@
+uuid: adc85ad2-929b-468e-ba61-c65e643c4937
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.data_structure_definition
+id: node.data_structure_definition
+target_entity_type_id: node
+target_bundle: data_structure_definition
+default_langcode: site_default
+language_alterable: false

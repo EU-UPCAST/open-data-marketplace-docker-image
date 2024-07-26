@@ -4,22 +4,167 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_variation_type.dataset
-    - field.field.commerce_product_variation.dataset.field_dataset_year
+    - field.field.commerce_product_variation.dataset.commerce_file
+    - field.field.commerce_product_variation.dataset.field_access_rights
+    - field.field.commerce_product_variation.dataset.field_byte_size
+    - field.field.commerce_product_variation.dataset.field_checksum
+    - field.field.commerce_product_variation.dataset.field_compress_format
+    - field.field.commerce_product_variation.dataset.field_conforms_to
+    - field.field.commerce_product_variation.dataset.field_data_structure_definition
+    - field.field.commerce_product_variation.dataset.field_description
+    - field.field.commerce_product_variation.dataset.field_format
+    - field.field.commerce_product_variation.dataset.field_has_policy
+    - field.field.commerce_product_variation.dataset.field_issued
+    - field.field.commerce_product_variation.dataset.field_license
+    - field.field.commerce_product_variation.dataset.field_media_type
+    - field.field.commerce_product_variation.dataset.field_package_format
+    - field.field.commerce_product_variation.dataset.field_rights
+    - field.field.commerce_product_variation.dataset.field_spatial_resolution_in_mete
+    - field.field.commerce_product_variation.dataset.field_temporal_resolution
+    - field.field.commerce_product_variation.dataset.license_expiration
+    - field.field.commerce_product_variation.dataset.license_type
   module:
     - commerce_price
+    - custom_field
+    - datetime
+    - file
+    - interval
+    - text
 id: commerce_product_variation.dataset.default
 targetEntityType: commerce_product_variation
 bundle: dataset
 mode: default
 content:
-  field_dataset_year:
+  field_access_rights:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_byte_size:
     type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 1
+    weight: 4
+    region: content
+  field_checksum:
+    type: custom_formatter
+    label: above
+    settings:
+      fields: {  }
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_compress_format:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_conforms_to:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_data_structure_definition:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_format:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_has_policy:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_issued:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_license:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_media_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_package_format:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_rights:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_spatial_resolution_in_mete:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_temporal_resolution:
+    type: interval_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
     region: content
   list_price:
     type: commerce_price_default
@@ -28,20 +173,27 @@ content:
       strip_trailing_zeroes: false
       currency_display: symbol
     third_party_settings: {  }
-    weight: -1
+    weight: 1
     region: content
-  price:
-    type: commerce_price_default
+  product_id:
+    type: entity_reference_label
     label: above
     settings:
-      strip_trailing_zeroes: false
-      currency_display: symbol
+      link: true
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
+  commerce_file: true
+  commerce_variation_cart_form: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   langcode: true
-  product_id: true
+  license_expiration: true
+  license_type: true
+  price: true
   search_api_excerpt: true
   sku: true
   title: true
+  uuid: true

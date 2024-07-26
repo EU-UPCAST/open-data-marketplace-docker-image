@@ -1,0 +1,19 @@
+uuid: de26e85a-ead7-44ed-9f57-1fc62f9d8433
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - json_table
+id: commerce_product.field_json_sample
+field_name: field_json_sample
+entity_type: commerce_product
+type: json
+settings: {  }
+module: json_table
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

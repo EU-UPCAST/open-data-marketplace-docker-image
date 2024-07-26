@@ -1,0 +1,23 @@
+uuid: ebfce154-ecd8-4306-b76b-4f2a0b617bc0
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.feeds_item
+  module:
+    - feeds
+id: commerce_product.dataset.feeds_item
+field_name: feeds_item
+entity_type: commerce_product
+bundle: dataset
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

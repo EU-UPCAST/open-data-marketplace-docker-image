@@ -1,0 +1,11 @@
+uuid: 2312d048-b1f7-4de0-8382-04b8d0669cc0
+langcode: el
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.policy_constraint_operator
+id: taxonomy_term.policy_constraint_operator
+target_entity_type_id: taxonomy_term
+target_bundle: policy_constraint_operator
+default_langcode: site_default
+language_alterable: false

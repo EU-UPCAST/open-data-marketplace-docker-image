@@ -1,0 +1,7 @@
+uuid: a2654aef-a683-41bb-ba11-09304135d145
+langcode: el
+status: false
+dependencies: {  }
+formId: node_organization_form
+captchaType: default
+label: node_organization_form

@@ -1,0 +1,29 @@
+uuid: 3c8bb48e-4f01-4d0a-83cd-c1509fc79ecb
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_high_value_data_category
+    - taxonomy.vocabulary.high_value_dataset_categories
+id: commerce_product.dataset.field_high_value_data_category
+field_name: field_high_value_data_category
+entity_type: commerce_product
+bundle: dataset
+label: 'High Value Data category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      high_value_dataset_categories: high_value_dataset_categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

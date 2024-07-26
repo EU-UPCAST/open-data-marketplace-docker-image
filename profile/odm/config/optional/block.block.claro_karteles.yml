@@ -1,0 +1,20 @@
+uuid: 23d1412a-335c-466b-9b04-db8c94204f87
+langcode: el
+status: true
+dependencies:
+  theme:
+    - claro
+id: claro_karteles
+theme: claro
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Καρτέλες
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

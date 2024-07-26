@@ -1,0 +1,42 @@
+uuid: a4cf134c-9793-4181-93fd-bf35f8f4c3b5
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.data_negotiation_log.body
+    - field.field.node.data_negotiation_log.field_negotiation
+    - field.field.node.data_negotiation_log.field_order
+    - field.field.node.data_negotiation_log.field_related_entity
+    - node.type.data_negotiation_log
+  module:
+    - text
+    - user
+id: node.data_negotiation_log.teaser
+targetEntityType: node
+bundle: data_negotiation_log
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_negotiation: true
+  field_order: true
+  field_related_entity: true
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

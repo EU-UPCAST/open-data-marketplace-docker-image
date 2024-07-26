@@ -1,0 +1,26 @@
+uuid: ddc9c7ae-b236-4d14-bdd9-06a0db5038ac
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.dataset
+    - field.storage.commerce_product_variation.field_description
+    - filter.format.html
+    - filter.format.plain_text
+  module:
+    - text
+id: commerce_product_variation.dataset.field_description
+field_name: field_description
+entity_type: commerce_product_variation
+bundle: dataset
+label: description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - html
+    - plain_text
+field_type: text_long

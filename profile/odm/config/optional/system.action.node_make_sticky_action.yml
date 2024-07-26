@@ -1,0 +1,13 @@
+uuid: f5842c89-aa32-4ce5-b603-a7334b5d20e4
+langcode: el
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: sOb26JSy3fGpWkvR0WYN6_hMqj_6d1rvbvrkzp1yya0
+id: node_make_sticky_action
+label: 'Κάνετε το περιεχόμενο καρφιτσωμένο'
+type: node
+plugin: node_make_sticky_action
+configuration: {  }

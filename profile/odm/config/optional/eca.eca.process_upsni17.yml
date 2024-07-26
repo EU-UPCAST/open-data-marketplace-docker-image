@@ -1,0 +1,47 @@
+uuid: f23cf43c-4b50-45d3-8cf8-52c1a092dfe0
+langcode: el
+status: true
+dependencies:
+  module:
+    - eca_form
+id: process_upsni17
+modeller: bpmn_io
+label: noname
+version: ''
+weight: null
+events:
+  Event_1ewxvip:
+    plugin: 'form:form_build'
+    label: Event_1ewxvip
+    configuration:
+      form_id: commerce-product-variation-dataset-add-form
+      entity_type_id: ''
+      bundle: ''
+      operation: ''
+    successors:
+      -
+        id: Activity_0ood3zw
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions:
+  Activity_1o3q192:
+    plugin: eca_form_field_disable
+    label: Activity_1o3q192
+    configuration:
+      flag: true
+      field_name: price
+    successors: {  }
+  Activity_0ood3zw:
+    plugin: eca_form_field_default_value
+    label: Activity_0ood3zw
+    configuration:
+      value: '0'
+      field_name: price1
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_1o3q192
+        condition: ''

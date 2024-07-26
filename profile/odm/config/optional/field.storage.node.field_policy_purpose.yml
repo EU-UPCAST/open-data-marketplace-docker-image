@@ -1,0 +1,20 @@
+uuid: b1561295-9f55-4357-8a88-400076ee8e48
+langcode: el
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_policy_purpose
+field_name: field_policy_purpose
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

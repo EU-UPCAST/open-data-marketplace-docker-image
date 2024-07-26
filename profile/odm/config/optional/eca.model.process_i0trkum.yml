@@ -1,0 +1,118 @@
+uuid: 4d3c41cb-0d57-4285-8b12-bf150ad4d77d
+langcode: el
+status: true
+dependencies:
+  config:
+    - eca.eca.process_i0trkum
+id: process_i0trkum
+label: 'Provider offer creation process (clone)'
+tags:
+  - ''
+documentation: ''
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_i0trkUm" name="Provider offer creation process (clone)" isExecutable="true">
+      <bpmn2:extensionElements />
+      <bpmn2:startEvent id="Event_14hrhmc" name="Custom variation build form&#10;" camunda:modelerTemplate="org.drupal.event.form:form_build">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="form:form_build" />
+          </camunda:properties>
+          <camunda:field name="form_id">
+            <camunda:string>commerce-product-variation-dataset-add-form</camunda:string>
+          </camunda:field>
+          <camunda:field name="entity_type_id">
+            <camunda:string></camunda:string>
+          </camunda:field>
+          <camunda:field name="bundle">
+            <camunda:string></camunda:string>
+          </camunda:field>
+          <camunda:field name="operation">
+            <camunda:string></camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_0o5lrti</bpmn2:outgoing>
+        <bpmn2:outgoing>Flow_10si9n7</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_0gjzpgg" name="Set restriction from query" camunda:modelerTemplate="org.drupal.action.eca_form_field_default_value">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_form_field_default_value" />
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>field_custom_variation_restrict[0][target_plugin_id]</camunda:string>
+          </camunda:field>
+          <camunda:field name="value">
+            <camunda:string>[current-page:query:restrict]</camunda:string>
+          </camunda:field>
+          <camunda:field name="strip_tags">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+          <camunda:field name="trim">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+          <camunda:field name="xss_filter">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0o5lrti</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_0o5lrti" sourceRef="Event_14hrhmc" targetRef="Activity_0gjzpgg" />
+      <bpmn2:task id="Activity_17hq6jb" name="set user from query" camunda:modelerTemplate="org.drupal.action.eca_form_field_default_value">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_form_field_default_value" />
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>field_custom_variation_restrict[0][target_plugin_configuration][restrict_to_users][uids]</camunda:string>
+          </camunda:field>
+          <camunda:field name="value">
+            <camunda:string>[current-page:query:user]</camunda:string>
+          </camunda:field>
+          <camunda:field name="strip_tags">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+          <camunda:field name="trim">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+          <camunda:field name="xss_filter">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_10si9n7</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_10si9n7" sourceRef="Event_14hrhmc" targetRef="Activity_17hq6jb" />
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="sid-2958aa33-365f-450e-8b01-bcef14f50209">
+      <bpmndi:BPMNPlane id="sid-dc2199ab-f33a-43c7-b48a-de94e94c555d" bpmnElement="Process_i0trkUm">
+        <bpmndi:BPMNShape id="Event_14hrhmc_di" bpmnElement="Event_14hrhmc">
+          <dc:Bounds x="372" y="202" width="36" height="36" />
+          <bpmndi:BPMNLabel>
+            <dc:Bounds x="351" y="245" width="83" height="40" />
+          </bpmndi:BPMNLabel>
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0gjzpgg_di" bpmnElement="Activity_0gjzpgg">
+          <dc:Bounds x="660" y="120" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_17hq6jb_di" bpmnElement="Activity_17hq6jb">
+          <dc:Bounds x="660" y="240" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Flow_0o5lrti_di" bpmnElement="Flow_0o5lrti">
+          <di:waypoint x="408" y="220" />
+          <di:waypoint x="550" y="220" />
+          <di:waypoint x="550" y="160" />
+          <di:waypoint x="660" y="160" />
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_10si9n7_di" bpmnElement="Flow_10si9n7">
+          <di:waypoint x="408" y="220" />
+          <di:waypoint x="550" y="220" />
+          <di:waypoint x="550" y="280" />
+          <di:waypoint x="660" y="280" />
+        </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>

@@ -1,0 +1,101 @@
+uuid: 0c064db7-cccc-4818-98fe-0ac19245be52
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.themes.field_code
+    - field.field.taxonomy_term.themes.field_color
+    - field.field.taxonomy_term.themes.field_icon
+    - field.field.taxonomy_term.themes.field_text_color
+    - taxonomy.vocabulary.themes
+  module:
+    - color_field
+    - hide_revision_field
+    - path
+    - svg_image_field
+    - text
+id: taxonomy_term.themes.default
+targetEntityType: taxonomy_term
+bundle: themes
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_code:
+    type: string_textfield
+    weight: 104
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_color:
+    type: color_field_widget_html5
+    weight: 101
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_icon:
+    type: svg_image_field_widget
+    weight: 102
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_max_width: 300
+      preview_image_max_height: 300
+    third_party_settings: {  }
+  field_text_color:
+    type: color_field_widget_html5
+    weight: 103
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  revision_log_message:
+    type: hide_revision_field_log_widget
+    weight: 80
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+      show: true
+      default: ''
+      permission_based: false
+      allow_user_settings: true
+      hide_revision: false
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  uuid: true

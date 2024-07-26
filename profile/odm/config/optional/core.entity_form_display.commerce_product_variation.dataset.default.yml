@@ -1,53 +1,216 @@
-uuid: d3aba4ac-236f-402e-81f5-912edefdb84c
+uuid: 526e9b61-4305-4816-a8da-b40fc11ea703
 langcode: el
 status: true
 dependencies:
   config:
     - commerce_product.commerce_product_variation_type.dataset
-    - field.field.commerce_product_variation.dataset.field_dataset_year
+    - field.field.commerce_product_variation.dataset.commerce_file
+    - field.field.commerce_product_variation.dataset.field_access_rights
+    - field.field.commerce_product_variation.dataset.field_byte_size
+    - field.field.commerce_product_variation.dataset.field_checksum
+    - field.field.commerce_product_variation.dataset.field_compress_format
+    - field.field.commerce_product_variation.dataset.field_conforms_to
+    - field.field.commerce_product_variation.dataset.field_data_structure_definition
+    - field.field.commerce_product_variation.dataset.field_description
+    - field.field.commerce_product_variation.dataset.field_format
+    - field.field.commerce_product_variation.dataset.field_has_policy
+    - field.field.commerce_product_variation.dataset.field_issued
+    - field.field.commerce_product_variation.dataset.field_license
+    - field.field.commerce_product_variation.dataset.field_media_type
+    - field.field.commerce_product_variation.dataset.field_package_format
+    - field.field.commerce_product_variation.dataset.field_rights
+    - field.field.commerce_product_variation.dataset.field_spatial_resolution_in_mete
+    - field.field.commerce_product_variation.dataset.field_temporal_resolution
+    - field.field.commerce_product_variation.dataset.license_expiration
+    - field.field.commerce_product_variation.dataset.license_type
   module:
+    - commerce
     - commerce_price
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
+    - custom_field
+    - datetime
+    - file
+    - interval
+    - text
 id: commerce_product_variation.dataset.default
 targetEntityType: commerce_product_variation
 bundle: dataset
 mode: default
 content:
-  field_dataset_year:
+  commerce_file:
+    type: file_generic
+    weight: 23
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_access_rights:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_byte_size:
     type: number
-    weight: 91
+    weight: 9
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
+  field_checksum:
+    type: custom_stacked
+    weight: 24
     region: content
     settings:
-      include_locked: true
+      label: true
+      wrapper: div
+      open: true
+    third_party_settings: {  }
+  field_compress_format:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_conforms_to:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_data_structure_definition:
+    type: file_generic
+    weight: 13
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 14
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_format:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_has_policy:
+    type: entity_reference_autocomplete
+    weight: 16
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_issued:
+    type: datetime_default
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_license:
+    type: entity_reference_autocomplete
+    weight: 18
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_media_type:
+    type: entity_reference_autocomplete
+    weight: 21
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_package_format:
+    type: entity_reference_autocomplete
+    weight: 19
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_rights:
+    type: entity_reference_autocomplete
+    weight: 20
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_spatial_resolution_in_mete:
+    type: number
+    weight: 22
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_temporal_resolution:
+    type: interval_default
+    weight: 7
+    region: content
+    settings:
+      allowed_periods: {  }
+    third_party_settings: {  }
+  license_expiration:
+    type: commerce_plugin_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  license_type:
+    type: commerce_plugin_select
+    weight: 5
+    region: content
+    settings: {  }
     third_party_settings: {  }
   list_price:
     type: commerce_list_price
-    weight: -1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   price:
     type: commerce_price_default
-    weight: 0
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   sku:
     type: string_textfield
-    weight: -4
+    weight: 1
     region: content
     settings:
       size: 60
@@ -55,14 +218,14 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 90
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
@@ -70,4 +233,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  langcode: true
   uid: true
+  uuid: true

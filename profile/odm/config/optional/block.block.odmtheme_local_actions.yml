@@ -1,0 +1,20 @@
+uuid: b9c9c0ff-f65b-447d-b4bb-3a085a7a70bb
+langcode: en
+status: true
+dependencies:
+  theme:
+    - odmtheme
+_core:
+  default_config_hash: rD4t3ClGDaBfcZORVKNtxKxE1T662MrBXBvOJoYm5zA
+id: odmtheme_local_actions
+theme: odmtheme
+region: header
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

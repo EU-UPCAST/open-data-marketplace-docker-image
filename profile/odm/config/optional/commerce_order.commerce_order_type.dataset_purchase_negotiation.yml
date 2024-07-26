@@ -5,6 +5,7 @@ dependencies:
   module:
     - commerce_cart
     - commerce_checkout
+    - commerce_invoice
 third_party_settings:
   commerce_cart:
     cart_block_view: commerce_cart_block
@@ -13,8 +14,11 @@ third_party_settings:
     enable_cart_message: true
   commerce_checkout:
     checkout_flow: dataset_checkout_flow
+  commerce_invoice:
+    invoice_type: credit_memo
+    order_placed_generation: true
 id: dataset_purchase_negotiation
-label: 'Dataset purchase negotiation'
+label: 'Dataset acquisition'
 traits: {  }
 locked: false
 workflow: order_default_validation

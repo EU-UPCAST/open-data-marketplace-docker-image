@@ -1,0 +1,22 @@
+uuid: ac847dd5-12d4-4c7a-a0c3-86169e34b4b1
+langcode: el
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - radix
+_core:
+  default_config_hash: 7Dtg8wEbdqEpHrmGyB62GasZoYE2I_2JWx0v-IfJkaw
+id: radix_content
+theme: radix
+region: content
+weight: -8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Περιεχόμενο κεντρικής σελίδας'
+  label_display: '0'
+  provider: system
+visibility: {  }

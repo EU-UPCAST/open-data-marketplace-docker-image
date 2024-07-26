@@ -10,7 +10,7 @@ id: node.data_exchange_negotiation.field_provider_agreement
 field_name: field_provider_agreement
 entity_type: node
 bundle: data_exchange_negotiation
-label: provider_agreement
+label: 'provider agreement'
 description: ''
 required: false
 translatable: false

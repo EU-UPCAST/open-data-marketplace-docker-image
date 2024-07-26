@@ -1,0 +1,40 @@
+uuid: f7f23a2d-645d-491a-9ffa-011a6e051709
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.license_document.body
+    - field.field.node.license_document.field_license_component
+    - field.field.node.license_document.field_logo
+    - node.type.license_document
+  module:
+    - text
+    - user
+id: node.license_document.teaser
+targetEntityType: node
+bundle: license_document
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_license_component: true
+  field_logo: true
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

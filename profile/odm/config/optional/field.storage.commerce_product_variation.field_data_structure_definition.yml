@@ -1,0 +1,23 @@
+uuid: cca3ab03-3285-4b22-926b-0b46ae76665c
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - file
+id: commerce_product_variation.field_data_structure_definition
+field_name: field_data_structure_definition
+entity_type: commerce_product_variation
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: 60cae2cd-a2a3-4a08-acde-ab5a116d88ba
+langcode: el
+status: true
+dependencies:
+  module:
+    - node
+id: rights
+label: rights
+type: 'canonical_entities:node'
+pattern: 'rights/[node:nid]'
+selection_criteria:
+  df7a39b7-c934-4717-a886-f161c6209ba4:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: df7a39b7-c934-4717-a886-f161c6209ba4
+    context_mapping:
+      node: node
+    bundles:
+      rights_statment: rights_statment
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,21 @@
+uuid: dd9640a4-ed6e-4117-bdd9-cefe7c056a87
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_language
+  module:
+    - languagefield
+id: commerce_product.dataset.field_language
+field_name: field_language
+entity_type: commerce_product
+bundle: dataset
+label: language
+description: 'A language of the resource. This refers to the natural language used for textual metadata (i.e., titles, descriptions, etc.) of a cataloged resource (i.e., dataset or service) or the textual values of a dataset distribution.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: language_field

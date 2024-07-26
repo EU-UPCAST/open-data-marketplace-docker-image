@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.data_exchange_offer.field_negotiation
     - field.field.node.data_exchange_request.field_data_processing_workflow
     - field.field.node.data_exchange_request.field_negotiation
+    - field.field.node.data_negotiation_log.field_negotiation
     - field.storage.node.field_data_processing_workflow
     - field.storage.node.field_negotiation
     - node.type.data_exchange_request

@@ -1,0 +1,19 @@
+uuid: 16671d3f-ef24-4470-88c7-8b47a5d3cbb7
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_version
+    - node.type.dataset_series
+id: node.dataset_series.field_version
+field_name: field_version
+entity_type: node
+bundle: dataset_series
+label: version
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

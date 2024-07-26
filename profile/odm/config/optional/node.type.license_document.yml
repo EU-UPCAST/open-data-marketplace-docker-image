@@ -1,0 +1,18 @@
+uuid: 08d01bf5-65a9-4fd4-9a5b-ca2d91cefdf4
+langcode: el
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'License Document'
+type: license_document
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

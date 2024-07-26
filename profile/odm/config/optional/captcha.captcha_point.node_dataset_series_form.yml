@@ -1,0 +1,7 @@
+uuid: 59b55508-5ed8-4dcd-83a8-3c9e61400baa
+langcode: el
+status: false
+dependencies: {  }
+formId: node_dataset_series_form
+captchaType: default
+label: node_dataset_series_form

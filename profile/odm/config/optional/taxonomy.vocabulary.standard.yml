@@ -1,0 +1,9 @@
+uuid: 403dc689-a467-4474-a9e5-027fb0c21093
+langcode: el
+status: true
+dependencies: {  }
+name: Standard
+vid: standard
+description: null
+weight: 0
+new_revision: false

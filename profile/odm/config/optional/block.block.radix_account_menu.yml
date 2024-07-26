@@ -1,0 +1,27 @@
+uuid: d7c351ec-4b0e-47db-8e5f-2ca883311a1f
+langcode: el
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - radix
+_core:
+  default_config_hash: gvWonx7xHxLnwRhCOAmbOETkQ9QfJRbC91sAQNHJBAw
+id: radix_account_menu
+theme: radix
+region: navbar_branding
+weight: -6
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Μενού λογαριασμού χρήστη'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

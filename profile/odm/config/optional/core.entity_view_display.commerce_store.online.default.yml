@@ -1,0 +1,90 @@
+uuid: 799c1421-f333-45a2-9cb8-3faf8deafffe
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_store.commerce_store_type.online
+    - field.field.commerce_store.online.field_color
+    - field.field.commerce_store.online.field_description
+    - field.field.commerce_store.online.field_logo
+    - field.field.commerce_store.online.field_text_color
+  module:
+    - address
+    - color_field
+    - text
+_core:
+  default_config_hash: TXXGt2nhVIkNciw-z_ybNwsIZnsyMLKvqUFjsZFUmwI
+id: commerce_store.online.default
+targetEntityType: commerce_store
+bundle: online
+mode: default
+content:
+  address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_color:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_logo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: mini
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text_color:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  mail:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  billing_countries: true
+  created: true
+  default_currency: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  is_default: true
+  langcode: true
+  search_api_excerpt: true
+  timezone: true
+  uid: true
+  uuid: true

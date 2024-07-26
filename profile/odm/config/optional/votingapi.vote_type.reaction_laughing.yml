@@ -1,0 +1,18 @@
+uuid: b895fb97-d72c-4573-b4b7-073122c64d1b
+langcode: el
+status: true
+dependencies:
+  module:
+    - votingapi_reaction
+third_party_settings:
+  votingapi_reaction:
+    reaction: true
+    icon_type: uploaded_image
+    icon_class: ''
+    uploaded_image: ''
+    remote_image: ''
+    html_element: ''
+id: reaction_laughing
+label: "I'm laughing"
+value_type: points
+description: 'Automatically created reaction'

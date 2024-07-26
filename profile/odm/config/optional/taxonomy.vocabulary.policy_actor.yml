@@ -1,0 +1,9 @@
+uuid: 257739ba-58aa-4444-a33f-97d83d3c6575
+langcode: el
+status: true
+dependencies: {  }
+name: 'Policy Actor'
+vid: policy_actor
+description: 'ODRL Policy Actor'
+weight: 0
+new_revision: false

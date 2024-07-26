@@ -1,0 +1,20 @@
+uuid: 3164a709-d506-4c7d-bc8a-eb1fb8237ebc
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.field_spatial_resolution_in_mete
+field_name: field_spatial_resolution_in_mete
+entity_type: commerce_product_variation
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

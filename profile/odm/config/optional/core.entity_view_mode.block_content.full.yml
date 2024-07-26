@@ -1,0 +1,13 @@
+uuid: 6b646efb-0e1b-4140-a1eb-d8465f9e7da8
+langcode: el
+status: false
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: Q7yUUYeRLByl-MCGveKKF_KhAtNICLCMJuKWfugCvso
+id: block_content.full
+label: Πλήρες
+description: ''
+targetEntityType: block_content
+cache: true

@@ -1,0 +1,18 @@
+uuid: 6b3131af-5b11-4cad-a5f9-147825aad813
+langcode: el
+status: true
+dependencies:
+  module:
+    - votingapi_reaction
+third_party_settings:
+  votingapi_reaction:
+    reaction: true
+    icon_type: uploaded_image
+    icon_class: ''
+    uploaded_image: ''
+    remote_image: ''
+    html_element: ''
+id: reaction_angry
+label: "I'm angry"
+value_type: points
+description: 'Automatically created reaction'

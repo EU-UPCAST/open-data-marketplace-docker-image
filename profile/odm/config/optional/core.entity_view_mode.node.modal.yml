@@ -1,0 +1,11 @@
+uuid: 12750b52-dcec-4203-9605-828214bc22ac
+langcode: el
+status: true
+dependencies:
+  module:
+    - node
+id: node.modal
+label: modal
+description: ''
+targetEntityType: node
+cache: true

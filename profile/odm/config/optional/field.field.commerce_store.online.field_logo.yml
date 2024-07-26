@@ -1,0 +1,31 @@
+uuid: 5909b95c-4be8-4be5-8200-63d9d1fe1d67
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_store.commerce_store_type.online
+    - field.storage.commerce_store.field_logo
+    - media.type.preview_image_type
+    - media.type.vector_image
+id: commerce_store.online.field_logo
+field_name: field_logo
+entity_type: commerce_store
+bundle: online
+label: logo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      vector_image: vector_image
+      preview_image_type: preview_image_type
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: vector_image
+field_type: entity_reference

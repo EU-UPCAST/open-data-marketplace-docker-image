@@ -1,0 +1,90 @@
+uuid: 58e01d04-549f-4b77-92ab-405dbcf7c35e
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - core.entity_view_mode.commerce_product.provider
+    - field.field.commerce_product.dataset.feeds_item
+    - field.field.commerce_product.dataset.field_access_rights
+    - field.field.commerce_product.dataset.field_accrual_periodicity
+    - field.field.commerce_product.dataset.field_conforms_to
+    - field.field.commerce_product.dataset.field_contact_point
+    - field.field.commerce_product.dataset.field_creator
+    - field.field.commerce_product.dataset.field_description
+    - field.field.commerce_product.dataset.field_has_part
+    - field.field.commerce_product.dataset.field_has_policy
+    - field.field.commerce_product.dataset.field_high_value_data_category
+    - field.field.commerce_product.dataset.field_identifier
+    - field.field.commerce_product.dataset.field_in_series
+    - field.field.commerce_product.dataset.field_issued
+    - field.field.commerce_product.dataset.field_json_sample
+    - field.field.commerce_product.dataset.field_keyword
+    - field.field.commerce_product.dataset.field_landing_page
+    - field.field.commerce_product.dataset.field_language
+    - field.field.commerce_product.dataset.field_legislation
+    - field.field.commerce_product.dataset.field_license
+    - field.field.commerce_product.dataset.field_modified
+    - field.field.commerce_product.dataset.field_publisher
+    - field.field.commerce_product.dataset.field_replaces
+    - field.field.commerce_product.dataset.field_rights
+    - field.field.commerce_product.dataset.field_spatial
+    - field.field.commerce_product.dataset.field_spatial_resolution_in_mete
+    - field.field.commerce_product.dataset.field_status
+    - field.field.commerce_product.dataset.field_sync_id
+    - field.field.commerce_product.dataset.field_temporal
+    - field.field.commerce_product.dataset.field_temporal_resolution
+    - field.field.commerce_product.dataset.field_theme
+    - field.field.commerce_product.dataset.field_type
+    - field.field.commerce_product.dataset.field_version
+    - field.field.commerce_product.dataset.field_version_notes
+id: commerce_product.dataset.provider
+targetEntityType: commerce_product
+bundle: dataset
+mode: provider
+content: {  }
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_access_rights: true
+  field_accrual_periodicity: true
+  field_conforms_to: true
+  field_contact_point: true
+  field_creator: true
+  field_description: true
+  field_has_part: true
+  field_has_policy: true
+  field_high_value_data_category: true
+  field_identifier: true
+  field_in_series: true
+  field_issued: true
+  field_json_sample: true
+  field_keyword: true
+  field_landing_page: true
+  field_language: true
+  field_legislation: true
+  field_license: true
+  field_modified: true
+  field_publisher: true
+  field_replaces: true
+  field_rights: true
+  field_spatial: true
+  field_spatial_resolution_in_mete: true
+  field_status: true
+  field_sync_id: true
+  field_temporal: true
+  field_temporal_resolution: true
+  field_theme: true
+  field_type: true
+  field_version: true
+  field_version_notes: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  title: true
+  uid: true
+  uuid: true
+  variations: true

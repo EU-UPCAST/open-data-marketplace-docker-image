@@ -1,9 +1,8 @@
 _core:
   default_config_hash: UvSCt3S_NldJPFzvhSNOy9vWoPPFhmsmTC12vtVss9s
-langcode: el
 favicon:
   mimetype: image/png
-  path: 'public://Artboard 1_0.png'
+  path: profiles/contrib/odm/themes/odmtheme/odm.png
   use_default: false
 features:
   comment_user_picture: true
@@ -11,13 +10,13 @@ features:
   favicon: true
   node_user_picture: false
 logo:
-  path: 'public://Artboard 1_1_0.png'
+  path: profiles/contrib/odm/themes/odmtheme/odm-outlines.svg
   use_default: false
 third_party_settings:
   shortcut:
     module_link: true
-preset_accent_color: blue
-preset_focus_color: gin
+preset_accent_color: teal
+preset_focus_color: accent
 enable_darkmode: '0'
 classic_toolbar: vertical
 secondary_toolbar_frontend: true
@@ -27,3 +26,4 @@ focus_color: ''
 layout_density: default
 show_description_toggle: false
 show_user_theme_settings: false
+sticky_action_buttons: true

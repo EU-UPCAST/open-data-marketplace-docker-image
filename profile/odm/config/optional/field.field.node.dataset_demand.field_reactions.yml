@@ -1,0 +1,44 @@
+uuid: 9e8e8865-1f71-49c5-99d9-f7f3aff23e13
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reactions
+    - node.type.dataset_demand
+  module:
+    - votingapi_reaction
+id: node.dataset_demand.field_reactions
+field_name: field_reactions
+entity_type: node
+bundle: dataset_demand
+label: reactions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  anonymous_detection:
+    1: '1'
+    2: '2'
+  anonymous_rollover: '-1'
+  reactions:
+    reaction_angry:
+      show: 0
+      weight: '0'
+    reaction_laughing:
+      show: 0
+      weight: '0'
+    reaction_like:
+      show: 1
+      weight: '0'
+    reaction_love:
+      show: 0
+      weight: '0'
+    reaction_sad:
+      show: 0
+      weight: '0'
+    reaction_surprised:
+      show: 0
+      weight: '0'
+field_type: votingapi_reaction

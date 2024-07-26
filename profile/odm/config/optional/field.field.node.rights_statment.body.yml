@@ -1,0 +1,24 @@
+uuid: ba6238cb-ebfd-4602-9a44-0959c571d5ca
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.rights_statment
+  module:
+    - text
+id: node.rights_statment.body
+field_name: body
+entity_type: node
+bundle: rights_statment
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

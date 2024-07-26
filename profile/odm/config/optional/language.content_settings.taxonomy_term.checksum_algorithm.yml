@@ -1,0 +1,11 @@
+uuid: 744c3c7c-24c2-4ffc-be01-09bad1b34484
+langcode: el
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.checksum_algorithm
+id: taxonomy_term.checksum_algorithm
+target_entity_type_id: taxonomy_term
+target_bundle: checksum_algorithm
+default_langcode: site_default
+language_alterable: false

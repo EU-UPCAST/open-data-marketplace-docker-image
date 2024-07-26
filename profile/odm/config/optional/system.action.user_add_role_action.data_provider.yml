@@ -1,0 +1,14 @@
+uuid: f2d3be5c-01b5-426c-ad4d-8cf65c7328ba
+langcode: el
+status: true
+dependencies:
+  config:
+    - user.role.data_provider
+  module:
+    - user
+id: user_add_role_action.data_provider
+label: 'Add the Data provider role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: data_provider

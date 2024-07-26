@@ -1,0 +1,24 @@
+uuid: a012241d-8c2e-4aee-9afd-73e0345f2fb6
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.checksum
+  module:
+    - text
+id: node.checksum.body
+field_name: body
+entity_type: node
+bundle: checksum
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

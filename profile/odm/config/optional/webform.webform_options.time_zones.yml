@@ -1,0 +1,14 @@
+uuid: 0afc86c5-39e2-480b-86f4-a3caff66ca9b
+langcode: el
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: 8rVcRXLnTAEoWs7zl8du-7RIUnayqUcGYnvb3JT21-o
+id: time_zones
+label: 'Ζώνες ώρας'
+category: 'Ημερομηνία και ώρα'
+likert: false
+options: ''

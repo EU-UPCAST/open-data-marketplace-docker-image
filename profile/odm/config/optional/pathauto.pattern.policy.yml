@@ -1,0 +1,22 @@
+uuid: e47d8c39-02da-43df-ae84-3144d217fa1d
+langcode: el
+status: true
+dependencies:
+  module:
+    - node
+id: policy
+label: policy
+type: 'canonical_entities:node'
+pattern: 'policy/[node:nid]'
+selection_criteria:
+  8a023922-8385-49ff-933c-6b6c93c30640:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 8a023922-8385-49ff-933c-6b6c93c30640
+    context_mapping:
+      node: node
+    bundles:
+      policy: policy
+selection_logic: and
+weight: -5
+relationships: {  }

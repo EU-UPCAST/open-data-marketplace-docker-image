@@ -1,0 +1,19 @@
+uuid: b9c6461f-36a1-475f-b5e0-d6e07c4d51a0
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_buzzword
+    - node.type.basic_page
+id: node.basic_page.field_buzzword
+field_name: field_buzzword
+entity_type: node
+bundle: basic_page
+label: Buzzword
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

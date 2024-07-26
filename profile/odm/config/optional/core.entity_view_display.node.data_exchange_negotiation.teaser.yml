@@ -7,11 +7,10 @@ dependencies:
     - field.field.node.data_exchange_negotiation.body
     - field.field.node.data_exchange_negotiation.field_consumer
     - field.field.node.data_exchange_negotiation.field_consumer_agreement
-    - field.field.node.data_exchange_negotiation.field_data_definition
     - field.field.node.data_exchange_negotiation.field_data_processing_workflow
     - field.field.node.data_exchange_negotiation.field_product
-    - field.field.node.data_exchange_negotiation.field_provider
     - field.field.node.data_exchange_negotiation.field_provider_agreement
+    - field.field.node.data_exchange_negotiation.field_provider_store
     - field.field.node.data_exchange_negotiation.field_state
     - node.type.data_exchange_negotiation
   module:
@@ -36,13 +35,16 @@ content:
     weight: 100
     region: content
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   field_consumer: true
   field_consumer_agreement: true
-  field_data_definition: true
   field_data_processing_workflow: true
   field_product: true
-  field_provider: true
   field_provider_agreement: true
+  field_provider_store: true
   field_state: true
   langcode: true
   search_api_excerpt: true
+  uuid: true

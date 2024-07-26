@@ -1,0 +1,29 @@
+uuid: 28859341-0d6b-4410-b447-4c988770a91c
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_rights
+    - node.type.rights_statment
+id: commerce_product.dataset.field_rights
+field_name: field_rights
+entity_type: commerce_product
+bundle: dataset
+label: rights
+description: 'A statement that concerns all rights not addressed with license or access rights, such as copyright statements.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      rights_statment: rights_statment
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

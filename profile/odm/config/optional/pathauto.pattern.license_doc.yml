@@ -1,0 +1,22 @@
+uuid: b12fd3fd-088f-4c82-a12a-4beddbbc4199
+langcode: el
+status: true
+dependencies:
+  module:
+    - node
+id: license_doc
+label: 'License doc'
+type: 'canonical_entities:node'
+pattern: 'license-doc/[node:nid]'
+selection_criteria:
+  e6682f2d-0287-4559-b2a8-195587c228bc:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: e6682f2d-0287-4559-b2a8-195587c228bc
+    context_mapping:
+      node: node
+    bundles:
+      license_document: license_document
+selection_logic: and
+weight: -5
+relationships: {  }

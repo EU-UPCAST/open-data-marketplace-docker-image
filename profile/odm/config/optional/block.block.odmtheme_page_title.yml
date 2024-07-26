@@ -1,0 +1,20 @@
+uuid: c2decd8d-c1fa-4917-9627-8ea967530424
+langcode: en
+status: true
+dependencies:
+  theme:
+    - odmtheme
+_core:
+  default_config_hash: hHzrTrECDPsONWBstt70TUMq6wTTPDoq_bwVaoMt1xk
+id: odmtheme_page_title
+theme: odmtheme
+region: header
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

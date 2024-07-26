@@ -1,0 +1,62 @@
+uuid: 6eb09036-686e-488b-8627-b1991fa381c3
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.field.node.license_document.body
+    - field.field.node.license_document.field_license_component
+    - field.field.node.license_document.field_logo
+    - node.type.license_document
+  module:
+    - svg_image_field
+    - text
+    - user
+id: node.license_document.default
+targetEntityType: node
+bundle: license_document
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_license_component:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_logo:
+    type: svg_image_field_formatter
+    label: hidden
+    settings:
+      inline: false
+      apply_dimensions: true
+      width: 25
+      height: 25
+      enable_alt: true
+      enable_title: true
+      link: ''
+      force_fill: false
+      sanitize: true
+      sanitize_remote: false
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

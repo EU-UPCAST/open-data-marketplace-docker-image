@@ -5,32 +5,18 @@ dependencies:
   config:
     - commerce_order.commerce_order_type.dataset_purchase_negotiation
     - core.entity_form_mode.commerce_order.checkout
-    - field.field.commerce_order.dataset_purchase_negotiation.field_workflow_description
-  module:
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
+    - field.field.commerce_order.dataset_purchase_negotiation.field_negotiation
 id: commerce_order.dataset_purchase_negotiation.checkout
 targetEntityType: commerce_order
 bundle: dataset_purchase_negotiation
 mode: checkout
-content:
-  field_workflow_description:
-    type: string_textarea
-    weight: 0
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
+content: {  }
 hidden:
   adjustments: true
   billing_profile: true
   cart: true
+  coupons: true
+  field_negotiation: true
   ip_address: true
   mail: true
   order_items: true
@@ -38,3 +24,4 @@ hidden:
   state: true
   store_id: true
   uid: true
+  uuid: true

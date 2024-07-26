@@ -1,0 +1,25 @@
+uuid: c5f74510-6e72-4429-be43-1b0b96650c20
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_text_color
+    - taxonomy.vocabulary.themes
+  module:
+    - color_field
+id: taxonomy_term.themes.field_text_color
+field_name: field_text_color
+entity_type: taxonomy_term
+bundle: themes
+label: text_color
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#ffffff'
+    opacity: 1.0
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

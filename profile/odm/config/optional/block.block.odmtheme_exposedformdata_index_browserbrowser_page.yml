@@ -1,0 +1,23 @@
+uuid: 6ef5bbbe-1bb0-46c7-aa0a-3da8fbef829c
+langcode: el
+status: true
+dependencies:
+  config:
+    - views.view.data_index_browser
+  module:
+    - views
+  theme:
+    - odmtheme
+id: odmtheme_exposedformdata_index_browserbrowser_page
+theme: odmtheme
+region: navbar_left
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:data_index_browser-browser_page'
+settings:
+  id: 'views_exposed_filter_block:data_index_browser-browser_page'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility: {  }

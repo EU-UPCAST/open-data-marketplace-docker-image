@@ -1,0 +1,11 @@
+uuid: 486063b1-5c89-4e30-a81a-4b5626100097
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.consumer_application
+id: node.consumer_application
+target_entity_type_id: node
+target_bundle: consumer_application
+default_langcode: site_default
+language_alterable: false

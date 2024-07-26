@@ -1,0 +1,29 @@
+uuid: 3519dd2c-4507-4e43-bcee-be02b08e8fc0
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_browse_licenses
+    - node.type.entity_browser_test
+id: node.entity_browser_test.field_browse_licenses
+field_name: field_browse_licenses
+entity_type: node
+bundle: entity_browser_test
+label: browse_licenses
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_license'
+  handler_settings:
+    target_bundles:
+      url: url
+      commerce_file: commerce_file
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: url
+field_type: entity_reference

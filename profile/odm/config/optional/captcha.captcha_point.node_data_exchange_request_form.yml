@@ -1,0 +1,7 @@
+uuid: e9fd426c-1219-4e16-8cd0-690e15b44321
+langcode: el
+status: false
+dependencies: {  }
+formId: node_data_exchange_request_form
+captchaType: default
+label: node_data_exchange_request_form

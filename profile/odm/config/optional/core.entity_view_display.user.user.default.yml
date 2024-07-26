@@ -1,0 +1,33 @@
+uuid: 6adf4b2b-2057-41fa-b258-624a4b360086
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_store
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_store:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  commerce_remote_id: true
+  customer_profiles: true
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

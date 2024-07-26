@@ -1,0 +1,39 @@
+uuid: 2ed3766c-dfa8-4260-86e9-cc0ff3474265
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.field.node.person.body
+    - field.field.node.person.field_user
+    - node.type.person
+  module:
+    - text
+    - user
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_user:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

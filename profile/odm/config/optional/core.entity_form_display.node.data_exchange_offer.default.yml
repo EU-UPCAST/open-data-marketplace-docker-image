@@ -8,17 +8,9 @@ dependencies:
     - field.field.node.data_exchange_offer.field_variation
     - node.type.data_exchange_offer
   module:
-    - content_moderation
-    - field_layout
     - hide_revision_field
-    - layout_discovery
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: node.data_exchange_offer.default
 targetEntityType: node
 bundle: data_exchange_offer
@@ -130,4 +122,10 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uuid: true

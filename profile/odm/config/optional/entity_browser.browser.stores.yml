@@ -1,0 +1,29 @@
+uuid: affcd125-cf7c-4f0c-ae3d-dd29f5198696
+langcode: el
+status: true
+dependencies:
+  module:
+    - entity_browser_entity_form
+name: stores
+label: stores
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: drop_down
+widget_selector_configuration: {  }
+widgets:
+  c31608b0-aae6-4869-a667-b2e4760a1a23:
+    id: entity_form
+    uuid: c31608b0-aae6-4869-a667-b2e4760a1a23
+    label: entity_form
+    weight: 1
+    settings:
+      submit_text: 'Save entity'
+      entity_type: advancedqueue_queue
+      bundle: ''
+      form_mode: default

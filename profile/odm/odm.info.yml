@@ -246,5 +246,4 @@ dependencies:
 themes:
   - gin
   - radix
-  - ct
   - odmtheme

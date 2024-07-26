@@ -1,0 +1,21 @@
+uuid: 688fc943-79ca-4be4-b01a-198cb4b87527
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enable_monitoring
+    - node.type.consumer_application
+id: node.consumer_application.field_enable_monitoring
+field_name: field_enable_monitoring
+entity_type: node
+bundle: consumer_application
+label: 'Enable monitoring'
+description: 'If enabled, your Docker image will be created with monitoring capabilities.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Enabled
+  off_label: Disabled
+field_type: boolean

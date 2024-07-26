@@ -1,0 +1,24 @@
+uuid: 66b57e91-c7f7-4b5d-a3e1-8e37966177c2
+langcode: el
+status: true
+dependencies:
+  config:
+    - facets.facet.store
+  module:
+    - facets
+  theme:
+    - odmtheme
+id: odmtheme_store
+theme: odmtheme
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'facet_block:store'
+settings:
+  id: 'facet_block:store'
+  label: store
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: odmtheme_store
+visibility: {  }

@@ -1,0 +1,11 @@
+uuid: b75c31a0-b86d-4865-84cd-1444d28a9a84
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.distribution_formats_only
+label: 'Distribution formats only'
+description: ''
+targetEntityType: commerce_product_variation
+cache: true

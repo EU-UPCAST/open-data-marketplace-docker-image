@@ -1,0 +1,20 @@
+uuid: ff6b8c0a-7db9-4823-b361-6087fc888bd0
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - node
+id: commerce_product_variation.field_access_rights
+field_name: field_access_rights
+entity_type: commerce_product_variation
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

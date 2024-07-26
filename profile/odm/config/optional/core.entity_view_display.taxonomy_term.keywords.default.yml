@@ -1,0 +1,28 @@
+uuid: 1b2c97fd-027b-48f4-9a3d-9d868b519eac
+langcode: el
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.keywords
+  module:
+    - text
+id: taxonomy_term.keywords.default
+targetEntityType: taxonomy_term
+bundle: keywords
+mode: default
+content:
+  danse_subscribe:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

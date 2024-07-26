@@ -1,0 +1,27 @@
+uuid: 65710e4d-d078-444f-b3fd-db9ecef76a35
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - odmtheme
+_core:
+  default_config_hash: 171zrgRiyTFHfbY5HS_peormDCiBBZnU1r8BQE30iIM
+id: odmtheme_main_menu
+theme: odmtheme
+region: navbar_left
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,29 @@
+uuid: ce3edbe8-655f-4def-acc4-9571b3ba4338
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_conforms_to
+    - taxonomy.vocabulary.standard
+id: commerce_product.dataset.field_conforms_to
+field_name: field_conforms_to
+entity_type: commerce_product
+bundle: dataset
+label: 'conforms to'
+description: 'An established standard to which the described resource conforms.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      standard: standard
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

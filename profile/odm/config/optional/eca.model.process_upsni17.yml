@@ -1,0 +1,103 @@
+uuid: 5440a6ed-8b46-4402-8234-e173fd7e535a
+langcode: el
+status: true
+dependencies:
+  config:
+    - eca.eca.process_upsni17
+id: process_upsni17
+label: noname
+tags:
+  - untagged
+documentation: ''
+filename: ''
+modeldata: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:qa="http://some-company/schema/bpmn/qa" id="sample-diagram" targetNamespace="http://bpmn.io/schema/bpmn" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <bpmn2:process id="Process_uPsNi17" isExecutable="true">
+      <bpmn2:startEvent id="Event_1ewxvip" camunda:modelerTemplate="org.drupal.event.form:form_build">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="form:form_build" />
+          </camunda:properties>
+          <camunda:field name="form_id">
+            <camunda:string>commerce-product-variation-dataset-add-form</camunda:string>
+          </camunda:field>
+          <camunda:field name="entity_type_id">
+            <camunda:string></camunda:string>
+          </camunda:field>
+          <camunda:field name="bundle">
+            <camunda:string></camunda:string>
+          </camunda:field>
+          <camunda:field name="operation">
+            <camunda:string></camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:outgoing>Flow_1bj1i55</bpmn2:outgoing>
+      </bpmn2:startEvent>
+      <bpmn2:task id="Activity_1o3q192" camunda:modelerTemplate="org.drupal.action.eca_form_field_disable">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_form_field_disable" />
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>price</camunda:string>
+          </camunda:field>
+          <camunda:field name="flag">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_1xzshcw</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:task id="Activity_0ood3zw" camunda:modelerTemplate="org.drupal.action.eca_form_field_default_value">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_form_field_default_value" />
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>price1</camunda:string>
+          </camunda:field>
+          <camunda:field name="value">
+            <camunda:string>0</camunda:string>
+          </camunda:field>
+          <camunda:field name="strip_tags">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+          <camunda:field name="trim">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+          <camunda:field name="xss_filter">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_1bj1i55</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_1xzshcw</bpmn2:outgoing>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_1bj1i55" sourceRef="Event_1ewxvip" targetRef="Activity_0ood3zw" />
+      <bpmn2:sequenceFlow id="Flow_1xzshcw" sourceRef="Activity_0ood3zw" targetRef="Activity_1o3q192" />
+    </bpmn2:process>
+    <bpmndi:BPMNDiagram id="sid-beb0e38c-568f-4a3e-9b2c-1a0b574d7675">
+      <bpmndi:BPMNPlane id="sid-58d854ee-638a-4c95-9da2-b4cb259c2946" bpmnElement="Process_uPsNi17">
+        <bpmndi:BPMNShape id="Event_10pu8qb_di" bpmnElement="Event_1ewxvip">
+          <dc:Bounds x="412" y="122" width="36" height="36" />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_0ood3zw_di" bpmnElement="Activity_0ood3zw">
+          <dc:Bounds x="1030" y="340" width="100" height="80" />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_1o3q192_di" bpmnElement="Activity_1o3q192">
+          <dc:Bounds x="1220" y="350" width="100" height="80" />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNEdge id="Flow_1bj1i55_di" bpmnElement="Flow_1bj1i55">
+          <di:waypoint x="448" y="140" />
+          <di:waypoint x="739" y="140" />
+          <di:waypoint x="739" y="380" />
+          <di:waypoint x="1030" y="380" />
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_1xzshcw_di" bpmnElement="Flow_1xzshcw">
+          <di:waypoint x="1130" y="380" />
+          <di:waypoint x="1175" y="380" />
+          <di:waypoint x="1175" y="390" />
+          <di:waypoint x="1220" y="390" />
+        </bpmndi:BPMNEdge>
+      </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+  </bpmn2:definitions>

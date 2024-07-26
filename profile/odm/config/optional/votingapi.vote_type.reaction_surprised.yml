@@ -1,0 +1,18 @@
+uuid: 84bddae2-39a8-4829-bb1a-6da1333d3166
+langcode: el
+status: true
+dependencies:
+  module:
+    - votingapi_reaction
+third_party_settings:
+  votingapi_reaction:
+    reaction: true
+    icon_type: uploaded_image
+    icon_class: ''
+    uploaded_image: ''
+    remote_image: ''
+    html_element: ''
+id: reaction_surprised
+label: "I'm surprised"
+value_type: points
+description: 'Automatically created reaction'

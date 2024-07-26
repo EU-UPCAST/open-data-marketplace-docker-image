@@ -1,0 +1,11 @@
+uuid: 67c28aa6-96ea-4c44-97d0-0afe02f705fb
+langcode: el
+status: true
+dependencies:
+  module:
+    - node
+id: node.view_mode_selector
+label: 'View mode selector'
+description: ''
+targetEntityType: node
+cache: true

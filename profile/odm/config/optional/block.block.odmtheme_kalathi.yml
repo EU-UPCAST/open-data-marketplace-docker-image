@@ -1,0 +1,22 @@
+uuid: d634f5cd-2ef2-4b18-bf31-7ae455bc4ad5
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_cart_flyout
+  theme:
+    - odmtheme
+id: odmtheme_kalathi
+theme: odmtheme
+region: navbar_right
+weight: -4
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Καλάθι
+  label_display: '0'
+  provider: commerce_cart_flyout
+  dropdown: true
+  use_quantity_count: 1
+visibility: {  }

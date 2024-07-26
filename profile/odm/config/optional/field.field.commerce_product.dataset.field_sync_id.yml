@@ -1,0 +1,19 @@
+uuid: e11c31a3-f9f1-4ac8-a4db-df2b7f39290a
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_sync_id
+id: commerce_product.dataset.field_sync_id
+field_name: field_sync_id
+entity_type: commerce_product
+bundle: dataset
+label: 'synchronization external identifiers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+uuid: 2f838bc3-9540-4948-a629-9ba1e260cc6c
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.rights_statment
+id: node.rights_statment
+target_entity_type_id: node
+target_bundle: rights_statment
+default_langcode: site_default
+language_alterable: false

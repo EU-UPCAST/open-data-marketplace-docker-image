@@ -1,0 +1,11 @@
+uuid: 01f13b37-eace-4cde-b457-c4a673b9dd7a
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.data_processing_workflow
+id: node.data_processing_workflow
+target_entity_type_id: node
+target_bundle: data_processing_workflow
+default_langcode: site_default
+language_alterable: false

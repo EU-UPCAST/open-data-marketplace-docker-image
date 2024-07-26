@@ -1,0 +1,11 @@
+uuid: f0447b0d-eaf5-4445-9b89-d4d2ee337d34
+langcode: el
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.policy_constraint
+id: taxonomy_term.policy_constraint
+target_entity_type_id: taxonomy_term
+target_bundle: policy_constraint
+default_langcode: site_default
+language_alterable: false

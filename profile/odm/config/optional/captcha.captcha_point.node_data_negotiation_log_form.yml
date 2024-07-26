@@ -1,0 +1,7 @@
+uuid: eb875196-5147-465d-8695-05a465a55ebd
+langcode: el
+status: false
+dependencies: {  }
+formId: node_data_negotiation_log_form
+captchaType: default
+label: node_data_negotiation_log_form

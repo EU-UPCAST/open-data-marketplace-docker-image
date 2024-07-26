@@ -2,11 +2,15 @@ uuid: a260480b-14a4-4efc-bac8-7915cad49890
 langcode: el
 status: true
 dependencies:
+  config:
+    - search_api_autocomplete.search.data_index_browser
   module:
-    - commerce_checkout
     - commerce_product
+    - commerce_store
     - media
+    - search_api_autocomplete
     - system
+    - votingapi_reaction
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
@@ -14,7 +18,10 @@ label: 'Ανώνυμος χρήστης'
 weight: -9
 is_admin: false
 permissions:
-  - 'access checkout'
   - 'access content'
+  - 'use search_api_autocomplete for data_index_browser'
   - 'view commerce_product'
+  - 'view commerce_store'
+  - 'view dataset commerce_product'
   - 'view media'
+  - 'view reactions on node:dataset_demand:field_reactions'

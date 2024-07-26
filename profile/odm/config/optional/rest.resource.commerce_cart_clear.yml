@@ -1,0 +1,20 @@
+uuid: a4ffc5d0-68d1-4088-b64a-e3513ece01a3
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_cart_api
+    - serialization
+    - user
+_core:
+  default_config_hash: gFt_6Zv9JEPLa560_rsfsqrQC21_LQ6becnJMNjUIpM
+id: commerce_cart_clear
+plugin_id: commerce_cart_clear
+granularity: resource
+configuration:
+  methods:
+    - DELETE
+  formats:
+    - json
+  authentication:
+    - cookie

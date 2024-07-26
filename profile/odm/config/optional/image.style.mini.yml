@@ -1,0 +1,15 @@
+uuid: b3d1a37f-e276-48dc-ae1d-c83f27283e00
+langcode: el
+status: true
+dependencies: {  }
+name: mini
+label: mini
+effects:
+  4f7fb69f-cd94-4bdb-8547-5ef1eaadad4e:
+    uuid: 4f7fb69f-cd94-4bdb-8547-5ef1eaadad4e
+    id: image_scale
+    weight: 1
+    data:
+      width: 80
+      height: 80
+      upscale: false

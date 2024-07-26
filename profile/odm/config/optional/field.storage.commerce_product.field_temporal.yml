@@ -1,0 +1,20 @@
+uuid: 073c0844-fa78-41eb-aa5e-e68daa1491f9
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - datetime_range
+id: commerce_product.field_temporal
+field_name: field_temporal
+entity_type: commerce_product
+type: daterange
+settings:
+  datetime_type: datetime
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

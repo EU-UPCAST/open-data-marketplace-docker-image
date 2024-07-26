@@ -1,0 +1,11 @@
+uuid: fb407e99-ccc8-49d5-bdac-8fd013723467
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.dataset_demand
+id: node.dataset_demand
+target_entity_type_id: node
+target_bundle: dataset_demand
+default_langcode: site_default
+language_alterable: false

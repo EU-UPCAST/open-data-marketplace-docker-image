@@ -1,0 +1,20 @@
+uuid: 600add7c-0091-4618-ac35-83e97ac23309
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - geofield
+id: commerce_product.field_spatial
+field_name: field_spatial
+entity_type: commerce_product
+type: geofield
+settings:
+  backend: geofield_backend_default
+module: geofield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

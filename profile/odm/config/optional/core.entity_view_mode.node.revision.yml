@@ -1,0 +1,17 @@
+uuid: ae839f78-dc9f-4621-82d7-424f91721379
+langcode: el
+status: false
+dependencies:
+  module:
+    - node
+  enforced:
+    module:
+      - ds_extras
+      - node
+_core:
+  default_config_hash: 9KZ3WmwficPZQW4KRu0DdKX2V9A1Xiz5LFFm2NHg4_A
+id: node.revision
+label: Αναθεώρηση
+description: ''
+targetEntityType: node
+cache: true

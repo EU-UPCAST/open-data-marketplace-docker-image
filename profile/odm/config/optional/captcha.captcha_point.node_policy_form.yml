@@ -1,0 +1,7 @@
+uuid: 1ce6512c-5d8b-443b-a0ea-0dc50794ab0d
+langcode: el
+status: false
+dependencies: {  }
+formId: node_policy_form
+captchaType: default
+label: node_policy_form

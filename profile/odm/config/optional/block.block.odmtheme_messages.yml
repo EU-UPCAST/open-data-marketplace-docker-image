@@ -1,0 +1,22 @@
+uuid: 76119d49-071d-44ac-aa42-9f115dfe8ad0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - odmtheme
+_core:
+  default_config_hash: Cr71lupn9Gqi52xOLnCj_dK_7QdZEQ8P6P4-M4yoLiM
+id: odmtheme_messages
+theme: odmtheme
+region: header
+weight: -3
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

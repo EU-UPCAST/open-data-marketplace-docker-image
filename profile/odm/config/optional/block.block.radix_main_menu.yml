@@ -1,0 +1,27 @@
+uuid: 45e7bac2-a12d-40a0-bbd6-00ee5fb2700e
+langcode: el
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - radix
+_core:
+  default_config_hash: fuvLcYZrsLU-txh31Y--BLYzlbKlVWaPHVvLTaitGGY
+id: radix_main_menu
+theme: radix
+region: navbar_branding
+weight: -9
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Κεντρική πλοήγηση'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

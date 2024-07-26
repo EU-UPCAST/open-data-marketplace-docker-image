@@ -1,0 +1,18 @@
+uuid: 432f98f8-a0ff-435a-a405-2693f8577a96
+langcode: el
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Legislation
+type: legislation
+description: null
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: true

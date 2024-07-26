@@ -1,0 +1,9 @@
+uuid: f4899286-74f4-4c85-94ab-dfbfa0ada043
+langcode: el
+status: true
+dependencies: {  }
+name: 'Resource status'
+vid: resource_status
+description: null
+weight: 0
+new_revision: false

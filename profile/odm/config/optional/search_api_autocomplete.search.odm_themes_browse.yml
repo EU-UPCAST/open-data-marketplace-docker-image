@@ -1,0 +1,29 @@
+uuid: 02d66432-a429-4797-ba6c-7dd7d76c7bd5
+langcode: el
+status: true
+dependencies:
+  config:
+    - search_api.index.datasets_index
+    - views.view.odm_themes_browse
+  module:
+    - views
+    - search_api_autocomplete
+id: odm_themes_browse
+label: 'ODM Themes browse'
+index_id: datasets_index
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:odm_themes_browse':
+    displays:
+      default: true
+      selected: {  }
+options: {  }

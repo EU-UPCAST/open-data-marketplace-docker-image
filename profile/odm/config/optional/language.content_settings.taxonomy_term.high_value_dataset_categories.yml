@@ -1,0 +1,11 @@
+uuid: 3322b5a3-118d-42d8-9b1c-9a22743d6f75
+langcode: el
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.high_value_dataset_categories
+id: taxonomy_term.high_value_dataset_categories
+target_entity_type_id: taxonomy_term
+target_bundle: high_value_dataset_categories
+default_langcode: site_default
+language_alterable: false

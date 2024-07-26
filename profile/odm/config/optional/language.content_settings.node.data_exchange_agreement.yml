@@ -1,0 +1,11 @@
+uuid: 6210098b-632c-4eb9-9c9b-7bb44ef5001d
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.data_exchange_agreement
+id: node.data_exchange_agreement
+target_entity_type_id: node
+target_bundle: data_exchange_agreement
+default_langcode: site_default
+language_alterable: false

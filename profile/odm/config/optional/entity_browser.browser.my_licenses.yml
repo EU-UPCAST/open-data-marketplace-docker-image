@@ -1,0 +1,31 @@
+uuid: 3466fe3b-95f2-47fa-8c2f-c418c2e3d605
+langcode: el
+status: true
+dependencies:
+  config:
+    - views.view.odm_license_selector_browser
+  module:
+    - views
+name: my_licenses
+label: 'my licenses'
+display: iframe
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: single
+widget_selector_configuration: {  }
+widgets:
+  a5e030c6-01e4-4991-b7a1-39a8483b0380:
+    id: view
+    uuid: a5e030c6-01e4-4991-b7a1-39a8483b0380
+    label: view
+    weight: 1
+    settings:
+      submit_text: 'Select entities'
+      auto_select: false
+      view: odm_license_selector_browser
+      view_display: entity_browser_1

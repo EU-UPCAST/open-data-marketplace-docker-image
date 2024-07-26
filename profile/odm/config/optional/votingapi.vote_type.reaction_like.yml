@@ -1,0 +1,18 @@
+uuid: 26b83748-4bd8-4f9c-bf7f-122ca0e202a0
+langcode: el
+status: true
+dependencies:
+  module:
+    - votingapi_reaction
+third_party_settings:
+  votingapi_reaction:
+    reaction: true
+    icon_type: uploaded_image
+    icon_class: ''
+    uploaded_image: ''
+    remote_image: ''
+    html_element: ''
+id: reaction_like
+label: 'I like this'
+value_type: points
+description: 'Automatically created reaction'

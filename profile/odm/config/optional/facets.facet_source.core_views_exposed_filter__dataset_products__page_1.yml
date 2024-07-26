@@ -1,0 +1,12 @@
+uuid: 3e4d3ea2-e881-4add-a485-e427dd0b11b7
+langcode: el
+status: true
+dependencies: {  }
+id: core_views_exposed_filter__dataset_products__page_1
+name: 'core_views_exposed_filter:dataset_products__page_1'
+filter_key: datasets_browse_facet
+url_processor: core_views_url_processor
+breadcrumb:
+  active: false
+  before: true
+  group: false

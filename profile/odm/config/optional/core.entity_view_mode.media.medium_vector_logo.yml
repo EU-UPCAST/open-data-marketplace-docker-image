@@ -1,0 +1,11 @@
+uuid: a90ca63e-5a10-4b2f-8c4d-7a028ecae319
+langcode: el
+status: true
+dependencies:
+  module:
+    - media
+id: media.medium_vector_logo
+label: 'Medium vector logo'
+description: ''
+targetEntityType: media
+cache: true

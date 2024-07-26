@@ -1,0 +1,14 @@
+uuid: d86e281a-1b83-4b61-b173-e92d6108cc9b
+langcode: el
+status: true
+dependencies:
+  config:
+    - user.role.alternate_api_user
+  module:
+    - user
+id: user_add_role_action.alternate_api_user
+label: 'Add the Alternate API user role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: alternate_api_user

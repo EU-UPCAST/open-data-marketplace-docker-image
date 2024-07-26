@@ -1,0 +1,51 @@
+uuid: b9d57c2c-f680-4241-8411-9305afdd7851
+langcode: el
+status: true
+dependencies:
+  module:
+    - eca_form
+id: process_i0trkum
+modeller: bpmn_io
+label: 'Provider offer creation process (clone)'
+version: ''
+weight: null
+events:
+  Event_14hrhmc:
+    plugin: 'form:form_build'
+    label: |
+      Custom variation build form
+    configuration:
+      form_id: commerce-product-variation-dataset-add-form
+      entity_type_id: ''
+      bundle: ''
+      operation: ''
+    successors:
+      -
+        id: Activity_0gjzpgg
+        condition: ''
+      -
+        id: Activity_17hq6jb
+        condition: ''
+conditions: {  }
+gateways: {  }
+actions:
+  Activity_0gjzpgg:
+    plugin: eca_form_field_default_value
+    label: 'Set restriction from query'
+    configuration:
+      value: '[current-page:query:restrict]'
+      field_name: 'field_custom_variation_restrict[0][target_plugin_id]'
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors: {  }
+  Activity_17hq6jb:
+    plugin: eca_form_field_default_value
+    label: 'set user from query'
+    configuration:
+      value: '[current-page:query:user]'
+      field_name: 'field_custom_variation_restrict[0][target_plugin_configuration][restrict_to_users][uids]'
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors: {  }

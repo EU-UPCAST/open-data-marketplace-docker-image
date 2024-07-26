@@ -1,0 +1,7 @@
+uuid: 27817382-2d50-401a-8606-d298fb24fc54
+langcode: el
+status: false
+dependencies: {  }
+formId: node_data_exchange_offer_form
+captchaType: default
+label: node_data_exchange_offer_form

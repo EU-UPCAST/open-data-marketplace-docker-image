@@ -1,0 +1,20 @@
+uuid: 1e3b5673-97ff-4432-a5c0-bfcb97eba01a
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_license
+    - node
+id: node.field_licensed_files
+field_name: field_licensed_files
+entity_type: node
+type: entity_reference
+settings:
+  target_type: commerce_license
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

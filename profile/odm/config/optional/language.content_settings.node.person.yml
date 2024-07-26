@@ -1,0 +1,11 @@
+uuid: cee36f39-b509-43a4-a784-8854c4e93b1d
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.person
+id: node.person
+target_entity_type_id: node
+target_bundle: person
+default_langcode: site_default
+language_alterable: false

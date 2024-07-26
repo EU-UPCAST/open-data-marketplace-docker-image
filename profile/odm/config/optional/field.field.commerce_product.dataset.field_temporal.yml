@@ -1,0 +1,21 @@
+uuid: 29bdee8e-c847-4549-8b68-154a1044fa84
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_temporal
+  module:
+    - datetime_range
+id: commerce_product.dataset.field_temporal
+field_name: field_temporal
+entity_type: commerce_product
+bundle: dataset
+label: 'temporal coverage'
+description: 'The temporal period that the dataset covers.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

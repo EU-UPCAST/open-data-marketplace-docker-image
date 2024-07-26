@@ -1,0 +1,24 @@
+uuid: 44b05e8f-f535-47ab-b79b-4d7c815d80d8
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.license_document
+  module:
+    - text
+id: node.license_document.body
+field_name: body
+entity_type: node
+bundle: license_document
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

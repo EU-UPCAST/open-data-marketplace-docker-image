@@ -1,0 +1,21 @@
+uuid: 43e7a2ab-1ca6-4bf9-835b-868c2ba1c01a
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.dataset
+    - field.storage.commerce_product_variation.field_issued
+  module:
+    - datetime
+id: commerce_product_variation.dataset.field_issued
+field_name: field_issued
+entity_type: commerce_product_variation
+bundle: dataset
+label: issued
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

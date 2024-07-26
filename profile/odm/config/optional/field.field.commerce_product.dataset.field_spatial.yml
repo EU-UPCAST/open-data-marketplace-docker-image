@@ -1,0 +1,21 @@
+uuid: 864a2a7f-eebe-4ff2-8aee-9344fc049b04
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_spatial
+  module:
+    - geofield
+id: commerce_product.dataset.field_spatial
+field_name: field_spatial
+entity_type: commerce_product
+bundle: dataset
+label: 'spatial coverage'
+description: 'The geographical area covered by the dataset.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

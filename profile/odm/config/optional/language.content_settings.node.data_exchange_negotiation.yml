@@ -1,0 +1,11 @@
+uuid: 90f2c864-7883-461f-9b62-f807a5f6e0ea
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.data_exchange_negotiation
+id: node.data_exchange_negotiation
+target_entity_type_id: node
+target_bundle: data_exchange_negotiation
+default_langcode: site_default
+language_alterable: false

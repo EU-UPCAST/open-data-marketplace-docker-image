@@ -1,0 +1,11 @@
+uuid: 08138acb-bd0b-4af3-901e-1bc36329bbad
+langcode: el
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.policy_actor
+id: taxonomy_term.policy_actor
+target_entity_type_id: taxonomy_term
+target_bundle: policy_actor
+default_langcode: site_default
+language_alterable: false

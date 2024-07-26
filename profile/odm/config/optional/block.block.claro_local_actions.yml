@@ -1,0 +1,20 @@
+uuid: 3f4b35dc-f310-4504-a9d8-f6deee82df59
+langcode: el
+status: true
+dependencies:
+  theme:
+    - claro
+_core:
+  default_config_hash: CdXfDmRgAvms7EQovxxWPdYi0GitxeRbVtScYK16ZH0
+id: claro_local_actions
+theme: claro
+region: content
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Πρωτεύουσες ενέργειες διαχείρισης'
+  label_display: '0'
+  provider: core
+visibility: {  }

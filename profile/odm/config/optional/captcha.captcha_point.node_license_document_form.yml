@@ -1,0 +1,7 @@
+uuid: 8f221a15-5a6d-4383-9665-c0c41f52cd8b
+langcode: el
+status: false
+dependencies: {  }
+formId: node_license_document_form
+captchaType: default
+label: node_license_document_form

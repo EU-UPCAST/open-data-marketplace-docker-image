@@ -1,0 +1,31 @@
+uuid: 97d9327c-aacd-4660-a73c-4a21ba8747e1
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_publisher
+    - node.type.organization
+    - node.type.person
+id: commerce_product.dataset.field_publisher
+field_name: field_publisher
+entity_type: commerce_product
+bundle: dataset
+label: publisher
+description: 'The entity responsible for making the resource available.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+      person: person
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: organization
+field_type: entity_reference

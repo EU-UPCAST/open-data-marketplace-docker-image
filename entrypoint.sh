@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # function Copied from MariaDB official image 2019-11-01
 #
 # usage: file_env VAR [DEFAULT]

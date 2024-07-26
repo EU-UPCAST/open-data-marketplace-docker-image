@@ -1,0 +1,39 @@
+uuid: bef46ea5-81e7-465a-9722-d5ab9ecdf76b
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.commerce_license.lite
+  module:
+    - commerce_license
+_core:
+  default_config_hash: E63wVJSklUtv3F393f0Gj3-N-eY83iQc4nZQOu7oMfI
+id: commerce_license.commerce_file.lite
+targetEntityType: commerce_license
+bundle: commerce_file
+mode: lite
+content:
+  product_variation:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  changed: true
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  expiration_type: true
+  expires: true
+  granted: true
+  licensed_files: true
+  originating_order: true
+  renewed: true
+  search_api_excerpt: true
+  state: true
+  uid: true
+  uuid: true

@@ -1,0 +1,11 @@
+uuid: 72ed003d-800f-4933-ba53-e0fc3f2e32f5
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.checksum
+id: node.checksum
+target_entity_type_id: node
+target_bundle: checksum
+default_langcode: site_default
+language_alterable: false

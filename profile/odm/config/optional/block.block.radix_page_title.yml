@@ -1,0 +1,20 @@
+uuid: a11e3209-f476-4d07-885e-0900eba652e4
+langcode: el
+status: true
+dependencies:
+  theme:
+    - radix
+_core:
+  default_config_hash: WzZpjSKU6T5zYMQBGsqD-qEFjZU5oImXiPVeVRspH8Y
+id: radix_page_title
+theme: radix
+region: header
+weight: -10
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Τίτλος σελίδας'
+  label_display: '0'
+  provider: core
+visibility: {  }

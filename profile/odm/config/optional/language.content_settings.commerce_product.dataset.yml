@@ -1,0 +1,11 @@
+uuid: 529ee627-bfac-4851-9b05-430ef214ce75
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+id: commerce_product.dataset
+target_entity_type_id: commerce_product
+target_bundle: dataset
+default_langcode: site_default
+language_alterable: false

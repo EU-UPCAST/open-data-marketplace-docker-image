@@ -1,0 +1,9 @@
+uuid: ec2a9953-0e76-430a-88e6-407442aa26bb
+langcode: el
+status: true
+dependencies: {  }
+id: core_views_exposed_filter__media__media_page_list
+name: 'core_views_exposed_filter:media__media_page_list'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

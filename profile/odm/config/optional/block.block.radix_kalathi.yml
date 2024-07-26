@@ -1,0 +1,21 @@
+uuid: e552bb47-ebd4-4862-a69d-a246c639b41a
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - radix
+id: radix_kalathi
+theme: radix
+region: navbar_branding
+weight: 0
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Καλάθι
+  label_display: visible
+  provider: commerce_cart
+  dropdown: true
+visibility: {  }

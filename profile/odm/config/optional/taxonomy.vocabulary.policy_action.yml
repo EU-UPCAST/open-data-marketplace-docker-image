@@ -1,0 +1,9 @@
+uuid: c28a9a1e-39b0-4820-b031-4baaaf1929b4
+langcode: el
+status: true
+dependencies: {  }
+name: 'Policy Action'
+vid: policy_action
+description: 'ODRL Policy Action'
+weight: 0
+new_revision: false

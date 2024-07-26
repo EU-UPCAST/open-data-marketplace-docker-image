@@ -1,0 +1,11 @@
+uuid: 27934b7b-287b-4483-a4b4-1ea650a91f70
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.only_add_to_cart_button
+label: 'Only add to cart button'
+description: ''
+targetEntityType: commerce_product_variation
+cache: true

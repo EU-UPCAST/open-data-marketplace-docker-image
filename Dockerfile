@@ -1,22 +1,31 @@
 # syntax=docker/dockerfile:1
 FROM drupal:latest
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+RUN echo 'memory_limit = 2048M' >> "$PHP_INI_DIR/php.ini";
+RUN echo 'max_execution_time = 120' >> "$PHP_INI_DIR/php.ini";
+RUN printf "\n" | pecl install apcu;
+RUN echo "extension=apcu.so" >> "$PHP_INI_DIR/php.ini";
+
 RUN ln -sf /usr/bin/bash /bin/sh
+RUN echo 'export  DRUPAL_DB_PASSWORD=`cat ${DRUPAL_DB_PASSWORD_FILE}`' >> /root/.bashrc
+
 WORKDIR /opt/drupal
 ENV COMPOSER_ALLOW_SUPERUSER=1
 COPY ./entrypoint.sh /opt/entrypoint.sh
 COPY ./wait-for-it.sh /opt/wait-for-it.sh
-COPY ./profile/odm /opt/drupal/web/profiles/custom/odm
-COPY ./modules /opt/drupal/web/profiles/custom/odm/modules
+COPY ./profile/odm /opt/drupal/web/profiles/contrib/odm
+COPY ./modules /opt/drupal/web/profiles/contrib/odm/modules
 RUN <<EOF
+
 docker-php-ext-install bcmath
+
 apt update
 apt install nano git jq unzip -y
 
 composer config minimum-stability dev
 composer config prefer-stable true
 
-composer config repositories.odm path ./web/profiles/custom/odm
+composer config repositories.odm path ./web/profiles/contrib/odm
 composer config repositories.assets composer https://asset-packagist.org
 composer config repositories.jsoneditor --json  '{"type":"package","package":{"name":"josdejong\/jsoneditor","version":"v5.29.1","type":"drupal-library","dist":{"url":"https:\/\/github.com\/josdejong\/jsoneditor\/archive\/v5.29.1.zip","type":"zip"},"source":{"url":"https:\/\/github.com\/josdejong\/jsoneditor","type":"git","reference":"v5.29.1"}}}'
 composer config repositories.jsonview --json  '{"type":"package","package":{"name":"yesmeck\/jquery-jsonview","version":"v1.2.3","type":"drupal-library","dist":{"url":"https:\/\/github.com\/yesmeck\/jquery-jsonview\/archive\/v1.2.3.zip","type":"zip"},"source":{"url":"https:\/\/github.com\/yesmeck\/jquery-jsonview","type":"git","reference":"v1.2.3"}}}'
@@ -73,10 +82,14 @@ if ! test -f /opt/drupal/web/sites/default/settings.php; then
     '^'.getenv('DRUPAL_TRUSTED_HOST').'\$',
   ];" >> /opt/drupal/web/sites/default/settings.php
 
+
+  echo "\$config['system.logging']['error_level'] = 'verbose';" >> /opt/drupal/web/sites/default/settings.php
+
+
   
   echo "\$settings['config_sync_directory'] = '/opt/config/sync';" >> /opt/drupal/web/sites/default/settings.php
   echo "\$settings['extension_discovery_scan_tests'] = true;">> /opt/drupal/web/sites/default/settings.php
-  #echo "\$settings['file_private_path'] = '/opt/files/private';">> /opt/drupal/web/sites/default/settings.php
+  echo "\$settings['file_private_path'] = '/opt/files/private';">> /opt/drupal/web/sites/default/settings.php
 fi
 
 chown -R  www-data:www-data /opt/drupal/web/sites/default

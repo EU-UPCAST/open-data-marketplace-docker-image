@@ -1,0 +1,25 @@
+uuid: b5cb4e27-5b9f-4a2e-a5a9-f249e934b4c1
+langcode: el
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - odmtheme
+id: odmtheme_kentrikiploigisi
+theme: odmtheme
+region: navbar_left
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Κεντρική πλοήγηση'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

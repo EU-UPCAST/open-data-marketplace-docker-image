@@ -1,0 +1,29 @@
+uuid: cb69a7c1-f7f3-42d0-8fe5-645d66e43409
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_policy_rule
+    - node.type.policy
+    - taxonomy.vocabulary.policy_rule
+id: node.policy.field_policy_rule
+field_name: field_policy_rule
+entity_type: node
+bundle: policy
+label: 'policy rule'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      policy_rule: policy_rule
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

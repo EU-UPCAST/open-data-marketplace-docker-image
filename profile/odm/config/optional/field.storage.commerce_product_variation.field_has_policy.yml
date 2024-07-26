@@ -1,0 +1,20 @@
+uuid: 8bf9679f-2f60-48f8-9f16-d4ef130bcf7f
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - node
+id: commerce_product_variation.field_has_policy
+field_name: field_has_policy
+entity_type: commerce_product_variation
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

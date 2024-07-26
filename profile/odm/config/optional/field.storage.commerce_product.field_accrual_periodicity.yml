@@ -1,0 +1,20 @@
+uuid: eb47179f-2143-4446-9b8f-5431b75c9f9f
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - taxonomy
+id: commerce_product.field_accrual_periodicity
+field_name: field_accrual_periodicity
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,77 @@
+uuid: c79b5b41-c4e1-44d7-b50b-9795db8d2e50
+langcode: el
+status: true
+dependencies:
+  module:
+    - eca_base
+    - eca_form
+id: process_rebw2up
+modeller: bpmn_io
+label: 'Dataset demand creation process'
+version: ''
+weight: null
+events:
+  Event_14hrhmc:
+    plugin: 'form:form_build'
+    label: |
+      build request form
+    configuration:
+      form_id: node-dataset-demand-form
+      entity_type_id: ''
+      bundle: ''
+      operation: ''
+    successors:
+      -
+        id: Activity_0gjzpgg
+        condition: ''
+  Event_12yhxy8:
+    plugin: 'form:form_submit'
+    label: 'submit dataset demand form'
+    configuration:
+      form_id: node-dataset-demand-form
+      entity_type_id: ''
+      bundle: ''
+      operation: ''
+    successors:
+      -
+        id: Activity_0v7dtp7
+        condition: Flow_0xw9v94
+conditions:
+  Flow_0kykb35:
+    plugin: eca_token_exists
+    configuration:
+      negate: false
+      token_name: 'current-page:query:provider'
+  Flow_0xw9v94:
+    plugin: eca_token_exists
+    configuration:
+      negate: false
+      token_name: 'current-page:query:redirect'
+gateways: {  }
+actions:
+  Activity_0gjzpgg:
+    plugin: eca_form_field_default_value
+    label: 'default dataset provider store'
+    configuration:
+      value: '[current-page:query:provider]'
+      field_name: field_provider_store
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_1k5ge7q
+        condition: Flow_0kykb35
+  Activity_1k5ge7q:
+    plugin: eca_form_field_disable
+    label: 'lock provider'
+    configuration:
+      flag: true
+      field_name: field_provider_store
+    successors: {  }
+  Activity_0v7dtp7:
+    plugin: eca_form_state_set_redirect
+    label: 'redirect to store'
+    configuration:
+      destination: '[current-page:query:redirect]'
+    successors: {  }

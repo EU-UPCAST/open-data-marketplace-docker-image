@@ -1,0 +1,11 @@
+uuid: 42fb904e-cebc-4f75-b701-118a449b5ee1
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_license
+id: commerce_license.lite
+label: lite
+description: ''
+targetEntityType: commerce_license
+cache: true

@@ -1,0 +1,20 @@
+uuid: 19f73123-eee6-43b7-9397-d82f2fb95c51
+langcode: el
+status: true
+dependencies:
+  module:
+    - odmblocks
+  theme:
+    - odmtheme
+id: odmtheme_odmfooterblock
+theme: odmtheme
+region: footer
+weight: 0
+provider: null
+plugin: odm_footer_block
+settings:
+  id: odm_footer_block
+  label: 'ODM Footer Block'
+  label_display: '0'
+  provider: odmblocks
+visibility: {  }

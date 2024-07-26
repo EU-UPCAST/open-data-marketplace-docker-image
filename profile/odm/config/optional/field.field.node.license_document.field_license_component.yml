@@ -1,0 +1,29 @@
+uuid: a1beef44-0fbf-49a1-b091-553e49ebd936
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_license_component
+    - node.type.license_document
+    - taxonomy.vocabulary.licenses
+id: node.license_document.field_license_component
+field_name: field_license_component
+entity_type: node
+bundle: license_document
+label: 'license component'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      licenses: licenses
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

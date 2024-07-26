@@ -1,0 +1,11 @@
+uuid: 4e5c48c3-a21f-487e-914e-194c91b78660
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.policy_constraint
+id: node.policy_constraint
+target_entity_type_id: node
+target_bundle: policy_constraint
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: 304783e3-eff7-44c5-bfc1-aafae13249c4
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - text
+id: commerce_product.field_version_notes
+field_name: field_version_notes
+entity_type: commerce_product
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

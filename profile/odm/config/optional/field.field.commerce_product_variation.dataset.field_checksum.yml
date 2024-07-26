@@ -1,0 +1,62 @@
+uuid: 7f6fa04d-c5f9-4198-a7bb-a8c164651f49
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.dataset
+    - field.storage.commerce_product_variation.field_checksum
+    - taxonomy.vocabulary.checksum_algorithm
+  module:
+    - custom_field
+id: commerce_product_variation.dataset.field_checksum
+field_name: field_checksum
+entity_type: commerce_product_variation
+bundle: dataset
+label: checksum
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    value:
+      type: text
+      weight: 0
+      check_empty: false
+      widget_settings:
+        label: Value
+        settings:
+          description: ''
+          description_display: after
+          size: 60
+          placeholder: ''
+          maxlength: 255
+          maxlength_js: false
+          prefix: ''
+          suffix: ''
+          required: false
+    algorithm:
+      type: entity_reference_autocomplete
+      weight: 0
+      check_empty: false
+      widget_settings:
+        label: Algorithm
+        settings:
+          description: ''
+          description_display: after
+          size: 60
+          placeholder: ''
+          required: false
+          match_operator: CONTAINS
+          match_limit: 10
+          handler: 'default:taxonomy_term'
+          handler_settings:
+            sort:
+              field: name
+              direction: asc
+            auto_create: false
+            target_bundles:
+              checksum_algorithm: checksum_algorithm
+            auto_create_bundle: ''
+field_type: custom

@@ -1,0 +1,45 @@
+uuid: 0f73e312-250d-430b-82fb-5451d4674f01
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.medium_vector_logo
+    - field.field.media.vector_image.field_media_svg
+    - media.type.vector_image
+  module:
+    - svg_image_field
+_core:
+  default_config_hash: azf-4JsCR_6x5XHzGMZOHv2Lko5YtmzttxsHVD4Aik8
+id: media.vector_image.medium_vector_logo
+targetEntityType: media
+bundle: vector_image
+mode: medium_vector_logo
+content:
+  field_media_svg:
+    type: svg_image_field_formatter
+    label: hidden
+    settings:
+      inline: false
+      apply_dimensions: true
+      width: 250
+      height: null
+      enable_alt: true
+      enable_title: true
+      link: ''
+      force_fill: false
+      sanitize: true
+      sanitize_remote: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
+  uuid: true

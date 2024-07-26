@@ -1,0 +1,9 @@
+uuid: 74ea5e90-3f90-4475-a7f4-8b15f0e7b636
+langcode: el
+status: true
+dependencies: {  }
+name: 'Policy Purpose'
+vid: policy_purpose
+description: null
+weight: 0
+new_revision: false

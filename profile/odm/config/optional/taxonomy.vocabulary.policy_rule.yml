@@ -1,0 +1,9 @@
+uuid: ca76dc49-93ba-43c6-a5f6-ea956a1b3c40
+langcode: und
+status: true
+dependencies: {  }
+name: 'Policy Rule'
+vid: policy_rule
+description: 'ODRL Policy Rule'
+weight: 0
+new_revision: false

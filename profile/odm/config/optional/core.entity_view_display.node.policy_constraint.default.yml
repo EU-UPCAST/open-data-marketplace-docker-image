@@ -1,0 +1,31 @@
+uuid: ed11d3bf-03e7-4266-8a17-5a0767ae1209
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.field.node.policy_constraint.body
+    - node.type.policy_constraint
+  module:
+    - text
+    - user
+id: node.policy_constraint.default
+targetEntityType: node
+bundle: policy_constraint
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

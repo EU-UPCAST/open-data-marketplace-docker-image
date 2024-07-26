@@ -1,0 +1,24 @@
+uuid: f0f48bc9-3e17-4bc0-9fb1-08057ac2b280
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.data_structure_definition
+  module:
+    - text
+id: node.data_structure_definition.body
+field_name: body
+entity_type: node
+bundle: data_structure_definition
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

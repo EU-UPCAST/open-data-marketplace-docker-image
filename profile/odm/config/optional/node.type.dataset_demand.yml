@@ -1,0 +1,18 @@
+uuid: 601988c4-41a3-4eca-a8cd-57c07d7e8afb
+langcode: el
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Dataset demand'
+type: dataset_demand
+description: null
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: false

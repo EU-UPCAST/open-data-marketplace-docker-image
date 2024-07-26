@@ -1,0 +1,18 @@
+uuid: a96cc835-a2f7-4e0a-bff2-15777db7338c
+langcode: el
+status: true
+dependencies:
+  theme:
+    - odmtheme
+id: odmtheme_proteyoysesenergeiesdiaheirisis
+theme: odmtheme
+region: content
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Πρωτεύουσες ενέργειες διαχείρισης'
+  label_display: '0'
+  provider: core
+visibility: {  }

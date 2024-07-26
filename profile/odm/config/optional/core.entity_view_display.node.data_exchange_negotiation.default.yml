@@ -6,11 +6,10 @@ dependencies:
     - field.field.node.data_exchange_negotiation.body
     - field.field.node.data_exchange_negotiation.field_consumer
     - field.field.node.data_exchange_negotiation.field_consumer_agreement
-    - field.field.node.data_exchange_negotiation.field_data_definition
     - field.field.node.data_exchange_negotiation.field_data_processing_workflow
     - field.field.node.data_exchange_negotiation.field_product
-    - field.field.node.data_exchange_negotiation.field_provider
     - field.field.node.data_exchange_negotiation.field_provider_agreement
+    - field.field.node.data_exchange_negotiation.field_provider_store
     - field.field.node.data_exchange_negotiation.field_state
     - node.type.data_exchange_negotiation
   module:
@@ -44,14 +43,6 @@ content:
     third_party_settings: {  }
     weight: 6
     region: content
-  field_data_definition:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_data_processing_workflow:
     type: entity_reference_label
     label: above
@@ -68,14 +59,6 @@ content:
     third_party_settings: {  }
     weight: 8
     region: content
-  field_provider:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_provider_agreement:
     type: entity_reference_label
     label: above
@@ -83,6 +66,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_provider_store:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_state:
     type: entity_reference_label
@@ -93,6 +84,10 @@ content:
     weight: 7
     region: content
 hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
   langcode: true
   links: true
   search_api_excerpt: true
+  uuid: true

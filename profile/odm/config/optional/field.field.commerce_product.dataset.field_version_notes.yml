@@ -1,0 +1,24 @@
+uuid: 1beee4e5-e3af-4c8d-a4dc-1399461321e3
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_version_notes
+    - filter.format.html
+  module:
+    - text
+id: commerce_product.dataset.field_version_notes
+field_name: field_version_notes
+entity_type: commerce_product
+bundle: dataset
+label: 'version notes'
+description: "A description of changes between this version and the previous version of the resource.\r\nIn case of backward compatibility issues with the previous version of the resource, a textual description of them SHOULD be specified by using this property."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - html
+field_type: text_long

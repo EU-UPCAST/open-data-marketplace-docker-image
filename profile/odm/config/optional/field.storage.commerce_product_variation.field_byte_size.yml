@@ -1,0 +1,20 @@
+uuid: ad00c477-3d3e-4b37-9572-83a094d59fb9
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product_variation.field_byte_size
+field_name: field_byte_size
+entity_type: commerce_product_variation
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

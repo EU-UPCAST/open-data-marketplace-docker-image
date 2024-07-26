@@ -1,0 +1,92 @@
+uuid: c269013d-0706-43af-b017-27ae785e6d5d
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.field.node.dataset_series.field_ckan
+    - field.field.node.dataset_series.field_description
+    - field.field.node.dataset_series.field_keyword
+    - field.field.node.dataset_series.field_store
+    - field.field.node.dataset_series.field_theme
+    - field.field.node.dataset_series.field_version
+    - node.type.dataset_series
+  module:
+    - dvf
+    - text
+    - user
+id: node.dataset_series.default
+targetEntityType: node
+bundle: dataset_series
+mode: default
+content:
+  field_ckan:
+    type: dvf_default
+    label: above
+    settings:
+      axis:
+        x:
+          styles:
+            label:
+              position: ''
+            tick:
+              centered: true
+        'y':
+          styles:
+            label:
+              position: ''
+      chart:
+        styles:
+          width: ''
+          height: ''
+        palette: ''
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_keyword:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_store:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_theme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_version:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

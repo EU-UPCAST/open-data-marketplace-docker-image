@@ -1,0 +1,11 @@
+uuid: 6d51cedd-26e6-46fc-abde-b94e9bf81e9a
+langcode: el
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.policy_rule
+id: taxonomy_term.policy_rule
+target_entity_type_id: taxonomy_term
+target_bundle: policy_rule
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,16 @@
+uuid: a28d1431-6f39-403a-9c10-1717341d80d2
+langcode: el
+status: true
+dependencies:
+  config:
+    - user.role.api_user
+  module:
+    - user
+_core:
+  default_config_hash: hDrvgCSFAwxC1NqAKh5M_biEHaNVso19b-HQOqxtxuA
+id: user_add_role_action.api_user
+label: 'Add the API User role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: api_user

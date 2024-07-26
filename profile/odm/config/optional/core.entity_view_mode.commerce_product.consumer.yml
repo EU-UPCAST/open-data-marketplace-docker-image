@@ -1,0 +1,11 @@
+uuid: 659e0e7b-7600-4a1c-b73e-dbf49b9a3013
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.consumer
+label: Consumer
+description: ''
+targetEntityType: commerce_product
+cache: true

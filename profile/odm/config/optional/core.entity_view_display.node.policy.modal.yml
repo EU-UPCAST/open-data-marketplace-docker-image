@@ -1,0 +1,77 @@
+uuid: 92ca8a21-6b7e-4612-a319-7916f87aeb36
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.modal
+    - field.field.node.policy.body
+    - field.field.node.policy.field_policy_action
+    - field.field.node.policy.field_policy_actor
+    - field.field.node.policy.field_policy_constraint
+    - field.field.node.policy.field_policy_purpose
+    - field.field.node.policy.field_policy_rule
+    - node.type.policy
+  module:
+    - custom_field
+    - text
+    - user
+id: node.policy.modal
+targetEntityType: node
+bundle: policy
+mode: modal
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_policy_action:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_policy_actor:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_policy_constraint:
+    type: custom_formatter
+    label: above
+    settings:
+      fields: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_policy_purpose:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_policy_rule:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  uuid: true

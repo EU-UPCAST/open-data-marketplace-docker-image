@@ -1,0 +1,29 @@
+uuid: d43dcf40-2efe-4cb1-8ada-b40128405814
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_theme
+    - node.type.dataset_series
+    - taxonomy.vocabulary.themes
+id: node.dataset_series.field_theme
+field_name: field_theme
+entity_type: node
+bundle: dataset_series
+label: theme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      themes: themes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,28 @@
+uuid: 2caffe0d-9b8f-42bd-a32d-6c88ca8484c9
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - file
+  enforced:
+    module:
+      - commerce_file
+_core:
+  default_config_hash: XXmXsv007Nw-CwesHilmb7KA0kMWbYlPnixxEKXXsrM
+id: commerce_product_variation.commerce_file
+field_name: commerce_file
+entity_type: commerce_product_variation
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: private
+module: file
+locked: false
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false

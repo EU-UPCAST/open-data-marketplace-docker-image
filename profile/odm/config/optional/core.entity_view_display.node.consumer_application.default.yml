@@ -1,0 +1,45 @@
+uuid: 968f91fe-7cc2-4945-b2a5-6bfe4550ab0d
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.field.node.consumer_application.field_enable_monitoring
+    - field.field.node.consumer_application.field_licensed_files
+    - node.type.consumer_application
+  module:
+    - user
+id: node.consumer_application.default
+targetEntityType: node
+bundle: consumer_application
+mode: default
+content:
+  field_enable_monitoring:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_licensed_files:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

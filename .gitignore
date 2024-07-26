@@ -1,3 +1,4 @@
 .env
 secrets/mysql_root_password/password
 *.log
+.idea

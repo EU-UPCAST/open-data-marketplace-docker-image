@@ -1,0 +1,57 @@
+uuid: d351be81-51c2-450c-ae99-ece4f2d281a0
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.modal
+    - field.field.node.dataset_demand.body
+    - field.field.node.dataset_demand.field_provider_store
+    - field.field.node.dataset_demand.field_reactions
+    - node.type.dataset_demand
+  module:
+    - text
+id: node.dataset_demand.modal
+targetEntityType: node
+bundle: dataset_demand
+mode: modal
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_provider_store:
+    type: entity_reference_autocomplete_tags
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_reactions: true
+  langcode: true
+  path: true
+  promote: true
+  revision_log: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true
+  uuid: true

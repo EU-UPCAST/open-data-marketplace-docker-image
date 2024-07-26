@@ -1,51 +1,61 @@
-uuid: 6113aa74-5134-4f90-b5e2-16b1bbf73be9
+uuid: 79841312-04cd-470a-b30a-59999bea9dcb
 langcode: el
 status: true
 dependencies:
   config:
-    - filter.format.text_with_material_icons
-    - node.type.data
     - node.type.data_exchange_negotiation
-    - node.type.data_exchange_offer
     - node.type.data_exchange_request
     - node.type.data_processing_workflow
+    - node.type.data_structure_definition
+    - node.type.dataset_demand
   module:
     - commerce_checkout
+    - commerce_invoice
+    - commerce_license
     - commerce_order
-    - commerce_payment
     - commerce_product
-    - filter
-    - form_mode_control
+    - commerce_promotion
+    - commerce_store
     - media
     - node
+    - profile
     - system
-    - toolbar
-_core:
-  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+    - votingapi_reaction
 id: authenticated
-label: 'Πιστοποιημένος χρήστης'
-weight: -8
-is_admin: false
+label: 'Authenticated user'
+weight: -4
+is_admin: null
 permissions:
   - 'access checkout'
   - 'access content'
-  - 'access content overview'
-  - 'access toolbar'
-  - 'access user profiles'
-  - 'create data content'
+  - 'cancel account'
+  - 'change own username'
   - 'create data_exchange_negotiation content'
-  - 'create data_exchange_offer content'
   - 'create data_exchange_request content'
   - 'create data_processing_workflow content'
-  - 'delete any data_exchange_offer content'
-  - 'delete any data_exchange_request content'
-  - 'delete any data_processing_workflow content'
-  - 'manage own commerce_payment_method'
-  - 'use  The form mode modal linked to  node entity( data_exchange_negotiation )'
-  - 'use  The form mode modal linked to  node entity( data_exchange_offer )'
-  - 'use  The form mode modal linked to  node entity( data_exchange_request )'
-  - 'use text format text_with_material_icons'
+  - 'create data_structure_definition content'
+  - 'create dataset_demand content'
+  - 'create reaction on node:dataset_demand:field_reactions'
+  - 'delete own customer profile'
+  - 'delete own data_exchange_negotiation content'
+  - 'delete own data_exchange_request content'
+  - 'delete own data_processing_workflow content'
+  - 'delete own data_structure_definition content'
+  - 'delete own dataset_demand content'
+  - 'edit own data_structure_definition content'
+  - 'edit own dataset_demand content'
+  - 'update own customer profile'
   - 'view commerce_product'
+  - 'view commerce_promotion'
+  - 'view commerce_store'
+  - 'view dataset commerce_product'
   - 'view media'
+  - 'view own commerce_invoice'
+  - 'view own commerce_license'
   - 'view own commerce_order'
+  - 'view own customer profile'
+  - 'view own profile'
   - 'view own unpublished content'
+  - 'view own unpublished profile'
+  - 'view reactions on node:dataset_demand:field_reactions'
+  - 'view the administration theme'

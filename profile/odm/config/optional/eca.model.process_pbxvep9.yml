@@ -35,9 +35,9 @@ modeldata: |
         </bpmn2:extensionElements>
         <bpmn2:outgoing>Flow_0o5lrti</bpmn2:outgoing>
         <bpmn2:outgoing>Flow_1shnr0f</bpmn2:outgoing>
-        <bpmn2:outgoing>Flow_0rok26w</bpmn2:outgoing>
         <bpmn2:outgoing>Flow_1szerbm</bpmn2:outgoing>
         <bpmn2:outgoing>Flow_0doyvkn</bpmn2:outgoing>
+        <bpmn2:outgoing>Flow_1ds4s0w</bpmn2:outgoing>
       </bpmn2:startEvent>
       <bpmn2:task id="Activity_0gjzpgg" name="default title" camunda:modelerTemplate="org.drupal.action.eca_form_field_default_value">
         <bpmn2:extensionElements>
@@ -143,58 +143,6 @@ modeldata: |
           </camunda:field>
         </bpmn2:extensionElements>
       </bpmn2:sequenceFlow>
-      <bpmn2:task id="Activity_1g3pwjo" name="default data definition" camunda:modelerTemplate="org.drupal.action.eca_form_field_default_value">
-        <bpmn2:extensionElements>
-          <camunda:properties>
-            <camunda:property name="pluginid" value="eca_form_field_default_value" />
-          </camunda:properties>
-          <camunda:field name="field_name">
-            <camunda:string>field_data_definition</camunda:string>
-          </camunda:field>
-          <camunda:field name="value">
-            <camunda:string>[current-page:query:dd]</camunda:string>
-          </camunda:field>
-          <camunda:field name="strip_tags">
-            <camunda:string>yes</camunda:string>
-          </camunda:field>
-          <camunda:field name="trim">
-            <camunda:string>yes</camunda:string>
-          </camunda:field>
-          <camunda:field name="xss_filter">
-            <camunda:string>yes</camunda:string>
-          </camunda:field>
-        </bpmn2:extensionElements>
-        <bpmn2:incoming>Flow_0rok26w</bpmn2:incoming>
-        <bpmn2:outgoing>Flow_0rpfr6n</bpmn2:outgoing>
-      </bpmn2:task>
-      <bpmn2:sequenceFlow id="Flow_0rok26w" sourceRef="Event_14hrhmc" targetRef="Activity_1g3pwjo" />
-      <bpmn2:task id="Activity_1m6z6ib" name="lock data definition" camunda:modelerTemplate="org.drupal.action.eca_form_field_disable">
-        <bpmn2:extensionElements>
-          <camunda:properties>
-            <camunda:property name="pluginid" value="eca_form_field_disable" />
-          </camunda:properties>
-          <camunda:field name="field_name">
-            <camunda:string>field_data_definition</camunda:string>
-          </camunda:field>
-          <camunda:field name="flag">
-            <camunda:string>yes</camunda:string>
-          </camunda:field>
-        </bpmn2:extensionElements>
-        <bpmn2:incoming>Flow_0rpfr6n</bpmn2:incoming>
-      </bpmn2:task>
-      <bpmn2:sequenceFlow id="Flow_0rpfr6n" name="data definition exists?" camunda:modelerTemplate="org.drupal.condition.eca_token_exists" sourceRef="Activity_1g3pwjo" targetRef="Activity_1m6z6ib">
-        <bpmn2:extensionElements>
-          <camunda:properties>
-            <camunda:property name="pluginid" value="eca_token_exists" />
-          </camunda:properties>
-          <camunda:field name="token_name">
-            <camunda:string>current-page:query:dd</camunda:string>
-          </camunda:field>
-          <camunda:field name="negate">
-            <camunda:string>no</camunda:string>
-          </camunda:field>
-        </bpmn2:extensionElements>
-      </bpmn2:sequenceFlow>
       <bpmn2:task id="Activity_1kn3lpt" name="default consumer" camunda:modelerTemplate="org.drupal.action.eca_form_field_default_value">
         <bpmn2:extensionElements>
           <camunda:properties>
@@ -275,6 +223,46 @@ modeldata: |
         <bpmn2:incoming>Flow_0c9ym1d</bpmn2:incoming>
       </bpmn2:task>
       <bpmn2:sequenceFlow id="Flow_0c9ym1d" sourceRef="Activity_1111a0j" targetRef="Activity_1vpvm6q" />
+      <bpmn2:task id="Activity_1vkdm83" name="default provider store" camunda:modelerTemplate="org.drupal.action.eca_form_field_default_value">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_form_field_default_value" />
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>field_provider_store</camunda:string>
+          </camunda:field>
+          <camunda:field name="value">
+            <camunda:string>[current-page:query:provider_store]</camunda:string>
+          </camunda:field>
+          <camunda:field name="strip_tags">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+          <camunda:field name="trim">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+          <camunda:field name="xss_filter">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_1ds4s0w</bpmn2:incoming>
+        <bpmn2:outgoing>Flow_0plgtxr</bpmn2:outgoing>
+      </bpmn2:task>
+      <bpmn2:task id="Activity_068y33r" name="lock provider store" camunda:modelerTemplate="org.drupal.action.eca_form_field_disable">
+        <bpmn2:extensionElements>
+          <camunda:properties>
+            <camunda:property name="pluginid" value="eca_form_field_disable" />
+          </camunda:properties>
+          <camunda:field name="field_name">
+            <camunda:string>field_provider_store</camunda:string>
+          </camunda:field>
+          <camunda:field name="flag">
+            <camunda:string>yes</camunda:string>
+          </camunda:field>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>Flow_0plgtxr</bpmn2:incoming>
+      </bpmn2:task>
+      <bpmn2:sequenceFlow id="Flow_1ds4s0w" sourceRef="Event_14hrhmc" targetRef="Activity_1vkdm83" />
+      <bpmn2:sequenceFlow id="Flow_0plgtxr" sourceRef="Activity_1vkdm83" targetRef="Activity_068y33r" />
     </bpmn2:process>
     <bpmndi:BPMNDiagram id="sid-2958aa33-365f-450e-8b01-bcef14f50209">
       <bpmndi:BPMNPlane id="sid-dc2199ab-f33a-43c7-b48a-de94e94c555d" bpmnElement="Process_pBXveP9">
@@ -300,14 +288,6 @@ modeldata: |
           <dc:Bounds x="990" y="60" width="100" height="80" />
           <bpmndi:BPMNLabel />
         </bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="Activity_1g3pwjo_di" bpmnElement="Activity_1g3pwjo">
-          <dc:Bounds x="660" y="190" width="100" height="80" />
-          <bpmndi:BPMNLabel />
-        </bpmndi:BPMNShape>
-        <bpmndi:BPMNShape id="Activity_1m6z6ib_di" bpmnElement="Activity_1m6z6ib">
-          <dc:Bounds x="990" y="190" width="100" height="80" />
-          <bpmndi:BPMNLabel />
-        </bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="Activity_1kn3lpt_di" bpmnElement="Activity_1kn3lpt">
           <dc:Bounds x="660" y="320" width="100" height="80" />
           <bpmndi:BPMNLabel />
@@ -322,6 +302,14 @@ modeldata: |
         </bpmndi:BPMNShape>
         <bpmndi:BPMNShape id="Activity_1vpvm6q_di" bpmnElement="Activity_1vpvm6q">
           <dc:Bounds x="990" y="460" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_1vkdm83_di" bpmnElement="Activity_1vkdm83">
+          <dc:Bounds x="660" y="570" width="100" height="80" />
+          <bpmndi:BPMNLabel />
+        </bpmndi:BPMNShape>
+        <bpmndi:BPMNShape id="Activity_068y33r_di" bpmnElement="Activity_068y33r">
+          <dc:Bounds x="990" y="570" width="100" height="80" />
           <bpmndi:BPMNLabel />
         </bpmndi:BPMNShape>
         <bpmndi:BPMNEdge id="Flow_0o5lrti_di" bpmnElement="Flow_0o5lrti">
@@ -348,19 +336,6 @@ modeldata: |
             <dc:Bounds x="840" y="66" width="74" height="14" />
           </bpmndi:BPMNLabel>
         </bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="Flow_0rok26w_di" bpmnElement="Flow_0rok26w">
-          <di:waypoint x="388" y="100" />
-          <di:waypoint x="500" y="100" />
-          <di:waypoint x="500" y="230" />
-          <di:waypoint x="660" y="230" />
-        </bpmndi:BPMNEdge>
-        <bpmndi:BPMNEdge id="Flow_0rpfr6n_di" bpmnElement="Flow_0rpfr6n">
-          <di:waypoint x="760" y="230" />
-          <di:waypoint x="990" y="230" />
-          <bpmndi:BPMNLabel>
-            <dc:Bounds x="841" y="196" width="69" height="27" />
-          </bpmndi:BPMNLabel>
-        </bpmndi:BPMNEdge>
         <bpmndi:BPMNEdge id="Flow_1szerbm_di" bpmnElement="Flow_1szerbm">
           <di:waypoint x="388" y="100" />
           <di:waypoint x="500" y="100" />
@@ -380,6 +355,16 @@ modeldata: |
         <bpmndi:BPMNEdge id="Flow_0c9ym1d_di" bpmnElement="Flow_0c9ym1d">
           <di:waypoint x="760" y="500" />
           <di:waypoint x="990" y="500" />
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_1ds4s0w_di" bpmnElement="Flow_1ds4s0w">
+          <di:waypoint x="388" y="100" />
+          <di:waypoint x="500" y="100" />
+          <di:waypoint x="500" y="610" />
+          <di:waypoint x="660" y="610" />
+        </bpmndi:BPMNEdge>
+        <bpmndi:BPMNEdge id="Flow_0plgtxr_di" bpmnElement="Flow_0plgtxr">
+          <di:waypoint x="760" y="610" />
+          <di:waypoint x="990" y="610" />
         </bpmndi:BPMNEdge>
       </bpmndi:BPMNPlane>
     </bpmndi:BPMNDiagram>

@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Negotiation states'
 vid: negotiation_states
-description: ''
+description: null
 weight: 0
+new_revision: false

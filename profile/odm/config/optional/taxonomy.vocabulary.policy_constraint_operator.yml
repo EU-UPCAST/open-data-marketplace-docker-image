@@ -1,0 +1,9 @@
+uuid: e41d6c7f-c700-41fd-b250-3162e3c05c23
+langcode: el
+status: true
+dependencies: {  }
+name: 'Policy Constraint Operator'
+vid: policy_constraint_operator
+description: null
+weight: 0
+new_revision: false

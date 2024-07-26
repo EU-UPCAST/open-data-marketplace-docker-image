@@ -1,0 +1,19 @@
+uuid: cd2ef703-af5b-4a57-ba61-39860dc278ec
+langcode: el
+status: true
+dependencies:
+  module:
+    - dvf
+    - node
+id: node.field_ckan
+field_name: field_ckan
+entity_type: node
+type: dvf_url
+settings: {  }
+module: dvf
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

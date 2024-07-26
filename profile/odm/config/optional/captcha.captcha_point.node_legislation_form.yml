@@ -1,0 +1,7 @@
+uuid: 23df8258-1301-48f5-97fd-b26ae3a99408
+langcode: el
+status: false
+dependencies: {  }
+formId: node_legislation_form
+captchaType: default
+label: node_legislation_form

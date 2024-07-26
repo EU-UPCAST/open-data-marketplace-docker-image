@@ -1,0 +1,29 @@
+uuid: eeb76545-a6cf-44d3-be68-52d3dfbf586b
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.dataset
+    - field.storage.commerce_product_variation.field_license
+    - node.type.license_document
+id: commerce_product_variation.dataset.field_license
+field_name: field_license
+entity_type: commerce_product_variation
+bundle: dataset
+label: license
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      license_document: license_document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -4,19 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.basic_page.body
+    - field.field.node.basic_page.field_buzzword
+    - field.field.node.basic_page.field_featured_image
     - node.type.basic_page
   module:
-    - content_moderation
-    - field_layout
     - hide_revision_field
-    - layout_discovery
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: node.basic_page.default
 targetEntityType: node
 bundle: basic_page
@@ -37,6 +31,24 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_buzzword:
+    type: string_textfield
+    weight: 123
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_featured_image:
+    type: entity_reference_autocomplete
+    weight: 122
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select
@@ -108,4 +120,10 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  uuid: true

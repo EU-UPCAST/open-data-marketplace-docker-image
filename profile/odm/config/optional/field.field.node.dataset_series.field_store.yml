@@ -1,0 +1,29 @@
+uuid: 457061c6-7dd2-443f-9696-63de69e43cfd
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_store.commerce_store_type.online
+    - field.storage.node.field_store
+    - node.type.dataset_series
+id: node.dataset_series.field_store
+field_name: field_store
+entity_type: node
+bundle: dataset_series
+label: store
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_store'
+  handler_settings:
+    target_bundles:
+      online: online
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

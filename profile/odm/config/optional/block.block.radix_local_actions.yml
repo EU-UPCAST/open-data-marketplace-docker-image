@@ -1,0 +1,20 @@
+uuid: 03cc41e0-c7e7-4df4-8b6d-55144604edfb
+langcode: el
+status: true
+dependencies:
+  theme:
+    - radix
+_core:
+  default_config_hash: 7DkzT2BMXRLxCncFckXCpfppu4Vg5-HCuEVmVTK3ygQ
+id: radix_local_actions
+theme: radix
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Πρωτεύουσες ενέργειες διαχείρισης'
+  label_display: '0'
+  provider: core
+visibility: {  }

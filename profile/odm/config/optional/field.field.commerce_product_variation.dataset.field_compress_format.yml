@@ -1,0 +1,29 @@
+uuid: a13998af-7531-4566-a3eb-361824aaba3a
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.dataset
+    - field.storage.commerce_product_variation.field_compress_format
+    - taxonomy.vocabulary.media_type
+id: commerce_product_variation.dataset.field_compress_format
+field_name: field_compress_format
+entity_type: commerce_product_variation
+bundle: dataset
+label: 'compress format'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      media_type: media_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

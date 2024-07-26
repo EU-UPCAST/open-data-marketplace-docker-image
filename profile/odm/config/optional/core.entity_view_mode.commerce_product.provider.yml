@@ -1,0 +1,11 @@
+uuid: da2455ea-59cf-4899-94eb-de4091013e17
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.provider
+label: Provider
+description: ''
+targetEntityType: commerce_product
+cache: true

@@ -1,0 +1,9 @@
+uuid: e3c0a598-acf8-423a-a74a-7d6407732937
+langcode: el
+status: true
+dependencies: {  }
+name: 'Checksum algorithm'
+vid: checksum_algorithm
+description: null
+weight: 0
+new_revision: false

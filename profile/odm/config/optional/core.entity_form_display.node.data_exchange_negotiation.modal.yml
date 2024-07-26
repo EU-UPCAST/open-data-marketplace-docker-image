@@ -7,23 +7,16 @@ dependencies:
     - field.field.node.data_exchange_negotiation.body
     - field.field.node.data_exchange_negotiation.field_consumer
     - field.field.node.data_exchange_negotiation.field_consumer_agreement
-    - field.field.node.data_exchange_negotiation.field_data_definition
     - field.field.node.data_exchange_negotiation.field_data_processing_workflow
     - field.field.node.data_exchange_negotiation.field_product
-    - field.field.node.data_exchange_negotiation.field_provider
     - field.field.node.data_exchange_negotiation.field_provider_agreement
+    - field.field.node.data_exchange_negotiation.field_provider_store
     - field.field.node.data_exchange_negotiation.field_state
     - node.type.data_exchange_negotiation
   module:
     - allowed_formats
-    - field_layout
-    - layout_discovery
+    - commerce
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: node.data_exchange_negotiation.modal
 targetEntityType: node
 bundle: data_exchange_negotiation
@@ -52,16 +45,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_data_definition:
-    type: entity_reference_autocomplete
-    weight: 3
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
   field_data_processing_workflow:
     type: entity_reference_autocomplete
     weight: 4
@@ -82,15 +65,21 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_provider:
-    type: entity_reference_autocomplete
-    weight: 2
+  field_provider_store:
+    type: commerce_entity_select
+    weight: 3
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      hide_single_entity: true
+      autocomplete_threshold: 2
+      autocomplete_size: 60
+      autocomplete_placeholder: ''
+      show_only_own_entities: 0
+    third_party_settings: {  }
+  url_redirects:
+    weight: 6
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden:
   created: true
@@ -106,3 +95,4 @@ hidden:
   sticky: true
   title: true
   uid: true
+  uuid: true

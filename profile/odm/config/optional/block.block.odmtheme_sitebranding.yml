@@ -1,0 +1,23 @@
+uuid: 92e83f96-14ad-4836-8b57-bd843460bfad
+langcode: el
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - odmtheme
+id: odmtheme_sitebranding
+theme: odmtheme
+region: navbar_branding
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

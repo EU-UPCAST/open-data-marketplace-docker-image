@@ -1,0 +1,28 @@
+uuid: cf524839-a817-49ae-b17a-d69653539408
+langcode: el
+status: true
+dependencies:
+  module:
+    - file
+    - svg_image_field
+    - taxonomy
+id: taxonomy_term.field_icon
+field_name: field_icon
+entity_type: taxonomy_term
+type: svg_image_field
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+module: svg_image_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

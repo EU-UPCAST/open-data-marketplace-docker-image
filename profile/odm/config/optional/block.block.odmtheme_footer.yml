@@ -1,0 +1,27 @@
+uuid: 163a7533-6728-46f5-8940-9335bd225699
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - odmtheme
+_core:
+  default_config_hash: 3_TfT9sd1XC7okV4ohMFbZIHE_G6eVVxLoWS83rTj1s
+id: odmtheme_footer
+theme: odmtheme
+region: footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

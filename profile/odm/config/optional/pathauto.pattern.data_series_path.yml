@@ -1,0 +1,22 @@
+uuid: 5b16fb66-8c2b-48bd-92cf-0b9341732522
+langcode: el
+status: true
+dependencies:
+  module:
+    - node
+id: data_series_path
+label: 'data series path'
+type: 'canonical_entities:node'
+pattern: 'data-series/[node:nid]'
+selection_criteria:
+  4cbdbb8f-f2ea-4064-95fc-8b89dbd941fe:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 4cbdbb8f-f2ea-4064-95fc-8b89dbd941fe
+    context_mapping:
+      node: node
+    bundles:
+      dataset_series: dataset_series
+selection_logic: and
+weight: -5
+relationships: {  }

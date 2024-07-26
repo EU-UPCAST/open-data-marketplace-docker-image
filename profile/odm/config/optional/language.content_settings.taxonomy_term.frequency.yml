@@ -1,0 +1,11 @@
+uuid: 4eccedcf-13b0-42f9-80f8-27bec4098d04
+langcode: el
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.frequency
+id: taxonomy_term.frequency
+target_entity_type_id: taxonomy_term
+target_bundle: frequency
+default_langcode: site_default
+language_alterable: false

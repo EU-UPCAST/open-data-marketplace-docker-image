@@ -1,0 +1,185 @@
+uuid: 7c9b54ba-5853-46e6-bbcf-31c35dc6d369
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - core.entity_view_mode.commerce_product.consumer
+    - field.field.commerce_product.dataset.feeds_item
+    - field.field.commerce_product.dataset.field_access_rights
+    - field.field.commerce_product.dataset.field_accrual_periodicity
+    - field.field.commerce_product.dataset.field_conforms_to
+    - field.field.commerce_product.dataset.field_contact_point
+    - field.field.commerce_product.dataset.field_creator
+    - field.field.commerce_product.dataset.field_description
+    - field.field.commerce_product.dataset.field_has_part
+    - field.field.commerce_product.dataset.field_has_policy
+    - field.field.commerce_product.dataset.field_high_value_data_category
+    - field.field.commerce_product.dataset.field_identifier
+    - field.field.commerce_product.dataset.field_in_series
+    - field.field.commerce_product.dataset.field_issued
+    - field.field.commerce_product.dataset.field_json_sample
+    - field.field.commerce_product.dataset.field_keyword
+    - field.field.commerce_product.dataset.field_landing_page
+    - field.field.commerce_product.dataset.field_language
+    - field.field.commerce_product.dataset.field_legislation
+    - field.field.commerce_product.dataset.field_license
+    - field.field.commerce_product.dataset.field_modified
+    - field.field.commerce_product.dataset.field_publisher
+    - field.field.commerce_product.dataset.field_replaces
+    - field.field.commerce_product.dataset.field_rights
+    - field.field.commerce_product.dataset.field_spatial
+    - field.field.commerce_product.dataset.field_spatial_resolution_in_mete
+    - field.field.commerce_product.dataset.field_status
+    - field.field.commerce_product.dataset.field_sync_id
+    - field.field.commerce_product.dataset.field_temporal
+    - field.field.commerce_product.dataset.field_temporal_resolution
+    - field.field.commerce_product.dataset.field_theme
+    - field.field.commerce_product.dataset.field_type
+    - field.field.commerce_product.dataset.field_version
+    - field.field.commerce_product.dataset.field_version_notes
+  module:
+    - datetime
+    - datetime_range
+    - geofield
+    - languagefield
+    - link
+id: commerce_product.dataset.consumer
+targetEntityType: commerce_product
+bundle: dataset
+mode: consumer
+content:
+  field_identifier:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_issued:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_keyword:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_landing_page:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_language:
+    type: languagefield_default
+    label: above
+    settings:
+      link_to_entity: false
+      format:
+        name: name
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_modified:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_spatial:
+    type: geofield_default
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_temporal:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      from_to: both
+      separator: '-'
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_theme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  variations:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: only_add_to_cart_button
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  feeds_item: true
+  field_access_rights: true
+  field_accrual_periodicity: true
+  field_conforms_to: true
+  field_contact_point: true
+  field_creator: true
+  field_description: true
+  field_has_part: true
+  field_has_policy: true
+  field_high_value_data_category: true
+  field_in_series: true
+  field_json_sample: true
+  field_legislation: true
+  field_license: true
+  field_publisher: true
+  field_replaces: true
+  field_rights: true
+  field_spatial_resolution_in_mete: true
+  field_status: true
+  field_sync_id: true
+  field_temporal_resolution: true
+  field_type: true
+  field_version: true
+  field_version_notes: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  uid: true
+  uuid: true

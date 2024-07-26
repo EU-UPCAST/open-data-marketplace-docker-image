@@ -1,0 +1,11 @@
+uuid: 723714da-c3b4-404f-9547-a48d74ce40c2
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.dataset_series
+id: node.dataset_series
+target_entity_type_id: node
+target_bundle: dataset_series
+default_langcode: site_default
+language_alterable: false

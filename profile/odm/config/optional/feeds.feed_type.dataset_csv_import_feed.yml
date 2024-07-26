@@ -1,0 +1,221 @@
+uuid: d1b16cfb-62b8-4f2c-97b8-8ddf6dc94c7a
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.field.commerce_product.dataset.field_description
+    - field.field.commerce_product.dataset.field_identifier
+    - field.field.commerce_product.dataset.field_issued
+    - field.field.commerce_product.dataset.field_keyword
+    - field.field.commerce_product.dataset.field_license
+    - field.field.commerce_product.dataset.field_spatial
+    - field.field.commerce_product.dataset.field_status
+    - field.field.commerce_product.dataset.field_temporal
+    - field.field.commerce_product.dataset.field_theme
+  module:
+    - commerce_feeds
+    - commerce_product
+    - feeds_tamper
+    - geofield
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      adc3d26e-ac13-43fe-9a27-51c855f87a66:
+        separator: '|'
+        limit: null
+        uuid: adc3d26e-ac13-43fe-9a27-51c855f87a66
+        plugin: explode
+        source: keyword
+        weight: 0
+        label: Explode
+label: 'Dataset CSV import feed'
+id: dataset_csv_import_feed
+description: ''
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:commerce_product'
+processor_configuration:
+  values:
+    type: dataset
+  langcode: el
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+custom_sources:
+  title:
+    value: title
+    label: title
+    machine_name: title
+    type: csv
+  store:
+    value: store
+    label: store
+    machine_name: store
+    type: csv
+  theme:
+    value: theme
+    label: theme
+    machine_name: theme
+    type: csv
+  description:
+    value: description
+    label: description
+    machine_name: description
+    type: csv
+  keyword:
+    value: keyword
+    label: keyword
+    machine_name: keyword
+    type: csv
+  identifier:
+    value: identifier
+    label: identifier
+    machine_name: identifier
+    type: csv
+  license:
+    value: license
+    label: license
+    machine_name: license
+    type: csv
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: blank
+  variations:
+    value: variations
+    label: variations
+    machine_name: variations
+    type: csv
+  start_date:
+    value: start_date
+    label: start_date
+    machine_name: start_date
+    type: csv
+  end_date:
+    value: end_date
+    label: end_date
+    machine_name: end_date
+    type: csv
+  issued_date:
+    value: issued_date
+    label: issued_date
+    machine_name: issued_date
+    type: csv
+  status:
+    value: status
+    label: status
+    machine_name: status
+    type: csv
+  geojson:
+    value: geoJSON
+    label: geoJSON
+    machine_name: geojson
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: stores
+    map:
+      target_id: store
+    settings:
+      reference_by: store_id
+      autocreate: 0
+      autocreate_bundle: false
+  -
+    target: field_theme
+    map:
+      target_id: theme
+    settings:
+      language: el
+      reference_by: name
+      autocreate: 0
+      autocreate_bundle: themes
+  -
+    target: field_description
+    map:
+      value: description
+      summary: description
+    settings:
+      language: ''
+      format: plain_text
+  -
+    target: field_keyword
+    map:
+      target_id: keyword
+    settings:
+      language: el
+      reference_by: name
+      autocreate: 1
+      autocreate_bundle: keywords
+  -
+    target: field_identifier
+    map:
+      value: identifier
+    settings:
+      language: null
+  -
+    target: field_license
+    map:
+      target_id: license
+    settings:
+      language: ''
+      reference_by: title
+      autocreate: 1
+      autocreate_bundle: license_document
+  -
+    target: field_temporal
+    map:
+      value: start_date
+      end_value: end_date
+    settings:
+      language: ''
+      timezone: UTC
+  -
+    target: field_issued
+    map:
+      value: issued_date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_status
+    map:
+      target_id: status
+    settings:
+      language: ''
+      reference_by: name
+      autocreate: 1
+      autocreate_bundle: resource_status
+  -
+    target: field_spatial
+    map:
+      lat: ''
+      lon: ''
+      value: geojson
+    settings:
+      language: null

@@ -1,0 +1,11 @@
+uuid: be48d117-f4a0-46d2-bc12-a080693427ca
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.data_exchange_offer
+id: node.data_exchange_offer
+target_entity_type_id: node
+target_bundle: data_exchange_offer
+default_langcode: site_default
+language_alterable: false

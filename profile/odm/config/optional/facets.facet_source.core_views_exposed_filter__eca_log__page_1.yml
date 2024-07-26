@@ -1,0 +1,12 @@
+uuid: d9a65f97-e7d3-49f6-9c78-5383d57596e8
+langcode: el
+status: true
+dependencies: {  }
+id: core_views_exposed_filter__eca_log__page_1
+name: 'core_views_exposed_filter:eca_log__page_1'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false

@@ -1,0 +1,22 @@
+uuid: 3041a573-4378-4020-92eb-85072f90525e
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.data_structure_definition
+id: node.data_structure_definition.promote
+field_name: promote
+entity_type: node
+bundle: data_structure_definition
+label: 'Προβιβασμένο στην πρώτη σελίδα'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Ανοικτό
+  off_label: Κλειστό
+field_type: boolean

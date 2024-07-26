@@ -1,0 +1,14 @@
+uuid: a3dde4b2-0e55-4a40-b4b1-ad11b3b56956
+langcode: el
+status: true
+dependencies:
+  config:
+    - user.role.data_provider
+  module:
+    - user
+id: user_remove_role_action.data_provider
+label: 'Remove the Data provider role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: data_provider

@@ -1,0 +1,24 @@
+uuid: 30ef81be-3106-4b96-a91b-3b7670ec2757
+langcode: el
+status: true
+dependencies:
+  config:
+    - facets.facet.keyword
+  module:
+    - facets
+  theme:
+    - odmtheme
+id: odmtheme_keyword
+theme: odmtheme
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'facet_block:keyword'
+settings:
+  id: 'facet_block:keyword'
+  label: keyword
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: odmtheme_keyword
+visibility: {  }

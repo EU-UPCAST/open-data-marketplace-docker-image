@@ -1,0 +1,17 @@
+uuid: a016b4f9-31d8-4eca-b173-c7b322c05d7c
+langcode: el
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ccmJnYDefjjUJ1_S8QUpDMgN41yZcLULtiTOdR1sJmo
+id: default
+label: Τιμολόγιο
+traits: {  }
+numberPattern: invoice_default
+logo: null
+dueDays: null
+paymentTerms: ''
+footerText: ''
+workflow: invoice_default
+sendConfirmation: false
+confirmationBcc: ''

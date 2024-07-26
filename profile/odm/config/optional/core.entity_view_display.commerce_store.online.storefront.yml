@@ -1,0 +1,106 @@
+uuid: a02cf1cc-cb3b-4edc-a588-ff799998cbd2
+langcode: el
+status: false
+dependencies:
+  config:
+    - commerce_store.commerce_store_type.online
+    - core.entity_view_mode.commerce_store.storefront
+    - field.field.commerce_store.online.field_color
+    - field.field.commerce_store.online.field_description
+    - field.field.commerce_store.online.field_logo
+    - field.field.commerce_store.online.field_text_color
+  module:
+    - address
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_3col_stacked_fluid
+      library: ds/ds_3col_stacked_fluid
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          header: div
+          left: div
+          middle: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      header:
+        - name
+      left:
+        - field_logo
+      middle:
+        - field_description
+      right:
+        - address
+        - mail
+_core:
+  default_config_hash: TXXGt2nhVIkNciw-z_ybNwsIZnsyMLKvqUFjsZFUmwI
+id: commerce_store.online.storefront
+targetEntityType: commerce_store
+bundle: online
+mode: storefront
+content:
+  address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: right
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: middle
+  field_logo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: medium_vector_logo
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: left
+  mail:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: right
+  name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: header
+hidden:
+  billing_countries: true
+  created: true
+  default_currency: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_color: true
+  field_text_color: true
+  is_default: true
+  langcode: true
+  search_api_excerpt: true
+  timezone: true
+  uid: true
+  uuid: true

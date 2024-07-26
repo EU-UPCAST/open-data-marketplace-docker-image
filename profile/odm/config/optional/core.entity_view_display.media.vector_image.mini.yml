@@ -1,0 +1,45 @@
+uuid: 7db38295-4109-44b4-8331-9661da06499a
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.mini
+    - field.field.media.vector_image.field_media_svg
+    - media.type.vector_image
+  module:
+    - svg_image_field
+_core:
+  default_config_hash: azf-4JsCR_6x5XHzGMZOHv2Lko5YtmzttxsHVD4Aik8
+id: media.vector_image.mini
+targetEntityType: media
+bundle: vector_image
+mode: mini
+content:
+  field_media_svg:
+    type: svg_image_field_formatter
+    label: hidden
+    settings:
+      inline: false
+      apply_dimensions: true
+      width: 120
+      height: 120
+      enable_alt: true
+      enable_title: true
+      link: ''
+      force_fill: false
+      sanitize: true
+      sanitize_remote: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
+  uuid: true

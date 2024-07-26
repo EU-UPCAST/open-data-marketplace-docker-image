@@ -1,0 +1,12 @@
+uuid: 1f0667cf-f214-474c-a884-688fcc3e50a0
+langcode: el
+status: true
+dependencies: {  }
+id: core_views_contextual_filter__dataset_products__page_1
+name: 'core_views_contextual_filter:dataset_products__page_1'
+filter_key: datasets_browse
+url_processor: core_views_url_processor
+breadcrumb:
+  active: false
+  before: true
+  group: false

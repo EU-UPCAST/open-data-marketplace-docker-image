@@ -1,0 +1,22 @@
+uuid: f2fc8229-8dde-4c02-8f00-449efc230bec
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: dataset_path
+label: 'dataset path'
+type: 'canonical_entities:commerce_product'
+pattern: 'dataset/[commerce_product:product_id]'
+selection_criteria:
+  e5768de0-3dca-41c9-a1ac-8ef2fbd78e64:
+    id: 'entity_bundle:commerce_product'
+    negate: false
+    uuid: e5768de0-3dca-41c9-a1ac-8ef2fbd78e64
+    context_mapping:
+      commerce_product: commerce_product
+    bundles:
+      dataset: dataset
+selection_logic: and
+weight: -5
+relationships: {  }

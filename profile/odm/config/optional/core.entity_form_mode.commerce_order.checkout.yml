@@ -1,0 +1,13 @@
+uuid: dd4364ec-2324-4cb7-b0c1-d31b5ae196e4
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_order
+_core:
+  default_config_hash: hI6zHs0P9XxjpjIYYZxrfjMIf2F5sOACOkwiyD6zRp0
+id: commerce_order.checkout
+label: 'Ολοκλήρωση Παραγγελίας'
+description: ''
+targetEntityType: commerce_order
+cache: true

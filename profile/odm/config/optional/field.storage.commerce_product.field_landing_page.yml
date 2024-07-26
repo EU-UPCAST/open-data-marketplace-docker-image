@@ -1,0 +1,19 @@
+uuid: 8e01d419-b218-45b2-ace2-79610450f302
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - link
+id: commerce_product.field_landing_page
+field_name: field_landing_page
+entity_type: commerce_product
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

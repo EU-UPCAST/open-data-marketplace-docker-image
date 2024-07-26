@@ -1,0 +1,22 @@
+uuid: 5154772d-6421-4839-8d12-c722f6d2ad61
+langcode: el
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: dataset_theme_path
+label: 'Dataset theme path'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'dataset-theme/[term:tid]'
+selection_criteria:
+  144004fc-3d81-4c8a-9aa3-571b19f27ef4:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 144004fc-3d81-4c8a-9aa3-571b19f27ef4
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      themes: themes
+selection_logic: and
+weight: -5
+relationships: {  }

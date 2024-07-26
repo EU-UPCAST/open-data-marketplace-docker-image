@@ -1,0 +1,11 @@
+uuid: eed6c16d-6511-474e-84f8-cb2e439393e9
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_store
+id: commerce_store.storefront
+label: Storefront
+description: ''
+targetEntityType: commerce_store
+cache: true

@@ -1,0 +1,25 @@
+uuid: 8af8e141-2896-45d6-976f-6f4ebe8a1566
+langcode: el
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - odmtheme
+id: odmtheme_titlosselidas
+theme: odmtheme
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Τίτλος σελίδας'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/page/*'

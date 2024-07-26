@@ -1,0 +1,33 @@
+uuid: 5326d4ba-4194-4b32-b26d-57ca4ff72bbe
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - languagefield
+id: commerce_product.field_language
+field_name: field_language
+entity_type: commerce_product
+type: language_field
+settings:
+  language_range:
+    11: '11'
+    1: 0
+    12: 0
+    2: 0
+    site_default: 0
+    und: 0
+    current_interface: 0
+    authors_default: 0
+  included_languages: {  }
+  excluded_languages: {  }
+  groups: ''
+  maxlength: 12
+  allowed_values_function: languagefield_allowed_values
+module: languagefield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -7,16 +7,9 @@ dependencies:
     - image.style.thumbnail
     - media.type.preview_image_type
   module:
-    - field_layout
     - hide_revision_field
     - image
-    - layout_discovery
     - path
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: media.preview_image_type.default
 targetEntityType: media
 bundle: preview_image_type
@@ -86,4 +79,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  uuid: true

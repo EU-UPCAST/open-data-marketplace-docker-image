@@ -1,0 +1,19 @@
+uuid: dc94c8e8-d538-40fa-9fcd-704013fa7035
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_reference
+    - taxonomy.vocabulary.media_type
+id: taxonomy_term.media_type.field_reference
+field_name: field_reference
+entity_type: taxonomy_term
+bundle: media_type
+label: reference
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

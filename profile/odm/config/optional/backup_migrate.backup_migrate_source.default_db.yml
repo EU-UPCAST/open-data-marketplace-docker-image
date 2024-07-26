@@ -1,0 +1,11 @@
+uuid: 95d10c88-c2d0-4ade-b081-5eede24f89d1
+langcode: el
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: I0ambmTIGFVABBaGMLbQcw-a5eWKxnsz7k2COEPKga4
+id: default_db
+label: 'Default Drupal Database'
+type: DefaultDB
+config:
+  name: 'Default Drupal Database'

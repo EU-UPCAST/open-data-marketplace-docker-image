@@ -28,13 +28,13 @@ events:
         id: Activity_1c3d3uc
         condition: ''
       -
-        id: Activity_1g3pwjo
-        condition: ''
-      -
         id: Activity_1kn3lpt
         condition: ''
       -
         id: Activity_1111a0j
+        condition: ''
+      -
+        id: Activity_1vkdm83
         condition: ''
 conditions:
   Flow_0kykb35:
@@ -47,11 +47,6 @@ conditions:
     configuration:
       negate: false
       token_name: 'current-page:query:product'
-  Flow_0rpfr6n:
-    plugin: eca_token_exists
-    configuration:
-      negate: false
-      token_name: 'current-page:query:dd'
 gateways: {  }
 actions:
   Activity_0gjzpgg:
@@ -94,26 +89,6 @@ actions:
       flag: true
       field_name: field_product
     successors: {  }
-  Activity_1g3pwjo:
-    plugin: eca_form_field_default_value
-    label: 'default data definition'
-    configuration:
-      value: '[current-page:query:dd]'
-      field_name: field_data_definition
-      strip_tags: true
-      trim: true
-      xss_filter: true
-    successors:
-      -
-        id: Activity_1m6z6ib
-        condition: Flow_0rpfr6n
-  Activity_1m6z6ib:
-    plugin: eca_form_field_disable
-    label: 'lock data definition'
-    configuration:
-      flag: true
-      field_name: field_data_definition
-    successors: {  }
   Activity_1kn3lpt:
     plugin: eca_form_field_default_value
     label: 'default consumer'
@@ -153,4 +128,24 @@ actions:
     configuration:
       flag: true
       field_name: field_provider
+    successors: {  }
+  Activity_1vkdm83:
+    plugin: eca_form_field_default_value
+    label: 'default provider store'
+    configuration:
+      value: '[current-page:query:provider_store]'
+      field_name: field_provider_store
+      strip_tags: true
+      trim: true
+      xss_filter: true
+    successors:
+      -
+        id: Activity_068y33r
+        condition: ''
+  Activity_068y33r:
+    plugin: eca_form_field_disable
+    label: 'lock provider store'
+    configuration:
+      flag: true
+      field_name: field_provider_store
     successors: {  }

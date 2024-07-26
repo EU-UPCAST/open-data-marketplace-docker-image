@@ -1,0 +1,18 @@
+uuid: 77114f61-dc8a-4d8c-83ff-cb76b5271291
+langcode: el
+status: true
+dependencies:
+  module:
+    - votingapi_reaction
+third_party_settings:
+  votingapi_reaction:
+    reaction: true
+    icon_type: uploaded_image
+    icon_class: ''
+    uploaded_image: ''
+    remote_image: ''
+    html_element: ''
+id: reaction_sad
+label: "I'm sad"
+value_type: points
+description: 'Automatically created reaction'

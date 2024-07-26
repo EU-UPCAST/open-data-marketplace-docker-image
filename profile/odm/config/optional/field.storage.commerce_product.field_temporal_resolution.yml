@@ -1,0 +1,19 @@
+uuid: 928cb945-73a2-4f32-9a7d-2acc3e0acbd3
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - interval
+id: commerce_product.field_temporal_resolution
+field_name: field_temporal_resolution
+entity_type: commerce_product
+type: interval
+settings: {  }
+module: interval
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

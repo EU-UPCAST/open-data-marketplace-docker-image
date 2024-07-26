@@ -1,0 +1,95 @@
+uuid: bc9f8440-1013-47fa-8169-ab1091440bbd
+langcode: el
+status: true
+dependencies:
+  config:
+    - filter.format.html
+    - media.type.preview_image_type
+    - media.type.vector_image
+    - node.type.data_exchange_agreement
+    - node.type.data_exchange_offer
+    - node.type.dataset_series
+    - node.type.policy
+    - search_api_autocomplete.search.data_index_browser
+    - commerce_order.commerce_order_type.dataset_purchase_negotiation
+    - commerce_product.commerce_product_variation_type.dataset
+    - commerce_product.commerce_product_type.dataset
+    - commerce_order.commerce_order_item_type.negotiated_dataset_purchase_item
+  module:
+    - commerce
+    - commerce_license
+    - commerce_order
+    - commerce_product
+    - commerce_store
+    - filter
+    - media
+    - node
+    - odmsync
+    - search_api_autocomplete
+    - system
+    - toolbar
+id: data_provider
+label: 'Data provider'
+weight: -5
+is_admin: null
+permissions:
+  - 'access commerce administration pages'
+  - 'access commerce_order overview'
+  - 'access commerce_product overview'
+  - 'access commerce_store overview'
+  - 'access content'
+  - 'access content overview'
+  - 'access sync pages'
+  - 'access toolbar'
+  - 'create commerce_license'
+  - 'create data_exchange_agreement content'
+  - 'create data_exchange_offer content'
+  - 'create dataset commerce_product'
+  - 'create dataset_purchase_negotiation commerce_order'
+  - 'create dataset_series content'
+  - 'create media'
+  - 'create online commerce_store'
+  - 'create own dataset commerce_product_variation'
+  - 'create policy content'
+  - 'create preview_image_type media'
+  - 'create vector_image media'
+  - 'delete all revisions'
+  - 'delete data_exchange_agreement revisions'
+  - 'delete dataset_purchase_negotiation commerce_order'
+  - 'delete media'
+  - 'delete own commerce_license'
+  - 'delete own data_exchange_agreement content'
+  - 'delete own data_exchange_offer content'
+  - 'delete own dataset commerce_product'
+  - 'delete own dataset commerce_product_variation'
+  - 'delete own dataset_series content'
+  - 'delete own policy content'
+  - 'delete own preview_image_type media'
+  - 'delete own vector_image media'
+  - 'duplicate own dataset commerce_product_variation'
+  - 'edit own dataset_series content'
+  - 'edit own policy content'
+  - 'edit own preview_image_type media'
+  - 'edit own vector_image media'
+  - 'manage dataset commerce_product_variation'
+  - 'manage negotiated_dataset_purchase_item commerce_order_item'
+  - 'revert all revisions'
+  - 'update dataset_purchase_negotiation commerce_order'
+  - 'update media'
+  - 'update own commerce_license'
+  - 'update own dataset commerce_product'
+  - 'update own dataset commerce_product_variation'
+  - 'update own online commerce_store'
+  - 'use search_api_autocomplete for data_index_browser'
+  - 'use text format html'
+  - 'view all revisions'
+  - 'view commerce_order in own store'
+  - 'view commerce_product'
+  - 'view dataset_purchase_negotiation commerce_order'
+  - 'view media'
+  - 'view online commerce_store'
+  - 'view own commerce_license'
+  - 'view own unpublished commerce_product'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'

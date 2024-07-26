@@ -1,0 +1,29 @@
+uuid: 5162a189-1763-4f8c-9372-6ce7e3ad50fd
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_negotiation
+    - node.type.data_exchange_negotiation
+    - node.type.data_negotiation_log
+id: node.data_negotiation_log.field_negotiation
+field_name: field_negotiation
+entity_type: node
+bundle: data_negotiation_log
+label: negotiation
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      data_exchange_negotiation: data_exchange_negotiation
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,72 @@
+uuid: 9b038e78-5ec7-479f-843f-68148031d588
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.dataset
+    - core.entity_view_mode.commerce_product_variation.only_add_to_cart_button
+    - field.field.commerce_product_variation.dataset.commerce_file
+    - field.field.commerce_product_variation.dataset.field_access_rights
+    - field.field.commerce_product_variation.dataset.field_byte_size
+    - field.field.commerce_product_variation.dataset.field_checksum
+    - field.field.commerce_product_variation.dataset.field_compress_format
+    - field.field.commerce_product_variation.dataset.field_conforms_to
+    - field.field.commerce_product_variation.dataset.field_data_structure_definition
+    - field.field.commerce_product_variation.dataset.field_description
+    - field.field.commerce_product_variation.dataset.field_format
+    - field.field.commerce_product_variation.dataset.field_has_policy
+    - field.field.commerce_product_variation.dataset.field_issued
+    - field.field.commerce_product_variation.dataset.field_license
+    - field.field.commerce_product_variation.dataset.field_media_type
+    - field.field.commerce_product_variation.dataset.field_package_format
+    - field.field.commerce_product_variation.dataset.field_rights
+    - field.field.commerce_product_variation.dataset.field_spatial_resolution_in_mete
+    - field.field.commerce_product_variation.dataset.field_temporal_resolution
+    - field.field.commerce_product_variation.dataset.license_expiration
+    - field.field.commerce_product_variation.dataset.license_type
+  module:
+    - commerce_variation_cart_form
+third_party_settings:
+  commerce_variation_cart_form:
+    combine: true
+id: commerce_product_variation.dataset.only_add_to_cart_button
+targetEntityType: commerce_product_variation
+bundle: dataset
+mode: only_add_to_cart_button
+content:
+  commerce_variation_cart_form:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  commerce_file: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_access_rights: true
+  field_byte_size: true
+  field_checksum: true
+  field_compress_format: true
+  field_conforms_to: true
+  field_data_structure_definition: true
+  field_description: true
+  field_format: true
+  field_has_policy: true
+  field_issued: true
+  field_license: true
+  field_media_type: true
+  field_package_format: true
+  field_rights: true
+  field_spatial_resolution_in_mete: true
+  field_temporal_resolution: true
+  langcode: true
+  license_expiration: true
+  license_type: true
+  list_price: true
+  price: true
+  product_id: true
+  search_api_excerpt: true
+  sku: true
+  title: true
+  uuid: true

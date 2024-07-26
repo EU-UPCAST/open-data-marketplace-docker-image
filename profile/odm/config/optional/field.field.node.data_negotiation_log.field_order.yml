@@ -1,0 +1,29 @@
+uuid: 9dc15e68-03b5-4b15-ad5f-a30dab1c4514
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_type.dataset_purchase_negotiation
+    - field.storage.node.field_order
+    - node.type.data_negotiation_log
+id: node.data_negotiation_log.field_order
+field_name: field_order
+entity_type: node
+bundle: data_negotiation_log
+label: order
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_order'
+  handler_settings:
+    target_bundles:
+      dataset_purchase_negotiation: dataset_purchase_negotiation
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

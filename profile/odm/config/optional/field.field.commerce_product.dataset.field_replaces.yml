@@ -1,0 +1,28 @@
+uuid: d7ebc36e-52ed-4f9c-880b-16c0f5552296
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_replaces
+id: commerce_product.dataset.field_replaces
+field_name: field_replaces
+entity_type: commerce_product
+bundle: dataset
+label: replaces
+description: 'A related resource that is supplanted, displaced, or superseded by the described resource.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:commerce_product'
+  handler_settings:
+    target_bundles:
+      dataset: dataset
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

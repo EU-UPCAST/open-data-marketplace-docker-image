@@ -1,0 +1,31 @@
+uuid: 364407cc-7073-49e7-879e-e546de68a26f
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_contact_point
+    - node.type.organization
+    - node.type.person
+id: commerce_product.dataset.field_contact_point
+field_name: field_contact_point
+entity_type: commerce_product
+bundle: dataset
+label: 'contact point'
+description: 'Relevant contact information for the cataloged resource.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+      person: person
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: organization
+field_type: entity_reference

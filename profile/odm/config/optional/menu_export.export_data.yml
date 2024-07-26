@@ -1,0 +1,400 @@
+1:
+  id:
+    value: '1'
+  uuid:
+    value: dae8265b-6a81-4c46-8f62-f86d65b81242
+  revision_id:
+    value: '1'
+  langcode:
+    value: el
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1707335095'
+  revision_user: false
+  revision_log_message: false
+  enabled:
+    value: '1'
+  title:
+    value: Browse
+  description:
+    value: 'Browse datasets'
+  menu_name:
+    value: main
+  link:
+    uri: 'internal:/'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '1'
+  weight:
+    value: '0'
+  expanded:
+    value: '0'
+  parent: false
+  changed:
+    value: '1707335095'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+2:
+  id:
+    value: '2'
+  uuid:
+    value: cd194655-95a9-4339-9a44-31673f8cfc17
+  revision_id:
+    value: '2'
+  langcode:
+    value: el
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1707335290'
+  revision_user: false
+  revision_log_message: false
+  enabled:
+    value: '1'
+  title:
+    value: Discover
+  description:
+    value: 'Discover a dataset matching a workflow'
+  menu_name:
+    value: main
+  link:
+    uri: 'internal:/'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '1'
+  weight:
+    value: '0'
+  expanded:
+    value: '0'
+  parent: false
+  changed:
+    value: '1707336557'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+3:
+  id:
+    value: '3'
+  uuid:
+    value: 6bfb3d9c-e410-4f9c-be2c-de478132871e
+  revision_id:
+    value: '3'
+  langcode:
+    value: el
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1707335382'
+  revision_user: false
+  revision_log_message: false
+  enabled:
+    value: '1'
+  title:
+    value: 'My account'
+  description:
+    value: 'My account'
+  menu_name:
+    value: main
+  link:
+    uri: 'internal:/'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '1'
+  weight:
+    value: '0'
+  expanded:
+    value: '1'
+  parent: false
+  changed:
+    value: '1707336424'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+4:
+  id:
+    value: '4'
+  uuid:
+    value: 4bdf45a2-3742-4c81-adb4-979c074f9f0f
+  revision_id:
+    value: '4'
+  langcode:
+    value: el
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1707335477'
+  revision_user: false
+  revision_log_message: false
+  enabled:
+    value: '1'
+  title:
+    value: Cart
+  description:
+    value: 'Your cart'
+  menu_name:
+    value: main
+  link:
+    uri: 'internal:/cart'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '1'
+  weight:
+    value: '0'
+  expanded:
+    value: '0'
+  parent: false
+  changed:
+    value: '1707335953'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+5:
+  id:
+    value: '5'
+  uuid:
+    value: b82b633c-82a5-4cae-b728-760c2ade76bd
+  revision_id:
+    value: '5'
+  langcode:
+    value: el
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1707335602'
+  revision_user: false
+  revision_log_message: false
+  enabled:
+    value: '1'
+  title:
+    value: 'Dataset negotiations'
+  description:
+    value: Negotiations
+  menu_name:
+    value: main
+  link:
+    uri: 'internal:/'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '1'
+  weight:
+    value: '0'
+  expanded:
+    value: '0'
+  parent:
+    value: 'menu_link_content:6bfb3d9c-e410-4f9c-be2c-de478132871e'
+  changed:
+    value: '1707335602'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+6:
+  id:
+    value: '6'
+  uuid:
+    value: 7c59bb26-d67f-4ada-94e3-ac8f1cb62b72
+  revision_id:
+    value: '6'
+  langcode:
+    value: el
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1707336342'
+  revision_user: false
+  revision_log_message: false
+  enabled:
+    value: '1'
+  title:
+    value: Integrate
+  description:
+    value: 'Integrate your datasets with each other'
+  menu_name:
+    value: main
+  link:
+    uri: 'internal:/'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '1'
+  weight:
+    value: '0'
+  expanded:
+    value: '0'
+  parent: false
+  changed:
+    value: '1707336362'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+7:
+  id:
+    value: '7'
+  uuid:
+    value: 2e1f790c-7b16-4680-bf6a-1052af16bafe
+  revision_id:
+    value: '7'
+  langcode:
+    value: el
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1707336484'
+  revision_user: false
+  revision_log_message: false
+  enabled:
+    value: '1'
+  title:
+    value: 'My store'
+  description:
+    value: 'My dataset store'
+  menu_name:
+    value: main
+  link:
+    uri: 'internal:/'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '1'
+  weight:
+    value: '0'
+  expanded:
+    value: '0'
+  parent:
+    value: 'menu_link_content:6bfb3d9c-e410-4f9c-be2c-de478132871e'
+  changed:
+    value: '1707336484'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+8:
+  id:
+    value: '8'
+  uuid:
+    value: 26e11c19-12d9-4234-84e5-bd123f5274f9
+  revision_id:
+    value: '8'
+  langcode:
+    value: el
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1707336532'
+  revision_user: false
+  revision_log_message: false
+  enabled:
+    value: '1'
+  title:
+    value: Inventory
+  description:
+    value: 'My data inventory'
+  menu_name:
+    value: main
+  link:
+    uri: 'internal:/'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '1'
+  weight:
+    value: '0'
+  expanded:
+    value: '0'
+  parent:
+    value: 'menu_link_content:6bfb3d9c-e410-4f9c-be2c-de478132871e'
+  changed:
+    value: '1707336532'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+9:
+  id:
+    value: '9'
+  uuid:
+    value: 3546c74f-0d74-491c-9ee3-aba37e81c2c3
+  revision_id:
+    value: '9'
+  langcode:
+    value: el
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1707392946'
+  revision_user: false
+  revision_log_message: false
+  enabled:
+    value: '1'
+  title:
+    value: 'Data processing workflows'
+  description:
+    value: 'My data processing workflows'
+  menu_name:
+    value: main
+  link:
+    uri: 'internal:/'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '1'
+  weight:
+    value: '0'
+  expanded:
+    value: '0'
+  parent:
+    value: 'menu_link_content:6bfb3d9c-e410-4f9c-be2c-de478132871e'
+  changed:
+    value: '1707392946'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'

@@ -4,32 +4,30 @@ status: true
 dependencies:
   config:
     - commerce_order.commerce_order_item_type.negotiated_dataset_purchase_item
+    - field.field.commerce_order_item.negotiated_dataset_purchase_item.license
   module:
-    - field_layout
-    - layout_discovery
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
+    - commerce
 id: commerce_order_item.negotiated_dataset_purchase_item.default
 targetEntityType: commerce_order_item
 bundle: negotiated_dataset_purchase_item
 mode: default
 content:
   purchased_entity:
-    type: entity_reference_autocomplete
+    type: commerce_entity_select
     weight: 0
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      hide_single_entity: false
+      autocomplete_threshold: 7
+      autocomplete_size: 60
+      autocomplete_placeholder: ''
+      show_only_own_entities: '1'
     third_party_settings: {  }
 hidden:
   adjustments: true
   created: true
+  license: true
   quantity: true
   total_price: true
   unit_price: true
+  uuid: true

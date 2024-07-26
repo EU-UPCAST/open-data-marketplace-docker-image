@@ -6,9 +6,10 @@ name: 'SKG DataMarket by UPCAST'
 mail: larjohn@gmail.com
 slogan: ''
 page:
-  403: /node/88
-  404: /node/88
-  front: /node/88
+  403: ''
+  404: ''
+  front: /odm/home
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: el
+mail_notification: null

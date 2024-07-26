@@ -1,0 +1,26 @@
+uuid: 4bd7d944-9de0-4905-b4d4-65ac6cccab92
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_description
+    - filter.format.html
+  module:
+    - text
+id: commerce_product.dataset.field_description
+field_name: field_description
+entity_type: commerce_product
+bundle: dataset
+label: description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - html
+field_type: text_with_summary

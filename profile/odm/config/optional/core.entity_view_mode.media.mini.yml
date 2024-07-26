@@ -1,0 +1,11 @@
+uuid: efa5a30f-3d59-4d65-8a82-ca8d8b30b9b6
+langcode: el
+status: true
+dependencies:
+  module:
+    - media
+id: media.mini
+label: mini
+description: ''
+targetEntityType: media
+cache: true

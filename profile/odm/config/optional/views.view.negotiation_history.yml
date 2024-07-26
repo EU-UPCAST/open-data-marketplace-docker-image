@@ -7,11 +7,13 @@ dependencies:
     - field.storage.node.field_data_processing_workflow
     - field.storage.node.field_variation
   module:
+    - commerce_product
+    - commerce_store
     - node
     - text
     - user
 id: negotiation_history
-label: 'Negotiation history'
+label: 'ODM Negotiation history'
 module: views
 description: 'Displays requests and offers regarding a specific negotiation'
 tag: ''
@@ -24,7 +26,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Negotiation history'
+      title: 'ODM Negotiation history'
       fields:
         title_1:
           id: title_1
@@ -242,6 +244,7 @@ display:
             offset: false
             offset_label: Αντιστάθμιση
           quantity: 9
+          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -359,6 +362,44 @@ display:
           admin_label: 'field_negotiation: Περιεχόμενο'
           plugin_id: standard
           required: true
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: Χρήστης
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
+          required: false
+        field_consumer:
+          id: field_consumer
+          table: node__field_consumer
+          field: field_consumer
+          relationship: field_negotiation
+          group_type: group
+          admin_label: 'field_consumer: Χρήστης'
+          plugin_id: standard
+          required: false
+        field_variation:
+          id: field_variation
+          table: node__field_variation
+          field: field_variation
+          relationship: none
+          group_type: group
+          admin_label: 'field_variation: Product variation'
+          plugin_id: standard
+          required: false
+        field_provider_store:
+          id: field_provider_store
+          table: node__field_provider_store
+          field: field_provider_store
+          relationship: field_negotiation
+          group_type: group
+          admin_label: 'field_provider_store: Store'
+          plugin_id: standard
+          required: false
       header:
         area:
           id: area

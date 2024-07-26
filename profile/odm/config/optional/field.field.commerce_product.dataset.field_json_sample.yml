@@ -1,0 +1,22 @@
+uuid: ad34f5c5-a564-4d1b-97bd-2189e87ce839
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_json_sample
+  module:
+    - json_table
+id: commerce_product.dataset.field_json_sample
+field_name: field_json_sample
+entity_type: commerce_product
+bundle: dataset
+label: 'JSON sample'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  size: big
+field_type: json

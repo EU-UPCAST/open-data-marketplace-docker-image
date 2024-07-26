@@ -1,0 +1,31 @@
+uuid: f6383923-91ce-4289-9b76-7692625e4c6b
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_image
+    - media.type.preview_image_type
+    - media.type.vector_image
+    - node.type.basic_page
+id: node.basic_page.field_featured_image
+field_name: field_featured_image
+entity_type: node
+bundle: basic_page
+label: featured_image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      vector_image: vector_image
+      preview_image_type: preview_image_type
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: vector_image
+field_type: entity_reference

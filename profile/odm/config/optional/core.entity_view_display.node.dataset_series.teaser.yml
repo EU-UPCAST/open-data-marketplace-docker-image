@@ -1,0 +1,35 @@
+uuid: da192c8a-d850-4e66-9eea-6ac316bbfd02
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dataset_series.field_ckan
+    - field.field.node.dataset_series.field_description
+    - field.field.node.dataset_series.field_keyword
+    - field.field.node.dataset_series.field_store
+    - field.field.node.dataset_series.field_theme
+    - field.field.node.dataset_series.field_version
+    - node.type.dataset_series
+  module:
+    - user
+id: node.dataset_series.teaser
+targetEntityType: node
+bundle: dataset_series
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_ckan: true
+  field_description: true
+  field_keyword: true
+  field_store: true
+  field_theme: true
+  field_version: true
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

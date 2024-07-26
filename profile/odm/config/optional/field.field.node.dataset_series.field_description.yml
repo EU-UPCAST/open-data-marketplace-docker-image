@@ -1,0 +1,24 @@
+uuid: 6915ee68-318b-434e-8431-ea7cca192547
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.dataset_series
+  module:
+    - text
+id: node.dataset_series.field_description
+field_name: field_description
+entity_type: node
+bundle: dataset_series
+label: description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

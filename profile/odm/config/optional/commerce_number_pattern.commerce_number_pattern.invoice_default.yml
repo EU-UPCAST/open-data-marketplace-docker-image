@@ -1,0 +1,18 @@
+uuid: 54a8f551-d975-4a4f-875a-8a8c07010428
+langcode: el
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_invoice
+_core:
+  default_config_hash: hp6r3xzLGwrIIC_hKth1N8BqtO9EasSw-VWXGQkkwO4
+id: invoice_default
+label: Τιμολόγιο
+targetEntityType: commerce_invoice
+plugin: infinite
+configuration:
+  pattern: '[pattern:number]'
+  initial_number: 1
+  padding: 0
+  per_store_sequence: true

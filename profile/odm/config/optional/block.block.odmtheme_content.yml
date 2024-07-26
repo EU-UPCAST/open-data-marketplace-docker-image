@@ -1,0 +1,22 @@
+uuid: 1dea79fd-5823-44f9-a8ec-39f37b2cf110
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - odmtheme
+_core:
+  default_config_hash: oLIH2P4WU_RKs8zYk1Chk2CI9lbFk82HJfWRgyPcbvc
+id: odmtheme_content
+theme: odmtheme
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

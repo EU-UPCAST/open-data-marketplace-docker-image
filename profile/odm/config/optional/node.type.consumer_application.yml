@@ -1,0 +1,18 @@
+uuid: 32120e10-6271-4d13-b732-d458f9ade7ea
+langcode: el
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Consumer application'
+type: consumer_application
+description: null
+help: null
+new_revision: false
+preview_mode: 0
+display_submitted: false

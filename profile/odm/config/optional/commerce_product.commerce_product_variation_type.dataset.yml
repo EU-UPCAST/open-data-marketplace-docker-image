@@ -1,9 +1,23 @@
+uuid: 6bcdd6a0-ff94-417c-8dfb-cc47b7ea04f6
 langcode: el
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - commerce_license
+third_party_settings:
+  commerce_license:
+    license_types:
+      commerce_file: commerce_file
+      url: url
+    activate_on_place: false
+    allow_renewal: false
+    interval: ''
+    period: second
 id: dataset
-label: 'Dataset Variation'
-traits: {  }
+label: 'Dataset Distribution'
+traits:
+  - commerce_file
+  - commerce_license
 locked: false
 orderItemType: negotiated_dataset_purchase_item
 generateTitle: false

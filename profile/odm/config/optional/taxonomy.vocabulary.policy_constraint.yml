@@ -1,0 +1,9 @@
+uuid: d328df26-1b57-4435-8fba-6d42ff63b243
+langcode: el
+status: true
+dependencies: {  }
+name: 'Policy Constraint'
+vid: policy_constraint
+description: null
+weight: 0
+new_revision: false

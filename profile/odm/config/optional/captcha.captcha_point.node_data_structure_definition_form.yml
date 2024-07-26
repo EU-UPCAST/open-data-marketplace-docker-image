@@ -1,0 +1,7 @@
+uuid: 03aaf6e0-02a6-4652-bff8-4f6c9bdebe89
+langcode: el
+status: false
+dependencies: {  }
+formId: node_data_structure_definition_form
+captchaType: default
+label: node_data_structure_definition_form

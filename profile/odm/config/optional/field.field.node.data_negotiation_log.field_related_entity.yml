@@ -1,0 +1,35 @@
+uuid: 1d359a1c-0ec2-43a8-84c7-d35c5f53e474
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_entity
+    - node.type.data_exchange_agreement
+    - node.type.data_exchange_offer
+    - node.type.data_exchange_request
+    - node.type.data_negotiation_log
+    - node.type.data_processing_workflow
+id: node.data_negotiation_log.field_related_entity
+field_name: field_related_entity
+entity_type: node
+bundle: data_negotiation_log
+label: related_entity
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      data_exchange_agreement: data_exchange_agreement
+      data_exchange_offer: data_exchange_offer
+      data_exchange_request: data_exchange_request
+      data_processing_workflow: data_processing_workflow
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: data_exchange_request
+field_type: entity_reference

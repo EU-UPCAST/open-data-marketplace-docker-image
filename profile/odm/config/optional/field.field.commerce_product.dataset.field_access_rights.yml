@@ -1,0 +1,29 @@
+uuid: a40d1ce9-0bef-465e-a00f-67b4935cfed3
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.dataset
+    - field.storage.commerce_product.field_access_rights
+    - node.type.rights_statment
+id: commerce_product.dataset.field_access_rights
+field_name: field_access_rights
+entity_type: commerce_product
+bundle: dataset
+label: 'access rights'
+description: 'Information about who can access the resource or an indication of its security status.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      rights_statment: rights_statment
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

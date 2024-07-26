@@ -7,15 +7,8 @@ dependencies:
     - field.field.node.data_processing_workflow.field_workflow
     - node.type.data_processing_workflow
   module:
-    - field_layout
     - json_field_widget
-    - layout_discovery
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: node.data_processing_workflow.default
 targetEntityType: node
 bundle: data_processing_workflow
@@ -68,6 +61,11 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   moderation_state: true
@@ -76,3 +74,4 @@ hidden:
   revision_log: true
   sticky: true
   uid: true
+  uuid: true

@@ -1,0 +1,11 @@
+uuid: e651458c-7c48-4591-89f9-81662bbf583c
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.data_negotiation_log
+id: node.data_negotiation_log
+target_entity_type_id: node
+target_bundle: data_negotiation_log
+default_langcode: site_default
+language_alterable: false

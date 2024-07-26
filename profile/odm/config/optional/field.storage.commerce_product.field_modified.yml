@@ -1,0 +1,20 @@
+uuid: 1ae45663-b086-438c-9050-4abab74f264e
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - datetime
+id: commerce_product.field_modified
+field_name: field_modified
+entity_type: commerce_product
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

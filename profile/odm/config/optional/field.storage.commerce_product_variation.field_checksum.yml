@@ -1,0 +1,40 @@
+uuid: 0f2d651f-a622-4145-89ac-d6d671cf31a8
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - custom_field
+    - taxonomy
+id: commerce_product_variation.field_checksum
+field_name: field_checksum
+entity_type: commerce_product_variation
+type: custom
+settings:
+  columns:
+    value:
+      name: value
+      type: string
+      max_length: '255'
+      unsigned: 0
+      precision: '10'
+      scale: '2'
+      size: normal
+      datetime_type: datetime
+    algorithm:
+      name: algorithm
+      type: entity_reference
+      max_length: '255'
+      unsigned: 0
+      precision: '10'
+      scale: '2'
+      size: normal
+      datetime_type: datetime
+      target_type: taxonomy_term
+module: custom_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

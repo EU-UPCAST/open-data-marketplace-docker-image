@@ -1,0 +1,14 @@
+uuid: 605ff52d-710b-4b66-9ef6-6c752b86dd90
+langcode: el
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: Mb_L3vE-0IBZH5s2rjpk2LNn0QHClQP9AARQdCmVLt4
+id: translations
+label: Μεταφράσεις
+category: Γλώσσα
+likert: false
+options: ''

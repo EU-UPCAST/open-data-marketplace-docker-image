@@ -1,0 +1,20 @@
+uuid: 82eff9ab-0c9b-4b59-a4d1-1893c9e44bb9
+langcode: el
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - node
+id: commerce_product.field_creator
+field_name: field_creator
+entity_type: commerce_product
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

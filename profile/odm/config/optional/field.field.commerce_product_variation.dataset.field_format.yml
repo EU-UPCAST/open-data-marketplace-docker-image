@@ -1,0 +1,29 @@
+uuid: 602740a6-ff30-41c1-bce4-43e2d0ed3eca
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.dataset
+    - field.storage.commerce_product_variation.field_format
+    - taxonomy.vocabulary.media_type
+id: commerce_product_variation.dataset.field_format
+field_name: field_format
+entity_type: commerce_product_variation
+bundle: dataset
+label: format
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      media_type: media_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

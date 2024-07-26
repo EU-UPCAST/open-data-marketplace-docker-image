@@ -1,0 +1,31 @@
+uuid: 102020f6-c393-4284-ba22-8dbf1edcf1a4
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.modal
+    - field.field.node.rights_statment.body
+    - node.type.rights_statment
+  module:
+    - text
+    - user
+id: node.rights_statment.modal
+targetEntityType: node
+bundle: rights_statment
+mode: modal
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  links: true
+  search_api_excerpt: true
+  uuid: true

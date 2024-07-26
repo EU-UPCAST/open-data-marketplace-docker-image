@@ -1,0 +1,21 @@
+uuid: 475a960f-e67c-44ea-aa05-900ec83f4841
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.negotiated_dataset_purchase_item
+    - field.storage.commerce_order_item.license
+id: commerce_order_item.negotiated_dataset_purchase_item.license
+field_name: license
+entity_type: commerce_order_item
+bundle: negotiated_dataset_purchase_item
+label: License
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:commerce_license'
+  handler_settings: {  }
+field_type: entity_reference

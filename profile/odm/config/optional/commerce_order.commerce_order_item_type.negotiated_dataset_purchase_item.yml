@@ -3,8 +3,9 @@ langcode: el
 status: true
 dependencies: {  }
 id: negotiated_dataset_purchase_item
-label: "negotiated dataset purchase item\t"
-traits: {  }
+label: "dataset acquisition item\t"
+traits:
+  - commerce_license_order_item_type
 locked: false
 purchasableEntityType: commerce_product_variation
 orderType: dataset_purchase_negotiation

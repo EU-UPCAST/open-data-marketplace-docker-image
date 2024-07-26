@@ -1,0 +1,89 @@
+uuid: d731fc31-3332-4c72-b034-a6e1aa9f96c1
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_policy_constraint
+    - node.type.policy
+    - taxonomy.vocabulary.policy_constraint
+    - taxonomy.vocabulary.policy_constraint_operator
+  module:
+    - custom_field
+id: node.policy.field_policy_constraint
+field_name: field_policy_constraint
+entity_type: node
+bundle: policy
+label: 'policy constraint'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_settings:
+    constraint:
+      type: entity_reference_autocomplete
+      weight: 0
+      check_empty: false
+      widget_settings:
+        label: Constraint
+        settings:
+          description: ''
+          description_display: after
+          size: 60
+          placeholder: ''
+          required: false
+          match_operator: CONTAINS
+          match_limit: 10
+          handler: 'default:taxonomy_term'
+          handler_settings:
+            sort:
+              field: name
+              direction: asc
+            auto_create: false
+            target_bundles:
+              policy_constraint: policy_constraint
+            auto_create_bundle: ''
+    operator:
+      type: entity_reference_autocomplete
+      weight: 0
+      check_empty: false
+      widget_settings:
+        label: Operator
+        settings:
+          description: ''
+          description_display: after
+          size: 60
+          placeholder: ''
+          required: false
+          match_operator: CONTAINS
+          match_limit: 10
+          handler: 'default:taxonomy_term'
+          handler_settings:
+            sort:
+              field: name
+              direction: asc
+            auto_create: false
+            target_bundles:
+              policy_constraint_operator: policy_constraint_operator
+            auto_create_bundle: ''
+    value:
+      type: textarea
+      weight: 0
+      check_empty: false
+      widget_settings:
+        label: Value
+        settings:
+          description: ''
+          description_display: after
+          placeholder: ''
+          maxlength: 255
+          maxlength_js: false
+          required: false
+          rows: 5
+          formatted: false
+          default_format: plain_text
+          format:
+            guidelines: true
+            help: true
+field_type: custom

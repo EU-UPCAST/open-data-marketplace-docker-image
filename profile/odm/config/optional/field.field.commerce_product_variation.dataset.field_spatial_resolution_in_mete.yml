@@ -1,0 +1,23 @@
+uuid: 5e47fa5d-2cda-4127-bdb3-a60e5dd8d5a3
+langcode: el
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.dataset
+    - field.storage.commerce_product_variation.field_spatial_resolution_in_mete
+id: commerce_product_variation.dataset.field_spatial_resolution_in_mete
+field_name: field_spatial_resolution_in_mete
+entity_type: commerce_product_variation
+bundle: dataset
+label: 'spatial resolution in meters'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

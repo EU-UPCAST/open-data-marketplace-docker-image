@@ -1,0 +1,24 @@
+uuid: a132f0d9-e5eb-47e4-adf0-046e9ee9ad56
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.policy_constraint
+  module:
+    - text
+id: node.policy_constraint.body
+field_name: body
+entity_type: node
+bundle: policy_constraint
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

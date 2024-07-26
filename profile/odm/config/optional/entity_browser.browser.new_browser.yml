@@ -1,0 +1,31 @@
+uuid: 4eddb3f0-473e-468e-8e0a-108b20bb5b54
+langcode: el
+status: true
+dependencies:
+  config:
+    - views.view.odm_license_selector_browser
+  module:
+    - views
+name: new_browser
+label: 'New browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  7981ff02-2fad-4fa9-a3fd-cc87f8ca5e66:
+    id: view
+    uuid: 7981ff02-2fad-4fa9-a3fd-cc87f8ca5e66
+    label: view
+    weight: 1
+    settings:
+      submit_text: 'Select entities'
+      auto_select: false
+      view: odm_license_selector_browser
+      view_display: entity_browser_1

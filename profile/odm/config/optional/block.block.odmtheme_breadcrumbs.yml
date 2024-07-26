@@ -1,0 +1,22 @@
+uuid: f5c9a0fc-a76b-405f-9d1c-fdd4c3db9fda
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - odmtheme
+_core:
+  default_config_hash: dBLpCxRgExOXsTDiOLgANZXqhy4ta_BKyXsSeNw-eKA
+id: odmtheme_breadcrumbs
+theme: odmtheme
+region: header
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

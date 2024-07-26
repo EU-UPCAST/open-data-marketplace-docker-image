@@ -1,0 +1,50 @@
+uuid: fb854323-5aac-4500-b0c7-0f76e6ddbef2
+langcode: el
+status: true
+dependencies:
+  module:
+    - custom_field
+    - node
+    - taxonomy
+id: node.field_policy_constraint
+field_name: field_policy_constraint
+entity_type: node
+type: custom
+settings:
+  columns:
+    constraint:
+      name: constraint
+      type: entity_reference
+      max_length: '255'
+      unsigned: 0
+      precision: '10'
+      scale: '2'
+      size: normal
+      datetime_type: datetime
+      target_type: taxonomy_term
+    operator:
+      name: operator
+      type: entity_reference
+      max_length: '255'
+      unsigned: 0
+      precision: '10'
+      scale: '2'
+      size: normal
+      datetime_type: datetime
+      target_type: taxonomy_term
+    value:
+      name: value
+      type: string_long
+      max_length: '255'
+      unsigned: 0
+      precision: '10'
+      scale: '2'
+      size: normal
+      datetime_type: datetime
+module: custom_field
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

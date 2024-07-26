@@ -1,0 +1,21 @@
+uuid: dd83a8e8-65d4-4c7e-bb83-fadd9635c873
+langcode: el
+status: false
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - claro
+id: claro_kalathi
+theme: claro
+region: highlighted
+weight: 0
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Καλάθι
+  label_display: visible
+  provider: commerce_cart
+  dropdown: true
+visibility: {  }

@@ -1,0 +1,19 @@
+uuid: fb81e1d2-33b6-41a5-af7f-819007369982
+langcode: el
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_code
+    - taxonomy.vocabulary.themes
+id: taxonomy_term.themes.field_code
+field_name: field_code
+entity_type: taxonomy_term
+bundle: themes
+label: code
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

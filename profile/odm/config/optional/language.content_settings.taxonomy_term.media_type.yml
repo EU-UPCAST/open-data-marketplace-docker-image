@@ -1,0 +1,11 @@
+uuid: 84062216-a54e-42a0-bb4b-9b461436a7d0
+langcode: el
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_type
+id: taxonomy_term.media_type
+target_entity_type_id: taxonomy_term
+target_bundle: media_type
+default_langcode: site_default
+language_alterable: false

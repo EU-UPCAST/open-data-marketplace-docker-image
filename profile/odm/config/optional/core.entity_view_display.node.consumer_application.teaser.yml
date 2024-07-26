@@ -1,0 +1,30 @@
+uuid: 2d9bfe92-addc-4744-bcf6-9da05e8d6561
+langcode: el
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.consumer_application.field_enable_monitoring
+    - field.field.node.consumer_application.field_licensed_files
+    - node.type.consumer_application
+  module:
+    - user
+id: node.consumer_application.teaser
+targetEntityType: node
+bundle: consumer_application
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_enable_monitoring: true
+  field_licensed_files: true
+  langcode: true
+  search_api_excerpt: true
+  uuid: true

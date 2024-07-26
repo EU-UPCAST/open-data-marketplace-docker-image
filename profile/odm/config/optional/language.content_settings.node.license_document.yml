@@ -1,0 +1,11 @@
+uuid: ec95564c-4f43-40f9-a892-d04b865808f7
+langcode: el
+status: true
+dependencies:
+  config:
+    - node.type.license_document
+id: node.license_document
+target_entity_type_id: node
+target_bundle: license_document
+default_langcode: site_default
+language_alterable: false

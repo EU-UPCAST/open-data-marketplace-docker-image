@@ -1,0 +1,7 @@
+uuid: f843543e-2b7f-468d-940a-586b19e6234a
+langcode: el
+status: false
+dependencies: {  }
+formId: node_data_exchange_agreement_form
+captchaType: default
+label: node_data_exchange_agreement_form
