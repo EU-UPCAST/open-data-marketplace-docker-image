@@ -79,6 +79,7 @@ install:
   - danse
   - danse_content
   - eca_danse
+  - default_content
   - devel
   - devel_entity_updates
   - ds

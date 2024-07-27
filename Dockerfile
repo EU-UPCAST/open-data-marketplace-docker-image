@@ -47,6 +47,8 @@ composer config --no-interaction extra.patches --json '{"drupal\/commerce":{"293
 composer config --no-interaction extra.patches --json '{"drupal\/commerce_cart_flyout":{"3075270-3":"https:\/\/www.drupal.org\/files\/issues\/2024-03-22\/consider-separate-count_text-into-two-values-3075270-3.patch"}}'
 composer config --no-interaction extra.patches --json '{"drupal\/feeds":{"3186281-34":"https:\/\/www.drupal.org\/files\/issues\/2024-01-21\/feeds-3186281-34.patch"}}'
 composer config --no-interaction extra.patches --json '{"drupal\/view_mode_page":{"3300706-17":"https:\/\/www.drupal.org\/files\/issues\/2023-05-01\/3300706-17-context_exception_when_trying_to_create_url_0.patch"}}'
+composer config --no-interaction extra.patches --json '{"drupal\/default_content":{"3001618-10":"https:\/\/www.drupal.org\/files\/issues\/2020-08-13\/3001618-10.patch"}}'
+composer config --no-interaction extra.patches --json '{"drupal\/view_mode_page":{"3440939":"https:\/\/www.drupal.org\/files\/issues\/2024-04-14\/contextawarepluginbaseerror.patch"}}'
 composer config --no-interaction extra.installer-types --json '["bower-asset", "npm-asset"]'
 composer config --no-interaction extra.installer-paths.web/libraries/{\$name} --json '["type:drupal-library","type:bower-asset","type:npm-asset"]'
 

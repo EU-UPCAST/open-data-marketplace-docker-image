@@ -2,7 +2,7 @@ _core:
   default_config_hash: 3qY7PfXvJcCtBPQpb9FxxBgXtUGFzx8JVakfWiNNYzw
 favicon:
   mimetype: image/png
-  path: 'public://odm.png'
+  path: profiles/contrib/odm/themes/odmtheme/odm.png
   url: ''
   use_default: false
 features:

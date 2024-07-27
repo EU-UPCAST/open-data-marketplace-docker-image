@@ -56,6 +56,7 @@
     "drupal/csv_importer": "^1.16",
     "drupal/custom_field": "^3.0@RC",
     "drupal/danse": "^2.3",
+    "drupal/default_content":"^2.0@alpha",
     "drupal/devel_entity_updates": "^4.1",
     "drupal/ds": "^3.18",
     "drupal/dvf": "^3.0",
